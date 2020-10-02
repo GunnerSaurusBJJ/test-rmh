@@ -7,11 +7,15 @@
     justify-items: center;
   } 
 }
+.categories__item {
+  width: 100%;
+}
 .categories {
   margin-top: 30px;
 }
 .categories-item__link {
   img {
     margin-bottom: 12px;
+    width: 100%;
   }
 }

@@ -15,6 +15,9 @@
 
 .inspire-image {
   position: relative;
+  img {
+    width: 100%;
+  }
   &:hover {
     .inspire-image--overlay {
       opacity: 1;
@@ -66,6 +69,9 @@
 }
 .collections-image {
   position: relative;
+  img {
+    width: 100%;
+  }
 }
 .collections-caption {
   position: absolute;
@@ -181,6 +187,9 @@
 }
 .blog-image {
   position: relative;
+  img {
+    width: 100%;
+  }
 }
 .blog-caption {
   position: absolute;

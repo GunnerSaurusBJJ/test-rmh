@@ -69,6 +69,7 @@
   }
   &__item {
     position: relative;
+    width: 100%;
     span {
       border-radius: 5px;
       background: rgba(0, 0, 0, 0.5);
@@ -80,6 +81,7 @@
     }
     img {
       border-radius: 10px;
+      width: 100%;
     }
   }
   &__item-date {

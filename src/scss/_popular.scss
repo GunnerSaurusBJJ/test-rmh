@@ -20,19 +20,54 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   // grid-gap: 40px;
-  margin-left: 30px;
+  // margin-left: 30px;
   margin-top: 30px;
 }
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
+  &:hover {
+    .card-image-prev {
+      opacity: 0;
+      visibility: hidden;
+      transition: all .4s;
+    }
+    .card-hover-img {
+      opacity: 1;
+      visibility: visible;
+    }
+    .card-icons {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  .card-hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    z-index: 10;
+    transition: all .4s;
+    img {
+      width: 100%;
+    }
+  }
+  .card-to-favorite {
+    right: 22px;
+    top: 26px;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+  }
   .card-image {
     position: relative;
   }
   .card-discount {
     position: absolute;
-    top: 10px;
+    top: -10px;
     z-index: 20;
     span {
       background-color: $red;
@@ -44,9 +79,12 @@
       padding: 4px;
     }
   }
-  img {
-    transform: translateX(-25px);
+  .card-image-prev {
+    width: 100%;
     cursor: pointer;
+    img {
+      width: 100%;
+    }
   }
   .card-title {
     font-size: 18px;
@@ -197,6 +235,7 @@
 .discount-banner {
   margin-top: 60px;
   background: url('/src/img/popular/bg-discount.jpg') no-repeat;
+  background-size: cover;
   padding-top: 50px;
   padding-bottom: 70px;
   padding-left: 40px;

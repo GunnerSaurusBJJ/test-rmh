@@ -3,7 +3,7 @@
   display: flex;
   align-items:center;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 0.97vw;
   height: 100px;
 }
 .navbar-links {
@@ -11,9 +11,6 @@
   justify-content: space-between;
   align-items:center;
   width: 34.236vw;
-  &__link {
-    // margin-right: 51px;
-  }
 }
 .navbar-search {
   position: relative;

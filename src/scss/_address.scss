@@ -3,7 +3,7 @@
 }
 .address-title {
   font-weight: bold;
-  font-size: 42px;
+  font-size: 3.333vw;
   margin-bottom: 20px;
 }
 .address-info {
@@ -12,6 +12,9 @@
 .address-map {
   display: flex;
   justify-content: flex-end;
+  iframe {
+    width: 66.73vw;
+  }
 }
 .address-card {
   position: absolute;
