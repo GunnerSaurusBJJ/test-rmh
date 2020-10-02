@@ -1,0 +1,59 @@
+.material-examples {
+  margin-top: 70px;
+}
+.example-banner {
+  background-color: #0081A7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+}
+.banner-img {
+  width: 500px;
+  height: 300px;
+}
+.banner-text {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 47px;
+    color: #fff;
+  }
+  &__desc {
+    color: #FFFFFF;
+    opacity: 0.54;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+  &__more {
+    img {
+      margin-right: 10px;
+    }
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    max-width: 270px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    padding: 14px 0;
+    margin-top: 35px;
+  }
+}
+
+.example-types {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.type-image {
+  img {
+    margin-bottom: 15px;
+  }
+}

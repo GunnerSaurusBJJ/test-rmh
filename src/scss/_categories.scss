@@ -1,0 +1,17 @@
+.categories-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  justify-content: space-between;
+  @media(min-width: 1440px) {
+    justify-items: center;
+  } 
+}
+.categories {
+  margin-top: 30px;
+}
+.categories-item__link {
+  img {
+    margin-bottom: 12px;
+  }
+}

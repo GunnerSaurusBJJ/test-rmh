@@ -1,0 +1,394 @@
+.catalog-filter-sidebar {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  min-width: 375px;
+  background: #fff;
+  top: 0;
+  padding: 32px;
+  transform: translateX(130%);
+  transition: transform .4s;
+  overflow: auto;
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    img {
+      cursor: pointer;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    height: 70px;
+  }
+}
+.sidebar-filter-visible {
+  transform: translateX(0);
+}
+.filter-sidebar-background {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 222;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .4s;
+}
+.filter-sidebar-background-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.content-hidden {
+  display: none;
+}
+.sidebar-arrow-rotate {
+  transform: rotate(180deg);
+}
+.filter-sidebar-price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  input {
+    border: 1px solid #D2D7E3;
+    border-radius: 10px;
+    width: 145px;
+    padding: 12px 35px;
+  }
+}
+
+.catalog-filter-sidebar-slider {
+	position: relative;
+	width: 100%;
+  max-width: 500px;
+  margin-top: 25px;
+}
+
+.slider {
+	position: relative;
+	z-index: 1;
+	height: 3px;
+	margin: 0 15px;
+}
+.slider > .track {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color: #D2D7E3;
+}
+.slider > .range {
+	position: absolute;
+	z-index: 2;
+	left: 25%;
+	right: 25%;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color: $red;
+}
+.slider > .thumb {
+	position: absolute;
+	z-index: 3;
+	width: 18px;
+	height: 18px;
+	background-color: $red;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(98,0,238,.1);
+	transition: box-shadow .3s ease-in-out;
+}
+.slider > .thumb.left {
+	left: 25%;
+	transform: translate(-15px, -8px);
+}
+.slider > .thumb.right {
+	right: 25%;
+	transform: translate(15px, -8px);
+}
+
+input[type=range] {
+	position: absolute;
+	pointer-events: none;
+	-webkit-appearance: none;
+	z-index: 2;
+	height: 10px;
+	width: 100%;
+	opacity: 0;
+}
+input[type=range]::-webkit-slider-thumb {
+	pointer-events: all;
+	width: 30px;
+	height: 30px;
+	border-radius: 0;
+	border: 0 none;
+	background-color: red;
+	-webkit-appearance: none;
+}
+
+
+.youtube-link {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	color: #000;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.input-left-wrapper, .input-right-wrapper {
+  position: relative;
+}
+.input-left-label, .input-right-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+
+.catalog-filter-sidebar__btns-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 17px;
+  background: #fff;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: sticky;
+  bottom: -40px;
+  button {
+    border-radius: 10px;
+    padding: 15px 18px;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    border: none;
+  }
+  .left-btn {
+    border: 1px solid #ED1C24;
+    background: #FFFFFF;
+  }
+  .right-btn {
+    background: #ED1C24;
+    color: #fff;
+  }
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 1px solid #D2D7E3;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: $red;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.load-more-info {
+  text-align: center;
+  margin-top: 80px;
+}
+.load-more-btn {
+  border-radius: 10px;
+  border: 1px solid #ED1C24;
+  background: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 15px 160px;
+  margin: 25px auto 0;
+  display: block;
+}
+.help-section__wrapper {
+  margin-top: 60px;
+  background: url('/src/full-catalog/img/help-bg.jpg') no-repeat center / cover;
+  height: 290px;
+  border-radius: 10px;
+}
+.help-section-info {
+  padding: 55px 65px;
+}
+
+.help-section__title {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.help-section__subtitle {
+  font-weight: normal;
+  font-size: 14px;
+  opacity: 0.5;
+  max-width: 550px;
+  margin-bottom: 25px;
+}
+
+.help-section__input-wrapper {
+  input {
+    border-radius: 10px;
+    border: 1px solid #D2D7E3;
+    padding: 14px 16px;
+    margin-right: 20px;
+  }
+  button {
+    background: #ED1C24;
+    border-radius: 10px;
+    padding: 14px 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+  }
+}
+.help-section-features {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 22px;
+  justify-items: center;
+  &__item {
+    display: flex;
+    align-items: center;
+    p {
+      max-width: 100px;
+      font-size: 14px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.close-count-btn {
+  display: inline-block;
+  margin-left: 0 !important;
+  transform: translateY(5px)
+}
+
+.catalog-filter-sidebar__btn {
+  position: relative;
+}
+
+.chosen-filter {
+  position: absolute;
+  bottom: 0;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #282724;
+  margin-left: 20px;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-checkmark {
+  position: absolute;
+  top: -2.2px;
+	left: -2.3px;
+	width: 19px;
+	height: 19px;
+	border-radius: 50%;
+  background: transparent;
+  border: 1px solid #D2D7E3;
+}
+
+
+.radio-container input:checked ~ .radio-checkmark {
+  border: 1px solid $red;
+}
+
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+.radio-container .radio-checkmark:after {
+ 	top: 1.2px;
+	left: 1.3px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+  background: $red;
+}
