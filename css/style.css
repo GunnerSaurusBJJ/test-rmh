@@ -741,23 +741,6 @@ input {
   padding: 30px;
 }
 
-.card:hover .card-image-prev {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-}
-
-.card:hover .card-hover-img {
-  opacity: 1;
-  visibility: visible;
-}
-
-.card:hover .card-icons {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .card .card-hover-img {
   position: absolute;
   top: 0;
@@ -777,9 +760,9 @@ input {
 .card .card-to-favorite {
   right: 22px;
   top: 26px;
-  font-size: 20px;
   position: absolute;
   cursor: pointer;
+  width: 24px !important;
 }
 
 .card .card-image {
@@ -825,7 +808,7 @@ input {
 
 .card .card-tooltip {
   position: absolute;
-  right: -15px;
+  right: -40px;
   bottom: 48px;
   padding: 8px 16px;
   border-radius: 5px;
@@ -860,7 +843,6 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 20px;
 }
 
 .card .card-icons img {
@@ -1032,6 +1014,23 @@ input {
   width: 100%;
   font-weight: bold;
   font-size: 14px;
+}
+
+.card-top-image-wrapper:hover .card-image-prev {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.card-top-image-wrapper:hover .card-hover-img {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-top-image-wrapper:hover .card-icons {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .material-examples {
