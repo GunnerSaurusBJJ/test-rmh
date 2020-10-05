@@ -10,7 +10,8 @@ let countDownDiscountModal = date.setDate(date.getDate() + 3);
 const modalDiscountClock = document.querySelector('.modal-discount__clock'),
 modalDiscount = document.querySelector('.modal-discount'),
 modalCloseBtn = document.querySelector('.modal-close'),
-cardSizeBtnWrapper = document.querySelectorAll('.card-sizes__btns')
+cardSizeBtnWrapper = document.querySelectorAll('.card-sizes__btns'),
+cardColorBtnWrapper = document.querySelectorAll('.card-colors__btns')
 
 setInterval(() => {
   // Get today's date and time
@@ -45,6 +46,16 @@ cardSizeBtnWrapper.forEach((item, idx) => {
     btn.addEventListener('click', () => {
       document.querySelector(`.card-size__button-selected.sizebtn${idx}`).classList.remove('card-size__button-selected')
       btn.classList.add('card-size__button-selected')
+    })
+  })
+})
+
+cardColorBtnWrapper.forEach((item, idx) => {
+  Array.from(item.children).forEach(btn => {
+    btn.classList.add(`colorbtn${idx}`)
+    btn.addEventListener('click', () => {
+      document.querySelector(`.card-colors__selected.colorbtn${idx}`).classList.remove('card-colors__selected')
+      btn.classList.add('card-colors__selected')
     })
   })
 })
@@ -117,7 +128,11 @@ collectionsPoints.forEach((point, index) => {
   point.setAttribute('id', index)
   point.nextElementSibling.setAttribute('id', index)
   point.addEventListener('click', (e) => {
-    document.querySelectorAll('.collection-card-opened').forEach(item => item.classList.add('display-none'))
+    document.querySelectorAll('.collection-card-opened').forEach(item => {
+      if(item.id !== point.id) {
+        item.classList.add('display-none')
+      }
+    })
     point.nextElementSibling.style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - 230 + 'px'
     point.nextElementSibling.classList.toggle('display-none')
   })

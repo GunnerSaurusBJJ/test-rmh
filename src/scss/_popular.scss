@@ -156,7 +156,6 @@
     padding-top: 14px;
   }
   .card-colors {
-    // margin-top: 14px;
     font-size: 14px;
     &__btns {
       margin-top: 10px;
@@ -233,6 +232,20 @@
 }
 .card-size__button-selected {
   border: 1px solid #A7A8B3 !important;
+}
+.card-colors__selected {
+  &:after {
+    content: '';
+    height: 20px;
+    width: 20px;
+    border: 1px solid #A7A8B3;
+    background: transparent;
+    position: absolute;
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 .add-to-cart-wrapper {
   background: #fff;
