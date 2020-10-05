@@ -1,4 +1,4 @@
-const sidebarItems = document.querySelectorAll('.sidebar-item'),
+const sidebarItems = document.querySelectorAll('.sidebar-products'),
 openedSideBar = document.querySelector('.sidebar-opened'),
 openedSideBarBackGround = document.querySelector('.sidebar-opened-background')
 closeSideBarBtn = document.querySelector('.close-sidebar'),

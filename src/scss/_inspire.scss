@@ -104,20 +104,20 @@
   }
 }
 .collection-left-point-1 {
-  right: 58px;
-  top: 50px;
+  right: calc(11.148% - 10px);;
+  top: calc(15.3333% - 10px);
 }
 .collection-left-point-2 {
-  right: 232px;
-  top: 180px;
+  right: calc(42% - 10px);
+  top: calc(50% - 10px);
 }
 .collection-left-point-3 {
-  right: 307px;
-  top: 180px;
+  right: calc(61% - 10px);
+  top: calc(51% - 10px);
 }
 .collection-right-point-1 {
-  right: 330px;
-  top: 73px;
+  right: calc(61% - 10px);
+  top: calc(19% - 10px);
 }
 .collection-card-opened {
   width: 215px;
@@ -127,7 +127,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 20px 16px;
+  padding: 24px 16px;
+  z-index: 10;
   img {
     margin: 0 auto;
   }
@@ -140,13 +141,14 @@
     color: #A7A8B3;
     font-size: 12px;
     margin-top: 4px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
   &__color-title {
     font-size: 12px;
     color: #282724 !important;
   }
   &__btns {
+    margin-bottom: 30px;
     button {
       border-radius: 5px;
       width: 16px;
@@ -163,7 +165,6 @@
     border: 1px solid $red;
     border-radius: 10px;
     background: #fff;
-    margin: 30px auto 20px;
     display: block;
   }
 }

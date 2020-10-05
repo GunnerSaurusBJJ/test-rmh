@@ -49,7 +49,7 @@ cardSizeBtnWrapper.forEach((item, idx) => {
   })
 })
 
-function magnify(imgID, zoom) {
+function magnify(imgID, zoom) { 
   var img, glass, w, h, bw;
   img = document.getElementById(imgID);
 
@@ -114,9 +114,11 @@ magnify("myimage", 1.5);
 
 const collectionsPoints = document.querySelectorAll('.collection-point')
 collectionsPoints.forEach((point, index) => {
+  point.setAttribute('id', index)
+  point.nextElementSibling.setAttribute('id', index)
   point.addEventListener('click', (e) => {
-    point.parentElement.querySelector('.collection-card-opened').setAttribute('id', index)
-    point.parentElement.querySelector('.collection-card-opened').style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - 230 + 'px'
-    point.parentElement.querySelector('.collection-card-opened').classList.toggle('display-none')
+    document.querySelectorAll('.collection-card-opened').forEach(item => item.classList.add('display-none'))
+    point.nextElementSibling.style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - 230 + 'px'
+    point.nextElementSibling.classList.toggle('display-none')
   })
 })
