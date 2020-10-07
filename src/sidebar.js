@@ -17,49 +17,32 @@ sidebarItems.forEach(item => {
 
 closeSideBarBtn.addEventListener('click', toggleClassSidebar)
 
-sofaImage.addEventListener('mouseover', () => {
-  changeImagePath(sofaImage, './img/sidebar/sofa-hover.svg')
+sidebarItems[0].addEventListener('mouseover', () => changeImagePath(sofaImage, './img/sidebar/sofa-hover.svg'))
+sidebarItems[0].addEventListener('mouseleave', (e) => {
+  if (!openedSideBar.classList.contains('open-sidebar')) {
+    changeImagePath(sofaImage, './img/sidebar/sofa.svg')
+  }
 })
 
-
-sofaImage.addEventListener('mouseleave', () => {
-  changeImagePath(sofaImage, './img/sidebar/sofa.svg')
+sidebarItems[1].addEventListener('mouseover', () => changeImagePath(bedImage, './img/sidebar/bed-hover.svg'))
+sidebarItems[1].addEventListener('mouseleave', () => {
+  if (!openedSideBar.classList.contains('open-sidebar')) {
+    changeImagePath(bedImage, './img/sidebar/bed.svg')
+  }
 })
 
-bedImage.addEventListener('mouseover', () => {
-  changeImagePath(bedImage, './img/sidebar/bed-hover.svg')
-})
-
-bedImage.addEventListener('mouseleave', () => {
-  changeImagePath(bedImage, './img/sidebar/bed.svg')
-})
-
-// armchairImage.addEventListener('mouseover', () => {
-//   changeImagePath(armchairImage, './img/sidebar/armchair-hover.svg')
-// })
-
-// armchairImage.addEventListener('mouseleave', () => {
-//   changeImagePath(armchairImage, './img/sidebar/armchair.svg')
-// })
-
-
-chairImage.addEventListener('mouseover', () => {
-  changeImagePath(chairImage, './img/sidebar/chair-hover.svg')
-})
-
-chairImage.addEventListener('mouseleave', () => {
-  changeImagePath(chairImage, './img/sidebar/chair.svg')
+sidebarItems[3].addEventListener('mouseover', () => changeImagePath(chairImage, './img/sidebar/chair-hover.svg'))
+sidebarItems[3].addEventListener('mouseleave', () => {
+  if (!openedSideBar.classList.contains('open-sidebar')) {
+    changeImagePath(chairImage, './img/sidebar/chair.svg')
+  }
 })
 
 function toggleClassSidebar (e) {
   let title = document.querySelector('.sidebar-opened-title h2')
   openedSideBar.classList.toggle('open-sidebar')
   openedSideBarBackGround.classList.toggle('sidebar-background-visible')
-  if (openedSideBarBackGround.classList.contains('sidebar-background-visible')) {
-    document.documentElement.style.overflow = 'hidden'
-  } else {
-    document.documentElement.style.overflow = 'auto'
-  }
+  document.documentElement.style.overflow = openedSideBarBackGround.classList.contains('sidebar-background-visible') ? 'hidden' : 'auto'
   const obj = {
     sofa: 'Диваны',
     bed: 'Кровати',
@@ -71,6 +54,11 @@ function toggleClassSidebar (e) {
       title.textContent = value
     }
   })
+  if (e.target === closeSideBarBtn.querySelector('img')) {
+    changeImagePath(sofaImage, './img/sidebar/sofa.svg')
+    changeImagePath(bedImage, './img/sidebar/bed.svg')
+    changeImagePath(chairImage, './img/sidebar/chair.svg')
+  }
 }
 
 document.addEventListener('click', (e) => {
@@ -78,6 +66,9 @@ document.addEventListener('click', (e) => {
     document.documentElement.style.overflow = 'auto'
     openedSideBarBackGround.classList.remove('sidebar-background-visible')
     openedSideBar.classList.remove('open-sidebar')
+    changeImagePath(sofaImage, './img/sidebar/sofa.svg')
+    changeImagePath(bedImage, './img/sidebar/bed.svg')
+    changeImagePath(chairImage, './img/sidebar/chair.svg')
   }
 })
 function changeImagePath (element, path) {
@@ -86,20 +77,47 @@ function changeImagePath (element, path) {
 }
 
 setInterval(() => {
-  // Get today's date and time
   let now = new Date().getTime();
-  // Find the distance between now and the count down date
   let distance = countDownDateForProductOfTheDay - now;
-  // Time calculations for days, hours, minutes and seconds
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  // Output the result in an element with id="demo"
   sidebarClock.innerHTML = hours + "ч | "
   + minutes + "м | " + seconds + "с ";
-  // If the count down is over, write some text 
-  // if (distance < 0) {
-  //   clearInterval(x);
-  //   sidebarClock.innerHTML = "EXPIRED";
-  // }
 }, 1000);
+
+document.querySelectorAll('.mobile-footer-links__title').forEach(item => {
+  item.addEventListener('click', () => {
+    item.nextElementSibling.classList.toggle('links-hidden')
+    item.querySelector('img').style.transform = !item.nextElementSibling.classList.contains('links-hidden')
+    ? 'rotate(180deg)'
+    : 'rotate(0deg)'
+  })
+})
+
+let mobileNavbarBurger = document.querySelector('.mobile-navbar__burger')
+let mobileSidebar = document.querySelector('.mobile-sidebar')
+
+mobileNavbarBurger.addEventListener('click', () => {
+  mobileNavbarBurger.classList.toggle('burger-active')
+  mobileSidebar.classList.toggle('mobile-sidebar-opened')
+  if (document.querySelector('.mobile-subcategory').classList.contains('mobile-subcategory-opened')) {
+    document.querySelector('.mobile-subcategory').classList.remove('mobile-subcategory-opened')
+  }
+})
+if (mobileSidebar.classList.contains('mobile-sidebar-opened')) {
+  document.documentElement.style.overflow = 'hidden'
+}
+
+let mobileSubcategoryTitle = document.querySelector('.mobile-subcategory-title')
+
+document.querySelectorAll('.mobile-sidebar-categories__item').forEach(item => {
+  item.addEventListener('click', () => {
+    mobileSubcategoryTitle.children[1].textContent = item.firstElementChild.children[1].textContent
+    document.querySelector('.mobile-subcategory').classList.add('mobile-subcategory-opened')
+  })
+})
+
+mobileSubcategoryTitle.querySelector('img').addEventListener('click', () => {
+  document.querySelector('.mobile-subcategory').classList.remove('mobile-subcategory-opened')
+})

@@ -191,6 +191,10 @@
     background: $red;
     border: none;
     margin-bottom: 85px;
+    &:hover {
+      background: #D00A12;
+      transition: .2s;
+    }
   }
   &__time {
     display: flex;

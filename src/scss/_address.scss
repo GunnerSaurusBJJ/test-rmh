@@ -1,10 +1,17 @@
 .address {
   margin-top: 40px;
+  @media #{$media-to-xs} {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 .address-title {
   font-weight: bold;
   font-size: 3.333vw;
   margin-bottom: 20px;
+  @media #{$media-to-xs} {
+    font-size: 24px;
+  }
 }
 .address-info {
   position: relative;
@@ -14,7 +21,25 @@
   justify-content: flex-end;
   iframe {
     width: 66.73vw;
+    @media #{$media-to-xs} {
+      height: 160px;
+      width: 100%;
+      border-radius: 10px;
+    }
   }
+}
+.scroll-up-main {
+  border-radius: 10px;
+  border: 1px solid #ED1C24;
+  background: #FFFFFF;
+  outline: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 11px;
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
 }
 .address-card {
   position: absolute;
@@ -75,6 +100,10 @@
     background: $red;
     padding: 11px 30px;
     margin-top: 22px;
+    &:hover {
+      background: #D00A12;
+      transition: .2s;
+    }
   }
   &__images {
     display: grid;

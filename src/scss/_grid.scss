@@ -1,0 +1,17 @@
+
+$xs: 375px;
+
+$screen: "only screen";
+$media-to-xs: "#{$screen} and (max-width: #{$xs})"; // up to 375px
+$media-xs-up: "#{$screen} and (min-width: #{$xs + 1})"; // from 376px
+.no-mobile {
+  @media #{$media-to-xs} {
+    display: none !important;
+  }
+}
+
+.only-mobile {
+  @media #{$media-xs-up} {
+    display: none !important;
+  }
+}

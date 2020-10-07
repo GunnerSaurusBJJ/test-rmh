@@ -1,5 +1,9 @@
 .material-examples {
   margin-top: 70px;
+  @media #{$media-to-xs} {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 .example-banner {
   background-color: #0081A7;
@@ -11,28 +15,42 @@
 .banner-img {
   width: 500px;
   height: 300px;
+  @media #{$media-to-xs} {
+    height: 190px;
+  }
 }
 .banner-text {
   padding-top: 50px;
   padding-bottom: 50px;
+  @media #{$media-to-xs} {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   &__title {
     font-weight: bold;
     font-size: 32px;
     line-height: 47px;
     color: #fff;
+    @media #{$media-to-xs} {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
   &__desc {
     color: #FFFFFF;
     opacity: 0.54;
     max-width: 300px;
     margin-top: 10px;
+    @media #{$media-to-xs} {
+      font-size: 12px;
+    }
   }
   &__more {
     img {
       margin-right: 10px;
     }
     background: transparent;
-    border: 2px solid #fff;
+    border: 1.5px solid #fff;
     border-radius: 10px;
     color: #fff;
     max-width: 270px;
@@ -42,6 +60,14 @@
     font-size: 14px;
     padding: 14px 0;
     margin-top: 35px;
+    @media #{$media-to-xs} {
+      margin-top: 20px;
+      max-width: 140px;
+    }
+    &:hover {
+      border: 1.5px solid #CBCBCB;
+      transition: .2s;
+    }
   }
 }
 
@@ -53,8 +79,19 @@
 }
 
 .type-image {
+  font-size: 1.25vw;
   img {
     margin-bottom: 15px;
     width: 100%;
+  }
+}
+
+.mobile-example-types {
+  margin-top: 20px;
+  .type-image + .type-image {
+    @media #{$media-to-xs} {
+      margin-left: 8px;
+      font-size: 14px;
+    }
   }
 }

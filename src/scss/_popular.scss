@@ -1,18 +1,41 @@
 .goods {
   margin-top: 50px;
+  @media #{$media-to-xs} {
+    margin-top: 00px;
+  }
   &__title {
     display: flex;
     align-items: flex-end;
+    @media #{$media-to-xs} {
+      display: block;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
     h1 {
       font-size: 48px;
       margin-right: 24px;
       line-height: 38px;
+      @media #{$media-to-xs} {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        display: inline-block;
+      }
     }
-    span {
+    a {
       color: $blue;
       font-weight: 700;
       cursor: pointer;
       font-size: 16px;
+      @media #{$media-to-xs} {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 26px;
+      }
+      &:hover {
+        color: #0B729E;
+        transition: .2s;
+      }
     }
   }
 }
@@ -20,11 +43,18 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 30px;
+  @media #{$media-to-xs} {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+  }
 }
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
+  @media #{$media-to-xs} {
+    border: 1px solid #D2D7E3;
+  }
   .card-hover-img {
     position: absolute;
     top: 0;
@@ -60,7 +90,15 @@
       font-size: 14px;
       line-height: 31px;
       padding: 4px;
+      @media #{$media-to-xs} {
+        font-size: 12px;
+      }
     }
+  }
+  .mobile-card-to-favorite {
+    position: absolute;
+    right: 0;
+    top: -8px;
   }
   .card-image-prev {
     width: 100%;
@@ -154,6 +192,9 @@
     justify-content: space-between;
     margin-top: auto;
     padding-top: 14px;
+    img {
+      margin-bottom: 6px;
+    }
   }
   .card-colors {
     font-size: 14px;
@@ -196,12 +237,21 @@
     text-decoration: line-through;
     text-align: right;
     line-height: 20px;
+    @media #{$media-to-xs} {
+      text-align-last: left;
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
   .new-price {
     font-weight: bold;
     color: #282724;
     font-size: 24px;
     line-height: 30px;
+    @media #{$media-to-xs} {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
   padding: 30px;
   &:hover {
@@ -220,14 +270,24 @@
   padding-top: 50px;
   padding-bottom: 70px;
   padding-left: 40px;
+  @media #{$media-to-xs} {
+    padding: 20px;
+  }
   &__title {
     font-weight: bold;
     font-size: 55px;
+    @media #{$media-to-xs} {
+      font-size: 18px;
+    }
   }
   &__subtitle {
     font-weight: normal;
     font-size: 18px;
     max-width: 540px;
+    @media #{$media-to-xs} {
+      font-size: 12px;
+      width: 50%;
+    }
   }
 }
 .card-size__button-selected {
@@ -266,18 +326,28 @@
   width: 100%;
   font-weight: bold;
   font-size: 14px;
+  &:hover {
+    border: 1.5px solid #D00A12;
+    transition: .2s;
+  }
 }
 
 .card-top-image-wrapper:hover .card-image-prev {
-  opacity: 0;
-  visibility: hidden;
-  transition: all .4s;
+  @media #{$media-xs-up} {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+  }
 }
 .card-top-image-wrapper:hover .card-hover-img {
-  opacity: 1;
-  visibility: visible;
+  @media #{$media-xs-up} {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .card-top-image-wrapper:hover .card-icons {
-  opacity: 0;
-  visibility: hidden;
+  @media #{$media-xs-up} {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

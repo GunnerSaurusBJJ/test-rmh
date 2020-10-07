@@ -6,14 +6,28 @@
   justify-content: center;
   align-items: center;
   background-color: #2E394D;
+  @media #{$media-to-xs} {
+    flex-direction: column;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   &__text {
     max-width: 450px;
     padding: 40px 0;
     color: #fff;
     margin-right: 70px;
+    @media #{$media-to-xs} {
+      margin-right: 0;
+      font-size: 14px;
+      padding-top: 20px;
+    }
   }
   &__input {
     position: relative;
+    @media #{$media-to-xs} {
+      width: 100%;
+      padding-bottom: 20px;
+    }
     input {
       border-radius: 10px;
       border: 1px solid #D2D7E3;
@@ -21,6 +35,10 @@
       height: 50px;
       width: 415px;
       padding-left: 10px;
+      @media #{$media-to-xs} {
+        width: 210px;
+        height: 40px;
+      }
     }
   }
   &__btn {
@@ -36,6 +54,15 @@
     background: $red;
     padding: 11px 30px;
     text-align: center;
+    cursor: pointer;
+    @media #{$media-to-xs} {
+      padding: 11px 20px;
+      top: 20px;
+    }
+    &:hover {
+      background: #D00A12;
+      transition: .2s;
+    }
   }
 }
 
@@ -89,4 +116,84 @@
       }
      }
   }
+}
+.mobile-footer-links {
+  padding-left: 16px;
+  padding-right: 16px;
+  &__item {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #D2D7E3;
+    overflow: hidden;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h5 {
+      font-size: 16px;
+    }
+    img {
+      width: 14px;
+    }
+  }
+  &__collapse {
+    display: flex;
+    flex-direction: column;
+    a {
+      margin-top: 24px;
+    }
+  }
+}
+
+.mobile-footer__socials {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-top: 24px;
+  border-bottom: 1px solid #D2D7E3;
+  padding-bottom: 24px;
+  a {
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #BDBDBD;
+    &:nth-of-type(2) {
+      padding: 10.5px 9.5px;
+    }
+    &:nth-of-type(3) {
+      padding: 11.5px 9px;
+    }
+    &:nth-of-type(4) {
+      padding: 9px 11px;
+    }
+    &:nth-of-type(5) {
+      padding: 9px 9px;
+    }
+  }
+  a + a {
+    margin-left: 16px;
+  }
+}
+
+.mobile-footer-contacts {
+  padding-left: 16px;
+  padding-right: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  &__block {
+
+    }
+  &__city {
+    font-size: 12px;
+    color: #A7A8B3;
+  }
+  &__phone {
+    font-size: 14px;
+  }
+}
+
+.links-hidden {
+  display: none;
 }

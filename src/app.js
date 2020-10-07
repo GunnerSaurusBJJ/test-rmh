@@ -3,6 +3,21 @@ $(document).ready(function(){
     nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
     prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
   });
+  $('.mobile-categories-wrapper').slick({
+    slidesToShow: 3,
+    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
+    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+  });
+  $('.mobile-example-types').slick({
+    slidesToShow: 2,
+    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
+    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+  });
+  $('.mobile-images-wrapper').slick({
+    slidesToShow: 3,
+    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
+    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+  });
 });
 var date = new Date();
 let countDownDiscountModal = date.setDate(date.getDate() + 3);
@@ -14,22 +29,13 @@ cardSizeBtnWrapper = document.querySelectorAll('.card-sizes__btns'),
 cardColorBtnWrapper = document.querySelectorAll('.card-colors__btns')
 
 setInterval(() => {
-  // Get today's date and time
   let now = new Date().getTime();
-  // Find the distance between now and the count down date
   let distance = countDownDiscountModal - now;
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  // Output the result in an element with id="demo"
   modalDiscountClock.innerHTML = days + "д | "
   + hours + "ч | " + minutes + "м ";
-  // If the count down is over, write some text 
-  // if (distance < 0) {
-  //   clearInterval(x);
-  //   sidebarClock.innerHTML = "EXPIRED";
-  // }
 }, 1000);
 
 setTimeout(() => {
@@ -40,23 +46,24 @@ modalCloseBtn.addEventListener('click', () => {
   modalDiscount.classList.remove('show-modal')
 })
 
-cardSizeBtnWrapper.forEach((item, idx) => {
-  Array.from(item.children).forEach(btn => {
-    btn.classList.add(`sizebtn${idx}`)
+cardSizeBtnWrapper.forEach((item, idx) => toggleUniqueClass(item, idx, 'sizebtn', 'card-size__button-selected'))
+cardColorBtnWrapper.forEach((item, idx) => toggleUniqueClass(item, idx, 'colorbtn', 'card-colors__selected'))
+
+function toggleUniqueClass (item, idx, addedClass, mainClass) {
+ return Array.from(item.children).forEach(btn => {
+    btn.classList.add(`${addedClass}${idx}`)
     btn.addEventListener('click', () => {
-      document.querySelector(`.card-size__button-selected.sizebtn${idx}`).classList.remove('card-size__button-selected')
-      btn.classList.add('card-size__button-selected')
+      document.querySelector(`.${mainClass}.${addedClass}${idx}`).classList.remove(`${mainClass}`)
+      btn.classList.add(`${mainClass}`)
     })
   })
-})
-
-cardColorBtnWrapper.forEach((item, idx) => {
-  Array.from(item.children).forEach(btn => {
-    btn.classList.add(`colorbtn${idx}`)
-    btn.addEventListener('click', () => {
-      document.querySelector(`.card-colors__selected.colorbtn${idx}`).classList.remove('card-colors__selected')
-      btn.classList.add('card-colors__selected')
-    })
+}
+// add no-mobile class to size btns from 3 element
+cardSizeBtnWrapper.forEach(item => {
+  Array.from(item.children).forEach((btn, idx) => {
+    if (idx > 1) {
+      btn.classList.add('no-mobile')
+    }
   })
 })
 
@@ -133,7 +140,18 @@ collectionsPoints.forEach((point, index) => {
         item.classList.add('display-none')
       }
     })
-    point.nextElementSibling.style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - 230 + 'px'
+    if (window.innerWidth > 500) {
+      point.nextElementSibling.style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - 230 + 'px'
+    }
     point.nextElementSibling.classList.toggle('display-none')
   })
 })
+
+document.querySelector('.scroll-up-main').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+})
+
+
