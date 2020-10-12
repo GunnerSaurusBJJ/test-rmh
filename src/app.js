@@ -143,7 +143,13 @@ collectionsPoints.forEach((point, index) => {
     if (window.innerWidth > 500) {
       point.nextElementSibling.style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - 230 + 'px'
     }
+    collectionsPoints.forEach(item => {
+      if (item.id !== point.id) {
+        item.classList.remove('collection-point-active')
+      }
+    })
     point.nextElementSibling.classList.toggle('display-none')
+    point.classList.toggle('collection-point-active')
   })
 })
 

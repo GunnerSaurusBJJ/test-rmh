@@ -12,26 +12,42 @@
   <title>rmh catalog</title>
 </head>
 <body>
-  <div class="sidebar">
+  <div class="sidebar no-mobile">
     <div class="logo">
       <a href="index.html">
         <img src="./img/sidebar/logo.svg" alt="logo" />
       </a>
     </div>
     <div class="sidebar-item sidebar-products" id="sofa">
-      <img class="sidebar-item__sofa-image" src="./img/sidebar/sofa.svg" alt="sofa" />
+      <img
+        class="sidebar-item__sofa-image"
+        src="./img/sidebar/sofa.svg"
+        alt="sofa"
+      />
       <a class="sidebar-link" href="#">Диваны</a>
     </div>
     <div class="sidebar-item sidebar-products" id="bed">
-      <img class="sidebar-item__bed-image" src="./img/sidebar/bed.svg" alt="bed" />
+      <img
+        class="sidebar-item__bed-image"
+        src="./img/sidebar/bed.svg"
+        alt="bed"
+      />
       <a class="sidebar-link" href="#">Кровати</a>
     </div>
     <div class="sidebar-item sidebar-products" id="armchair">
-      <img class="sidebar-item__armchair-image" src="./img/sidebar/armchair.svg" alt="armchair" />
+      <img
+        class="sidebar-item__armchair-image"
+        src="./img/sidebar/armchair.svg"
+        alt="armchair"
+      />
       <a class="sidebar-link" href="#">Кресла</a>
     </div>
     <div class="sidebar-item sidebar-products" id="chair">
-      <img class="sidebar-item__chair-image" src="./img/sidebar/chair.svg" alt="chair" />
+      <img
+        class="sidebar-item__chair-image"
+        src="./img/sidebar/chair.png"
+        alt="chair"
+      />
       <a class="sidebar-link" href="#">Стулья</a>
     </div>
     <div class="sidebar-item item-promo">
@@ -44,89 +60,271 @@
       <img src="./icons/sidebar/whatsapp.svg" alt="whatsapp" />
     </div>
   </div>
-  <div class="sidebar-opened-background">
+  <div class="sidebar-opened-background no-mobile">
     <div class="sidebar-opened">
       <div class="sidebar-opened-title">
-        <h2>
-          Диваны
-        </h2>
+        <h2>Диваны</h2>
         <span class="close-sidebar">
-          <img src="./icons/close.svg" alt="img">
+          <img src="./icons/close.svg" alt="img" />
         </span>
       </div>
       <div class="sidebar-opened-products">
         <div class="product-item">
-          <img src="./img/sidebar-opened/opened1.png" alt="img">
+          <img src="./img/sidebar-opened/opened1.png" alt="img" />
           <p>Прямые</p>
         </div>
-  
+
         <div class="product-item">
-          <img src="./img/sidebar-opened/opened2.png" alt="img">
+          <img src="./img/sidebar-opened/opened2.png" alt="img" />
           <p>Угловые</p>
         </div>
-  
+
         <div class="product-item">
-          <img src="./img/sidebar-opened/opened3.png" alt="img">
+          <img src="./img/sidebar-opened/opened3.png" alt="img" />
           <p>Модульные</p>
         </div>
-  
+
         <div class="product-item">
-          <img src="./img/sidebar-opened/opened4.png" alt="img">
+          <img src="./img/sidebar-opened/opened4.png" alt="img" />
           <p>Большие</p>
         </div>
-  
+
         <div class="product-item">
-          <img src="./img/sidebar-opened/opened5.png" alt="img">
+          <img src="./img/sidebar-opened/opened5.png" alt="img" />
           <p>Компактные</p>
         </div>
-  
+
         <div class="product-item">
-          <img src="./img/sidebar-opened/opened6.png" alt="img">
+          <img src="./img/sidebar-opened/opened6.png" alt="img" />
           <p>Кушетки</p>
         </div>
-  
+
         <div class="product-item">
-          <img src="./img/sidebar-opened/opened7.png" alt="img">
+          <img src="./img/sidebar-opened/opened7.png" alt="img" />
           <p>Пуфы</p>
         </div>
       </div>
-      
-        <a href="full_catalog.html">
-          <button class="sidebar-opened__showmore">
-            Смотреть все
-          </button>
-        </a>
+
+      <a href="full_catalog.html">
+        <button class="sidebar-opened__showmore">Смотреть все</button>
+      </a>
       <div class="sidebar-opened__popular">
         <div class="sidebar-opened__popular-caption">
           <h3 class="sidebar-opened__popular-title">Товар дня</h3>
           <div class="sidebar-opened__popular-time">
-            <img src="./icons/sidebar/clock.svg" alt="img">
+            <img src="./icons/sidebar/clock.svg" alt="img" />
             <span class="sidebar-opened__clock"></span>
           </div>
         </div>
-          <div class="sidebar-opened__popular-info">
-            <img src="./img/popular/popular_02.png" alt="">
-            <div class="sidebar-opened__popular-desc">
-              <p class="sidebar-opened__popular-name">Каир Textile Grey <br> 
-                из натуральной кожи
-              </p>
-              <span class="sidebar-opened__popular-type">
-                Диван прямой
-              </span>
-              <div class="sidebar-opened__popular-oldprice">
-                49 000 ₽
-              </div>
-              <div class="sidebar-opened__popular-newprice">
-                40 100 ₽
-              </div>
-            </div>
+        <div class="sidebar-opened__popular-info">
+          <img src="./img/popular/popular_02.png" alt="" />
+          <div class="sidebar-opened__popular-desc">
+            <p class="sidebar-opened__popular-name">
+              Каир Textile Grey <br />
+              из натуральной кожи
+            </p>
+            <span class="sidebar-opened__popular-type"> Диван прямой </span>
+            <div class="sidebar-opened__popular-oldprice">49 000 ₽</div>
+            <div class="sidebar-opened__popular-newprice">40 100 ₽</div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-discount modal no-mobile">
+    <div class="modal-discount-wrapper">
+      <img
+        class="modal-discount__close modal-close"
+        src="./icons/close.svg"
+      />
+      <h2 class="modal-discount__title">Скидки до 80%</h2>
+      <p class="modal-discount__subtitle">
+        Успей купить товар по выгодной цене
+      </p>
+      <p class="modal-discount__time-title">До конца акции осталось</p>
+      <div class="modal-discount__time">
+        <img src="./icons/sidebar/clock.svg" alt="img" />
+        <span class="modal-discount__clock"></span>
+      </div>
+      <button class="modal-discount__btn">Смотреть товары по скидкe</button>
+    </div>
+  </div>
+  <div class="mobile-sidebar only-mobile">
+    <div class="mobile-sidebar__top">
+      <a href="index.html">
+        <img src="img/mobile/mobile-logo.svg" alt="img" />
+      </a>
+    </div>
+    <div class="mobile-sidebar-search">
+      <input type="text" class="search" placeholder="Поиск" />
+      <img src="./icons/navbar/search.svg" alt="search" />
+    </div>
+    <div class="mobile-sidebar-categories">
+      <div class="mobile-sidebar-categories__item">
+        <div class="mobile-sidebar-categories__item-title">
+          <div>
+            <img src="./img/sidebar/sofa-hover.svg" alt="img" />
+          </div>
+          <p>Диваны</p>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-sidebar-categories__item-content"></div>
+      </div>
+      <div class="mobile-sidebar-categories__item">
+        <div class="mobile-sidebar-categories__item-title">
+          <div>
+            <img src="./img/sidebar/bed-hover.svg" alt="img" />
+          </div>
+          <p>Кровати</p>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-sidebar-categories__item-content"></div>
+      </div>
+      <div class="mobile-sidebar-categories__item">
+        <div class="mobile-sidebar-categories__item-title">
+          <div>
+            <img src="./img/sidebar/armchair-hover.svg" alt="img" />
+          </div>
+          <p>Кресла</p>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-sidebar-categories__item-content"></div>
+      </div>
+      <div class="mobile-sidebar-categories__item">
+        <div class="mobile-sidebar-categories__item-title">
+          <div>
+            <img src="./img/sidebar/chair-hover.png" alt="img" />
+          </div>
+          <p>Стулья</p>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-sidebar-categories__item-content"></div>
+      </div>
+      <div class="mobile-sidebar-categories__item">
+        <div class="mobile-sidebar-categories__item-title">
+          <div>
+            <img src="./img/sidebar/promo.svg" alt="img" />
+          </div>
+          <p>Акции</p>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-sidebar-categories__item-content"></div>
+      </div>
+    </div>
+    <div class="mobile-sidebar-bottom">
+      <div class="mobile-sidebar-bottom__item">
+        <img src="./icons/sidebar/location.svg" alt="img" />
+        <p>Санкт - Петербург</p>
+      </div>
+      <div class="mobile-sidebar-bottom__item">
+        <img src="./icons/sidebar/phone.svg" alt="img" />
+        <p>+7 800 100-0-100г</p>
+      </div>
+      <div class="mobile-sidebar-bottom__item">
+        <img src="./icons/sidebar/whatsapp.svg" alt="img" />
+        <p>Связаться через WhatsApp</p>
+      </div>
+    </div>
+  </div>
+  <!-- mobile-subcategory-opened -->
+  <div class="mobile-subcategory only-mobile">
+    <div class="mobile-subcategory-title">
+      <img src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
+      <p></p>
+    </div>
+    <div class="mobile-subcategory-item">
+      <div class="mobile-subcategory-item__title">
+        <div>
+          <img src="./img/mobile/mobile-subcategory01.png" alt="img" />
+        </div>
+        <p>Прямые</p>
+        <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+      </div>
+    </div>
+    <div class="mobile-subcategory-item">
+      <div class="mobile-subcategory-item__title">
+        <div>
+          <img src="./img/mobile/mobile-subcategory03.png" alt="img" />
+        </div>
+        <p>Угловые</p>
+        <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+      </div>
+    </div>
+    <div class="mobile-subcategory-item">
+      <div class="mobile-subcategory-item__title">
+        <div>
+          <img src="./img/mobile/mobile-subcategory03.png" alt="img" />
+        </div>
+        <p>Модульные</p>
+        <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+      </div>
+    </div>
+    <div class="mobile-subcategory-item">
+      <div class="mobile-subcategory-item__title">
+        <div>
+          <img src="./img/mobile/mobile-subcategory04.png" alt="img" />
+        </div>
+        <p>Большие</p>
+        <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+      </div>
+    </div>
+    <div class="mobile-subcategory-item">
+      <div class="mobile-subcategory-item__title">
+        <div>
+          <img src="./img/mobile/mobile-subcategory05.png" alt="img" />
+        </div>
+        <p>Компактные</p>
+        <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+      </div>
+    </div>
+    <div class="mobile-subcategory-item">
+      <div class="mobile-subcategory-item__title">
+        <div>
+          <img src="./img/mobile/mobile-subcategory06.png" alt="img" />
+        </div>
+        <p>Кушетки</p>
+        <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+      </div>
+    </div>
+    <div class="mobile-subcategory-item">
+      <div class="mobile-subcategory-item__title">
+        <div>
+          <img src="./img/mobile/mobile-subcategory07.png" alt="img" />
+        </div>
+        <p>Кушетки</p>
+        <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+      </div>
+    </div>
+    <a href="full_catalog.html" class="mobile-subcategory__showmore-link">
+      <button class="mobile-subcategory__showmore">Смотреть все</button>
+    </a>
+    <div class="mobile-subcategory-product">
+      <div class="mobile-subcategory-product__title">
+        <p>
+          Товар дня 
+        </p>
+        <p>
+          07м | 13м | 8 с 
+        </p>
+      </div>
+      <div class="mobile-subcategory-product__main">
+        <img src="./img/mobile/mobilemainprod.png" alt="img">
+        <div class="mobile-subcategory-product__info">
+          <h5>Каир Textile Grey </h5>
+          <p>Диван прямой</p>
+          <div class="mobile-subcategory-product__oldprice">
+            49 000 ₽ <span>-35 %</span>
+          </div>
+          <div class="mobile-subcategory-product__newprice">
+            40 100 ₽
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- !HEADER -->
   <header class="header">
-    <div class="container">
+    <div class="container no-mobile">
       <div class="header-navbar">
         <div class="navbar-links">
           <a class="navbar-links__link" href="#">Доставка и оплата</a>
@@ -148,6 +346,21 @@
             <a href="cart.html">Корзина</a>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="mobile-navbar only-mobile">
+      <div class="mobile-navbar__burger">
+        <span class="burger-line"></span>
+      </div>
+      <div class="mobile-navbar__logo">
+        <a href="index.html">
+          <img src="img/mobile/mobile-logo.svg" alt="img" />
+        </a>
+      </div>
+      <div class="mobile-navbar__links">
+        <img src="icons/mobile/mobile-search.svg" alt="img" />
+        <img src="./icons/navbar/favorite.svg" alt="favorite" />
+        <img src="./icons/navbar/cart.svg" alt="cart" />
       </div>
     </div>
   </header>
@@ -383,14 +596,14 @@
                 <input class="sidebar-filter-input-from" type="text">
               </div>
               <div class="input-right-wrapper">
-                <label class="input-right-label" for="input-right">от</label>
-                <input class="sidebar-filter-input-from" type="text">
+                <label class="input-right-label" for="input-right">до</label>
+                <input class="sidebar-filter-input-to" type="text">
               </div>
             </div>
             <div class="catalog-filter-sidebar-slider">
               <div class="multi-range-slider">
-                <input type="range" id="input-left" min="0" max="100" value="25">
-                <input type="range" id="input-right" min="0" max="100" value="75">
+                <input type="range" id="input-left" min="0" max="100000" value="10000">
+                <input type="range" id="input-right" min="0" max="100000" value="100000">
             
                 <div class="slider">
                   <div class="track"></div>
@@ -531,42 +744,52 @@
     <div class="container">
       <div class="wrapper">
         <div class="card">
-          <div class="card-image">
-            <div class="card-discount">
-              <span>-35%</span>
+          <div class="card-top-image-wrapper">
+            <div class="card-hover-img no-mobile">
+              <a href="product-page.html">
+                <img src="img/card-hover.png" alt="img" />
+              </a>
+              <img
+                src="./icons/navbar/favorite.svg"
+                class="card-to-favorite"
+                alt="favorite"
+              />
             </div>
-            <img src="./img/popular/popular_01.png" alt="img" class="card-image">
+            <div class="card-image">
+              <div class="card-discount">
+                <span>-35%</span>
+              </div>
+              <img
+                src="./img/popular/popular_01.png"
+                alt="img"
+                class="card-image-prev"
+              />
+            </div>
           </div>
-          <div class="card-icons">
+          <div class="card-icons no-mobile">
             <div class="card-icon__wrapper">
               <div class="card-tooltip">Легко чистить</div>
               <div>
-                <img src="./icons/popular/popular_03.svg" alt="img">
+                <img src="./icons/popular/popular_03.svg" alt="img" />
               </div>
             </div>
           </div>
-          <h5 class="card-title">
-            Энхель
-          </h5>
-          <p class="card-subtitle">
-            Диван прямой
-          </p>
+          <h5 class="card-title">Энхель</h5>
+          <p class="card-subtitle">Диван прямой</p>
           <div class="card-sizes">
-            <p class="card-sizes__title">
-              Размеры
-            </p>
+            <p class="card-sizes__title">Размеры</p>
             <div class="card-sizes__btns">
-              <button class="card-size__button card-size__button-selected">160<span>см</span></button>
+              <button class="card-size__button card-size__button-selected">
+                160<span>см</span>
+              </button>
               <button class="card-size__button">180<span>см</span></button>
             </div>
           </div>
           <div class="card-params">
-            <div class="card-colors">
-              <p class="card-colors__title">
-                Цвет
-              </p>
+            <div class="card-colors no-mobile">
+              <p class="card-colors__title">Цвет</p>
               <div class="card-colors__btns">
-                <button class="yellow"></button>
+                <button class="yellow card-colors__selected"></button>
                 <button class="blue"></button>
                 <button class="light"></button>
               </div>
@@ -575,65 +798,78 @@
               <div class="old-price">55 000 ₽</div>
               <div class="new-price">45 100 ₽</div>
             </div>
+            <img
+              src="./icons/navbar/cart.svg"
+              class="only-mobile"
+              alt="cart"
+            />
           </div>
-          <div class="add-to-cart-wrapper">
-            <button class="card_add-to-cart">
-              Добавить в корзину
-            </button>
+          <div class="add-to-cart-wrapper no-mobile">
+            <button class="card_add-to-cart">Добавить в корзину</button>
           </div>
         </div>
 
         <div class="card">
-          <div class="card-image">
-            <div class="card-discount">
-              <span>-35%</span>
+          <div class="card-top-image-wrapper">
+            <div class="card-hover-img no-mobile">
+              <a href="product-page.html">
+                <img src="img/card-hover.png" alt="img" />
+              </a>
+              <img
+                src="./icons/navbar/favorite.svg"
+                class="card-to-favorite"
+                alt="favorite"
+              />
             </div>
-            <img src="./img/popular/popular_02.png" alt="img" class="card-image">
-          </div>
-          <div class="card-icons">
-            <div class="card-icon__wrapper">
-              <div class="card-tooltip">Легко чистить</div>
-              <div>
-                <img src="./icons/popular/popular_02.svg" alt="img">
+            <div class="card-image">
+              <div class="card-discount">
+                <span>-35%</span>
               </div>
-            </div>
-            <div class="card-icon__wrapper">
-              <div class="card-tooltip">Легко чистить</div>
-              <div>
-                <img src="./icons/popular/popular_03.svg" alt="img">
-              </div>
-            </div>
-            <div class="card-icon__wrapper">
-              <div class="card-tooltip">Легко чистить</div>
-              <div>
-                <img src="./icons/popular/popular_01.svg" alt="img">
-              </div>
+              <img
+                src="./img/popular/popular_02.png"
+                alt="img"
+                class="card-image-prev"
+              />
             </div>
           </div>
-          <h5 class="card-title">
-            Энхель
-          </h5>
-          <p class="card-subtitle">
-            Диван прямой
-          </p>
+          <div class="card-icons no-mobile">
+            <div class="card-icon__wrapper">
+              <div class="card-tooltip">Легко чистить</div>
+              <div>
+                <img src="./icons/popular/popular_02.svg" alt="img" />
+              </div>
+            </div>
+            <div class="card-icon__wrapper">
+              <div class="card-tooltip">Легко чистить</div>
+              <div>
+                <img src="./icons/popular/popular_03.svg" alt="img" />
+              </div>
+            </div>
+            <div class="card-icon__wrapper">
+              <div class="card-tooltip">Легко чистить</div>
+              <div>
+                <img src="./icons/popular/popular_01.svg" alt="img" />
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title">Энхель</h5>
+          <p class="card-subtitle">Диван прямой</p>
           <div class="card-sizes">
-            <p class="card-sizes__title">
-              Размеры
-            </p>
+            <p class="card-sizes__title">Размеры</p>
             <div class="card-sizes__btns">
-              <button class="card-size__button card-size__button-selected">160<span>см</span></button>
+              <button class="card-size__button card-size__button-selected">
+                160<span>см</span>
+              </button>
               <button class="card-size__button">180<span>см</span></button>
               <button class="card-size__button">200<span>см</span></button>
               <button class="card-size__button">220<span>см</span></button>
             </div>
           </div>
           <div class="card-params">
-            <div class="card-colors">
-              <p class="card-colors__title">
-                Цвет
-              </p>
+            <div class="card-colors no-mobile">
+              <p class="card-colors__title">Цвет</p>
               <div class="card-colors__btns">
-                <button class="yellow"></button>
+                <button class="yellow card-colors__selected"></button>
                 <button class="blue"></button>
                 <button class="light"></button>
               </div>
@@ -642,65 +878,78 @@
               <div class="old-price">55 000 ₽</div>
               <div class="new-price">45 100 ₽</div>
             </div>
+            <img
+              src="./icons/navbar/cart.svg"
+              class="only-mobile"
+              alt="cart"
+            />
           </div>
-          <div class="add-to-cart-wrapper">
-            <button class="card_add-to-cart">
-              Добавить в корзину
-            </button>
+          <div class="add-to-cart-wrapper no-mobile">
+            <button class="card_add-to-cart">Добавить в корзину</button>
           </div>
         </div>
 
         <div class="card">
-          <div class="card-image">
-            <div class="card-discount">
-              <span>-35%</span>
+          <div class="card-top-image-wrapper">
+            <div class="card-hover-img no-mobile">
+              <a href="product-page.html">
+                <img src="img/card-hover.png" alt="img" />
+              </a>
+              <img
+                src="./icons/navbar/favorite.svg"
+                class="card-to-favorite"
+                alt="favorite"
+              />
             </div>
-            <img src="./img/popular/popular_03.png" alt="img" class="card-image">
-          </div>
-          <div class="card-icons">
-            <div class="card-icon__wrapper">
-              <div class="card-tooltip">Легко чистить</div>
-              <div>
-                <img src="./icons/popular/popular_02.svg" alt="img">
+            <div class="card-image">
+              <div class="card-discount">
+                <span>-35%</span>
               </div>
-            </div>
-            <div class="card-icon__wrapper">
-              <div class="card-tooltip">Легко чистить</div>
-              <div>
-                <img src="./icons/popular/popular_03.svg" alt="img">
-              </div>
-            </div>
-            <div class="card-icon__wrapper">
-              <div class="card-tooltip">Легко чистить</div>
-              <div>
-                <img src="./icons/popular/popular_01.svg" alt="img">
-              </div>
+              <img
+                src="./img/popular/popular_02.png"
+                alt="img"
+                class="card-image-prev"
+              />
             </div>
           </div>
-          <h5 class="card-title">
-            Энхель
-          </h5>
-          <p class="card-subtitle">
-            Диван прямой
-          </p>
+          <div class="card-icons no-mobile">
+            <div class="card-icon__wrapper">
+              <div class="card-tooltip">Легко чистить</div>
+              <div>
+                <img src="./icons/popular/popular_02.svg" alt="img" />
+              </div>
+            </div>
+            <div class="card-icon__wrapper">
+              <div class="card-tooltip">Легко чистить</div>
+              <div>
+                <img src="./icons/popular/popular_03.svg" alt="img" />
+              </div>
+            </div>
+            <div class="card-icon__wrapper">
+              <div class="card-tooltip">Легко чистить</div>
+              <div>
+                <img src="./icons/popular/popular_01.svg" alt="img" />
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title">Энхель</h5>
+          <p class="card-subtitle">Диван прямой</p>
           <div class="card-sizes">
-            <p class="card-sizes__title">
-              Размеры
-            </p>
+            <p class="card-sizes__title">Размеры</p>
             <div class="card-sizes__btns">
-              <button class="card-size__button card-size__button-selected">160<span>см</span></button>
+              <button class="card-size__button card-size__button-selected">
+                160<span>см</span>
+              </button>
               <button class="card-size__button">180<span>см</span></button>
               <button class="card-size__button">200<span>см</span></button>
               <button class="card-size__button">220<span>см</span></button>
             </div>
           </div>
           <div class="card-params">
-            <div class="card-colors">
-              <p class="card-colors__title">
-                Цвет
-              </p>
+            <div class="card-colors no-mobile">
+              <p class="card-colors__title">Цвет</p>
               <div class="card-colors__btns">
-                <button class="yellow"></button>
+                <button class="yellow card-colors__selected"></button>
                 <button class="blue"></button>
                 <button class="light"></button>
               </div>
@@ -709,65 +958,78 @@
               <div class="old-price">55 000 ₽</div>
               <div class="new-price">45 100 ₽</div>
             </div>
+            <img
+              src="./icons/navbar/cart.svg"
+              class="only-mobile"
+              alt="cart"
+            />
           </div>
-          <div class="add-to-cart-wrapper">
-            <button class="card_add-to-cart">
-              Добавить в корзину
-            </button>
+          <div class="add-to-cart-wrapper no-mobile">
+            <button class="card_add-to-cart">Добавить в корзину</button>
           </div>
         </div>
 
         <div class="card">
-          <div class="card-image">
-            <div class="card-discount">
-              <span>-35%</span>
+          <div class="card-top-image-wrapper">
+            <div class="card-hover-img no-mobile">
+              <a href="product-page.html">
+                <img src="img/card-hover.png" alt="img" />
+              </a>
+              <img
+                src="./icons/navbar/favorite.svg"
+                class="card-to-favorite"
+                alt="favorite"
+              />
             </div>
-            <img src="./img/popular/popular_04.png" alt="img" class="card-image">
-          </div>
-          <div class="card-icons">
-            <div class="card-icon__wrapper">
-              <div class="card-tooltip">Легко чистить</div>
-              <div>
-                <img src="./icons/popular/popular_02.svg" alt="img">
+            <div class="card-image">
+              <div class="card-discount">
+                <span>-35%</span>
               </div>
-            </div>
-            <div class="card-icon__wrapper">
-              <div class="card-tooltip">Легко чистить</div>
-              <div>
-                <img src="./icons/popular/popular_03.svg" alt="img">
-              </div>
-            </div>
-            <div class="card-icon__wrapper">
-              <div class="card-tooltip">Легко чистить</div>
-              <div>
-                <img src="./icons/popular/popular_01.svg" alt="img">
-              </div>
+              <img
+                src="./img/popular/popular_02.png"
+                alt="img"
+                class="card-image-prev"
+              />
             </div>
           </div>
-          <h5 class="card-title">
-            Энхель
-          </h5>
-          <p class="card-subtitle">
-            Диван прямой
-          </p>
+          <div class="card-icons no-mobile">
+            <div class="card-icon__wrapper">
+              <div class="card-tooltip">Легко чистить</div>
+              <div>
+                <img src="./icons/popular/popular_02.svg" alt="img" />
+              </div>
+            </div>
+            <div class="card-icon__wrapper">
+              <div class="card-tooltip">Легко чистить</div>
+              <div>
+                <img src="./icons/popular/popular_03.svg" alt="img" />
+              </div>
+            </div>
+            <div class="card-icon__wrapper">
+              <div class="card-tooltip">Легко чистить</div>
+              <div>
+                <img src="./icons/popular/popular_01.svg" alt="img" />
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title">Энхель</h5>
+          <p class="card-subtitle">Диван прямой</p>
           <div class="card-sizes">
-            <p class="card-sizes__title">
-              Размеры
-            </p>
+            <p class="card-sizes__title">Размеры</p>
             <div class="card-sizes__btns">
-              <button class="card-size__button card-size__button-selected">160<span>см</span></button>
+              <button class="card-size__button card-size__button-selected">
+                160<span>см</span>
+              </button>
               <button class="card-size__button">180<span>см</span></button>
               <button class="card-size__button">200<span>см</span></button>
               <button class="card-size__button">220<span>см</span></button>
             </div>
           </div>
           <div class="card-params">
-            <div class="card-colors">
-              <p class="card-colors__title">
-                Цвет
-              </p>
+            <div class="card-colors no-mobile">
+              <p class="card-colors__title">Цвет</p>
               <div class="card-colors__btns">
-                <button class="yellow"></button>
+                <button class="yellow card-colors__selected"></button>
                 <button class="blue"></button>
                 <button class="light"></button>
               </div>
@@ -776,11 +1038,14 @@
               <div class="old-price">55 000 ₽</div>
               <div class="new-price">45 100 ₽</div>
             </div>
+            <img
+              src="./icons/navbar/cart.svg"
+              class="only-mobile"
+              alt="cart"
+            />
           </div>
-          <div class="add-to-cart-wrapper">
-            <button class="card_add-to-cart">
-              Добавить в корзину
-            </button>
+          <div class="add-to-cart-wrapper no-mobile">
+            <button class="card_add-to-cart">Добавить в корзину</button>
           </div>
         </div>
       </div> 
@@ -810,6 +1075,7 @@
               Позвонить мне
             </button>
           </div>
+          <img src="./full-catalog/img/help-sofa.png" alt="img">
         </div>
       </div>
       <div class="help-section-features">
@@ -843,20 +1109,21 @@
   <footer class="footer">
     <div class="footer-subscribe">
       <p class="footer-subscribe__text">
-        Хотите раньше всех узнавать о новых коллекциях?
-        Подпишитесь на нашу рассылку
+        Хотите раньше всех узнавать о новых коллекциях? <br> Подпишитесь на нашу
+        рассылку
       </p>
       <div class="footer-subscribe__input">
-        <input type="text" placeholder="Ваш Email">
+        <input type="text" placeholder="Ваш Email" />
         <div class="footer-subscribe__btn">Подписаться</div>
       </div>
+      <button class="footer-subscribe__top-btn">
+        <img src="./icons/footer/footer-topimg.svg" alt="img">
+      </button>
     </div>
-    <div class="container">
+    <div class="no-mobile">
       <div class="footer-links-blocks">
         <div class="footer-links">
-          <div class="footer-links__title">
-            КАТАЛОГ
-          </div>
+          <div class="footer-links__title">КАТАЛОГ</div>
           <a href="#" class="footer-link">Диваны</a>
           <a href="#" class="footer-link">Кровати</a>
           <a href="#" class="footer-link">Стулья</a>
@@ -864,9 +1131,7 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            КОМПАНИЯ
-          </div>
+          <div class="footer-links__title">КОМПАНИЯ</div>
           <a href="#" class="footer-link">О магазине</a>
           <a href="#" class="footer-link">Реквизиты</a>
           <a href="#" class="footer-link">Контакты</a>
@@ -875,9 +1140,7 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            ПОМОЩЬ
-          </div>
+          <div class="footer-links__title">ПОМОЩЬ</div>
           <a href="#" class="footer-link">Доставка</a>
           <a href="#" class="footer-link">Оплата</a>
           <a href="#" class="footer-link">Возврат товара</a>
@@ -885,50 +1148,111 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            КОНТАКТЫ
-          </div>
+          <div class="footer-links__title">КОНТАКТЫ</div>
           <div class="footer-links__city">
-            <p>
-              Санкт - Петербург: 
-              отдел продаж
-            </p>
+            <p>Санкт - Петербург: отдел продаж</p>
             <span>+7 800 100-0-100</span>
           </div>
           <div class="footer-links__city">
-            <p>
-              Москва: отдел продаж
-            </p>
+            <p>Москва: отдел продаж</p>
             <span>+7 800 100-0-100</span>
           </div>
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            МЫ В СОЦ.СЕТЯХ
-          </div>
+          <div class="footer-links__title">МЫ В СОЦ.СЕТЯХ</div>
           <div class="footer-socials">
             <a href="#">
-              <img src="./icons/footer/insta.svg" alt="img">
+              <img src="./icons/footer/insta.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/tw.svg" alt="img">
+              <img src="./icons/footer/tw.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/vk.svg" alt="img">
+              <img src="./icons/footer/vk.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/ok.svg" alt="img">
+              <img src="./icons/footer/ok.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/Fb.svg" alt="img">
+              <img src="./icons/footer/Fb.svg" alt="img" />
             </a>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="mobile-footer-links only-mobile">
+      <div class="mobile-footer-links__item">
+        <div class="mobile-footer-links__title">
+          <h5>Каталог</h5>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-footer-links__collapse links-hidden">
+          <a href="#">Диваны</a>
+          <a href="#">Кровати</a>
+          <a href="#">Стулья</a>
+          <a href="#">Кресла</a>
+        </div>
+      </div>
+      <div class="mobile-footer-links__item">
+        <div class="mobile-footer-links__title">
+          <h5>О компании</h5>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-footer-links__collapse links-hidden">
+          <a href="#">О магазине</a>
+          <a href="#">Реквизиты</a>
+          <a href="#">Контакты</a>
+          <a href="#">Шоу-румы</a>
+          <a href="#">Блог</a>
+        </div>
+      </div>
+      <div class="mobile-footer-links__item">
+        <div class="mobile-footer-links__title">
+          <h5>Помощь</h5>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-footer-links__collapse links-hidden">
+          <a href="#">Доставка</a>
+          <a href="#">Оплата</a>
+          <a href="#">Возврат товара</a>
+          <a href="#">Служба поддержки</a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-footer__socials only-mobile">
+      <a href="#">
+        <img src="./icons/footer/insta.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/tw.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/vk.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/ok.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/Fb.svg" alt="img" />
+      </a>
+    </div>
+    <div class="mobile-footer-contacts only-mobile">
+      <div class="mobile-footer-contacts__block">
+        <div class="mobile-footer-contacts__city">Санкт - Петербург</div>
+        <div class="mobile-footer-contacts__phone">+7 800 100-0-100</div>
+      </div>
+      <div class="mobile-footer-contacts__block">
+        <div class="mobile-footer-contacts__city">Москва</div>
+        <div class="mobile-footer-contacts__phone">+7 800 100-0-100</div>
       </div>
     </div>
   </footer>

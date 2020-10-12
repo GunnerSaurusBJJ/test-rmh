@@ -86,11 +86,13 @@
   }
   &__item-date {
     margin-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     font-size: 14px;
     color: #A7A8B3;
+    line-height: 20px;
   }
   &__item-caption {
     line-height: 25px;
+    font-size: 18px;
   }
 }

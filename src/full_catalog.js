@@ -116,6 +116,21 @@ inputRight.addEventListener("mouseup", function() {
 	thumbRight.classList.remove("active");
 });
 
+//binding price value with price range slider in filter
+let inputFromPrice = document.querySelector('.sidebar-filter-input-from')
+let inputToPrice = document.querySelector('.sidebar-filter-input-to')
+
+inputFromPrice.value = inputLeft.value
+inputToPrice.value = inputRight.value
+
+inputLeft.addEventListener('input', () => {
+  inputFromPrice.value = inputLeft.value
+})
+
+inputRight.addEventListener('input', () => {
+  inputToPrice.value = inputRight.value
+})
+
 // sidebar filter section
 let watchFilteredBtn = document.querySelector('.watch-filtered-btn')
 
@@ -353,3 +368,34 @@ document.querySelector('.clear-filter-btn').addEventListener('click', () => {
     document.querySelector(item).textContent = ''
   })
 })
+
+$(document).ready(function(){
+  $('.full-catalog-categories__wrapper').slick({
+    slidesToShow: 3,
+    mobileFirst: true,
+    responsive: [
+          {
+                  breakpoint: 900,
+                  settings: 'unslick'
+          }
+    ],
+    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
+    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+  });
+
+  $('.full-catalog-filters__wrapper').slick({
+    slidesToShow: 3.4,
+    mobileFirst: true,
+    infinite: false,
+    responsive: [
+          {
+                  breakpoint: 900,
+                  settings: 'unslick'
+          }
+    ],
+    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
+    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+  });
+});
+
+

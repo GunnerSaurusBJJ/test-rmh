@@ -80,11 +80,11 @@
 .top-slider-arrow {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.2);
-  padding: 10px 15px 10px 13px;
   border-radius: 5px;
   z-index: 20;
-  bottom: 25px;
-  width: 34px;
+  bottom: 30px;
+  height: 40px;
+  width: 40px;
   transition: .2s;
   &:hover {
     background: rgba(0, 0, 0, 0.5);
@@ -96,10 +96,12 @@
 .top-slider {
   &__left-arrow {
     position: absolute;
-    right: 60px;
+    right: 82px;
+    padding: 10px 16px 10px 16px;
   }
   &__right-arrow {
     position: absolute;
-    right: 15px;
+    right: 30px;
+    padding: 10px 15px 10px 17px;
   }
 }

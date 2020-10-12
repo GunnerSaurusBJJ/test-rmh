@@ -29,8 +29,9 @@
       font-size: 16px;
       @media #{$media-to-xs} {
         font-weight: bold;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 26px;
+        margin-left: -10px;
       }
       &:hover {
         color: #0B729E;
@@ -65,11 +66,12 @@
     z-index: 10;
     transition: all .4s;
     img {
-      width: 100%;
+      width: 90%;
+      margin: 0 auto;
     }
   }
   .card-to-favorite {
-    right: 22px;
+    right: 36px;
     top: 26px;
     position: absolute;
     cursor: pointer;
@@ -110,12 +112,14 @@
   .card-title {
     font-size: 18px;
     font-weight: normal;
-    margin-top: 20px;
+    margin-top: 82px;
+    margin-left: 10px;
   }
   .card-subtitle {
     font-weight: normal;
     font-size: 14px;
     color: #A7A8B3;
+    margin-left: 10px;
   }
   .card-tooltip {
     position: absolute;
@@ -145,7 +149,8 @@
     }
   }
   .card-icons {
-    display: flex;
+    // display: flex;
+    display: none;
     img {
       background-color: $light-gray;
       padding: 8px;
@@ -163,6 +168,7 @@
     }
   }
   .card-sizes {
+    margin-left: 10px;
     &__title {
       font-weight: normal;
       font-size: 14px;
@@ -187,6 +193,7 @@
     }
   }
   .card-params {
+    margin-left: 10px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -255,29 +262,50 @@
   }
   padding: 30px;
   &:hover {
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.07);
     .add-to-cart-wrapper {
       opacity: 1;
       transition: all .4s;
-      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.07);
     }
   }
 }
 .discount-banner {
   margin-top: 60px;
-  background: url('/src/img/popular/bg-discount.jpg') no-repeat;
-  background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 70px;
-  padding-left: 40px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 10px;
+  background: #FFE677;
+  margin-bottom: 60px;
+  position: relative;
   @media #{$media-to-xs} {
-    padding: 20px;
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 160px;
+  }
+  div {
+    position: absolute;
+    left: 70px;
+    top: 58px;
+    p {
+      width: 490px;
+      @media #{$media-to-xs} {
+        width: 61%;
+        font-size: 14px;
+      }
+    }
+    @media #{$media-to-xs} {
+      left: 20px;
+      top: 20px;
+      width: 230px;
+    }
+  }
+  img {
+    width: 60%;
   }
   &__title {
     font-weight: bold;
     font-size: 55px;
     @media #{$media-to-xs} {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
   &__subtitle {
@@ -292,6 +320,7 @@
 }
 .card-size__button-selected {
   border: 1px solid #A7A8B3 !important;
+  font-weight: bold;
 }
 .card-colors__selected {
   &:after {
@@ -323,8 +352,10 @@
   background: transparent;
   padding: 15px;
   margin-top: 20px;
-  width: 100%;
+  width: 86%;
   font-weight: bold;
+  margin: 0 auto 0 22px;
+  display: block;
   font-size: 14px;
   &:hover {
     border: 1.5px solid #D00A12;

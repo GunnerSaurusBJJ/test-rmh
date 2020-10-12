@@ -45,7 +45,7 @@
     <div class="sidebar-item sidebar-products" id="chair">
       <img
         class="sidebar-item__chair-image"
-        src="./img/sidebar/chair.svg"
+        src="./img/sidebar/chair.png"
         alt="chair"
       />
       <a class="sidebar-link" href="#">Стулья</a>
@@ -193,7 +193,7 @@
       <div class="mobile-sidebar-categories__item">
         <div class="mobile-sidebar-categories__item-title">
           <div>
-            <img src="./img/sidebar/chair-hover.svg" alt="img" />
+            <img src="./img/sidebar/chair-hover.png" alt="img" />
           </div>
           <p>Стулья</p>
           <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
@@ -353,7 +353,9 @@
         <span class="burger-line"></span>
       </div>
       <div class="mobile-navbar__logo">
-        <img src="img/mobile/mobile-logo.svg" alt="img" />
+        <a href="index.html">
+          <img src="img/mobile/mobile-logo.svg" alt="img" />
+        </a>
       </div>
       <div class="mobile-navbar__links">
         <img src="icons/mobile/mobile-search.svg" alt="img" />
@@ -377,6 +379,54 @@
               </div>
               <div class="item-desc">
                 3-местный диван-кровать, Энхель темно-синий
+              </div>
+              <div class="item-size">
+                Размер: <span>160 cм</span>
+              </div>
+              <div class="item-color">
+                Цвет: <span>темно-синий</span>
+              </div>
+              <div class="item-material-changed-row">
+                <div class="item-material-changed">
+                  <img src="https://via.placeholder.com/30" alt="img">
+                  <p>Alur Plein - Алюр Плейн</p>
+                  <span>Изменить обивку</span>
+                </div>
+                <div class="item-material-changed__price">
+                  24 900 ₽
+                </div>
+              </div>
+            </div>
+            <div class="item-quantity">
+              <button class="item-quantity__sign">
+                <img src="icons/minus.svg" alt="img">
+              </button>
+              <div class="item-quantity__num">1</div>
+              <button class="item-quantity__sign">
+                <img src="icons/plus.svg" alt="img">
+              </button>
+            </div>
+            <div class="item-price">
+              <div class="item-price__old">
+                49 000 ₽
+                <span>-35%</span>
+              </div>
+              <div class="item-price__new">
+                40 100 ₽
+              </div>
+            </div>
+            <button class="cart__trash">
+              <img src="./icons/trash.svg" alt="img">
+            </button>
+          </div>
+          <div class="cart__item">
+            <img src="img/cart-sof.png" alt="img">
+            <div class="item-info">
+              <div class="item-name">
+                Каир Textile Gray
+              </div>
+              <div class="item-desc">
+                3-местный диван-кровать
               </div>
               <div class="item-size">
                 Размер: <span>160 cм</span>
@@ -432,7 +482,7 @@
             <div class="cart-summary__row-left">
               Скидка:
             </div>
-            <div class="cart-summary__row-right">
+            <div class="cart-summary__row-right discount">
               - 17 060 ₽
             </div>
           </div>
@@ -549,20 +599,21 @@
   <footer class="footer">
     <div class="footer-subscribe">
       <p class="footer-subscribe__text">
-        Хотите раньше всех узнавать о новых коллекциях?
-        Подпишитесь на нашу рассылку
+        Хотите раньше всех узнавать о новых коллекциях? <br> Подпишитесь на нашу
+        рассылку
       </p>
       <div class="footer-subscribe__input">
-        <input type="text" placeholder="Ваш Email">
+        <input type="text" placeholder="Ваш Email" />
         <div class="footer-subscribe__btn">Подписаться</div>
       </div>
+      <button class="footer-subscribe__top-btn">
+        <img src="./icons/footer/footer-topimg.svg" alt="img">
+      </button>
     </div>
-    <div class="container">
+    <div class="no-mobile">
       <div class="footer-links-blocks">
         <div class="footer-links">
-          <div class="footer-links__title">
-            КАТАЛОГ
-          </div>
+          <div class="footer-links__title">КАТАЛОГ</div>
           <a href="#" class="footer-link">Диваны</a>
           <a href="#" class="footer-link">Кровати</a>
           <a href="#" class="footer-link">Стулья</a>
@@ -570,9 +621,7 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            КОМПАНИЯ
-          </div>
+          <div class="footer-links__title">КОМПАНИЯ</div>
           <a href="#" class="footer-link">О магазине</a>
           <a href="#" class="footer-link">Реквизиты</a>
           <a href="#" class="footer-link">Контакты</a>
@@ -581,9 +630,7 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            ПОМОЩЬ
-          </div>
+          <div class="footer-links__title">ПОМОЩЬ</div>
           <a href="#" class="footer-link">Доставка</a>
           <a href="#" class="footer-link">Оплата</a>
           <a href="#" class="footer-link">Возврат товара</a>
@@ -591,50 +638,111 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            КОНТАКТЫ
-          </div>
+          <div class="footer-links__title">КОНТАКТЫ</div>
           <div class="footer-links__city">
-            <p>
-              Санкт - Петербург: 
-              отдел продаж
-            </p>
+            <p>Санкт - Петербург: отдел продаж</p>
             <span>+7 800 100-0-100</span>
           </div>
           <div class="footer-links__city">
-            <p>
-              Москва: отдел продаж
-            </p>
+            <p>Москва: отдел продаж</p>
             <span>+7 800 100-0-100</span>
           </div>
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            МЫ В СОЦ.СЕТЯХ
-          </div>
+          <div class="footer-links__title">МЫ В СОЦ.СЕТЯХ</div>
           <div class="footer-socials">
             <a href="#">
-              <img src="./icons/footer/insta.svg" alt="img">
+              <img src="./icons/footer/insta.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/tw.svg" alt="img">
+              <img src="./icons/footer/tw.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/vk.svg" alt="img">
+              <img src="./icons/footer/vk.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/ok.svg" alt="img">
+              <img src="./icons/footer/ok.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/Fb.svg" alt="img">
+              <img src="./icons/footer/Fb.svg" alt="img" />
             </a>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="mobile-footer-links only-mobile">
+      <div class="mobile-footer-links__item">
+        <div class="mobile-footer-links__title">
+          <h5>Каталог</h5>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-footer-links__collapse links-hidden">
+          <a href="#">Диваны</a>
+          <a href="#">Кровати</a>
+          <a href="#">Стулья</a>
+          <a href="#">Кресла</a>
+        </div>
+      </div>
+      <div class="mobile-footer-links__item">
+        <div class="mobile-footer-links__title">
+          <h5>О компании</h5>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-footer-links__collapse links-hidden">
+          <a href="#">О магазине</a>
+          <a href="#">Реквизиты</a>
+          <a href="#">Контакты</a>
+          <a href="#">Шоу-румы</a>
+          <a href="#">Блог</a>
+        </div>
+      </div>
+      <div class="mobile-footer-links__item">
+        <div class="mobile-footer-links__title">
+          <h5>Помощь</h5>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-footer-links__collapse links-hidden">
+          <a href="#">Доставка</a>
+          <a href="#">Оплата</a>
+          <a href="#">Возврат товара</a>
+          <a href="#">Служба поддержки</a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-footer__socials only-mobile">
+      <a href="#">
+        <img src="./icons/footer/insta.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/tw.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/vk.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/ok.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/Fb.svg" alt="img" />
+      </a>
+    </div>
+    <div class="mobile-footer-contacts only-mobile">
+      <div class="mobile-footer-contacts__block">
+        <div class="mobile-footer-contacts__city">Санкт - Петербург</div>
+        <div class="mobile-footer-contacts__phone">+7 800 100-0-100</div>
+      </div>
+      <div class="mobile-footer-contacts__block">
+        <div class="mobile-footer-contacts__city">Москва</div>
+        <div class="mobile-footer-contacts__phone">+7 800 100-0-100</div>
       </div>
     </div>
   </footer>

@@ -3,19 +3,19 @@
 }
 .footer-subscribe {
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: #2E394D;
+  padding-left: 16vw;
   @media #{$media-to-xs} {
     flex-direction: column;
     padding-left: 16px;
     padding-right: 16px;
   }
   &__text {
-    max-width: 450px;
-    padding: 40px 0;
+    padding: 37px 0;
     color: #fff;
-    margin-right: 70px;
+    font-size: 18px;
+    margin-right: 31px;
     @media #{$media-to-xs} {
       margin-right: 0;
       font-size: 14px;
@@ -32,13 +32,33 @@
       border-radius: 10px;
       border: 1px solid #D2D7E3;
       background: #fff;
-      height: 50px;
-      width: 415px;
-      padding-left: 10px;
+      width: 416px;
+      line-height: 20px;
+      padding: 14px 16px;
+      font-size: 14px;
+      &::placeholder {
+        color: #A7A8B3;
+      }
       @media #{$media-to-xs} {
         width: 210px;
         height: 40px;
       }
+    }
+  }
+  &__top-btn {
+    background: #A7A8B3;
+    border-radius: 5px;
+    width: 48px;
+    height: 48px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 32px;
+    img {
+      width: 22px;
+      padding-bottom: 2px;
     }
   }
   &__btn {
@@ -51,10 +71,10 @@
     font-size: 14px;
     color: #fff;
     border-radius: 10px;
-    background: $red;
-    padding: 11px 30px;
+    padding: 9.5px 32.9px;
     text-align: center;
     cursor: pointer;
+    background: #ED1C24;
     @media #{$media-to-xs} {
       padding: 11px 20px;
       top: 20px;
@@ -67,14 +87,26 @@
 }
 
 .footer-links-blocks {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
+  padding-left: 230px;
+  padding-top: 60px;
+  background: #F5F7F9;
+  display: flex;
 }
 .footer-links {
+  &:nth-of-type(1) {
+    margin-right: 154px;
+  }
+  &:nth-of-type(2) {
+    margin-right: 134px;
+  }
+  &:nth-of-type(3) {
+    margin-right: 80px;
+  }
+  &:nth-of-type(4) {
+    margin-right: 70px;
+  }
   &__title {
-    color: #BDBDBD;
+    color: #A7A8B3;
     font-weight: normal;
     font-size: 14px;
     margin-bottom: 30px;

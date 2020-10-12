@@ -256,7 +256,10 @@ input[type=range]::-webkit-slider-thumb {
 }
 .load-more-info {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 67px;
+  @media #{$media-to-xs} {
+    margin-top: 24px;
+  }
 }
 .load-more-btn {
   border-radius: 10px;
@@ -265,22 +268,48 @@ input[type=range]::-webkit-slider-thumb {
   font-weight: bold;
   font-size: 14px;
   padding: 15px 160px;
-  margin: 25px auto 0;
+  margin: 24px auto 0;
   display: block;
+  @media #{$media-to-xs} {
+    margin-top: 12px;
+    padding: 11px 120px;
+  }
+}
+.help-section {
+  @media #{$media-to-xs} {
+   padding-left: 16px;
+   padding-right: 16px;
+  }
 }
 .help-section__wrapper {
   margin-top: 60px;
-  background: url('/src/full-catalog/img/help-bg.jpg') no-repeat center / cover;
-  height: 290px;
+  background: #F5F6FA;
+  background: url('../src/full-catalog/img/help-bg.png') no-repeat center / cover;
+  height: 280px;
   border-radius: 10px;
 }
 .help-section-info {
-  padding: 55px 65px;
+  padding: 55px 68px 58px 68px;
+  position: relative;
+  @media #{$media-to-xs} {
+    padding: 20px;
+   }
+   img {
+     position: absolute;
+     top: 12px;
+     right: 58px;
+     width: 34.027vw;
+   }
 }
 
 .help-section__title {
   font-weight: bold;
   font-size: 32px;
+  @media #{$media-to-xs} {
+    font-size: 20px;
+    line-height: 24px;
+    width: 70%;
+  }
 }
 
 .help-section__subtitle {
@@ -289,22 +318,45 @@ input[type=range]::-webkit-slider-thumb {
   opacity: 0.5;
   max-width: 550px;
   margin-bottom: 25px;
+  @media #{$media-to-xs} {
+    width: 70%;
+    margin-top: 8px;
+   }
 }
 
 .help-section__input-wrapper {
   input {
     border-radius: 10px;
     border: 1px solid #D2D7E3;
-    padding: 14px 16px;
-    margin-right: 20px;
+    padding: 11px 16px;
+    margin-right: 18px;
+    width: 198px;
+    &::placeholder {
+      color: #A7A8B3;
+    }
+    @media #{$media-to-xs} {
+      width: 100%;
+    }
+  }
+  input + input {
+    @media #{$media-to-xs} {
+      margin-top: 12px;
+    }
   }
   button {
     background: #ED1C24;
     border-radius: 10px;
-    padding: 14px 50px;
+    padding: 13.5px 50px;
+    font-size: 14px;
+    font-weight: bold;
     border: none;
     outline: none;
+    width: 198px;
     color: #fff;
+    @media #{$media-to-xs} {
+      margin-top: 30px;
+      width: 100%;
+    }
     &:hover {
       background: #D00A12;
       transition: .2s;
@@ -313,14 +365,22 @@ input[type=range]::-webkit-slider-thumb {
 }
 .help-section-features {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(min-content, max-content));
+  grid-gap: 48px;
+  justify-content: center;
   margin-top: 22px;
+  margin-left: -40px;
   justify-items: center;
+  @media #{$media-to-xs} {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+    margin-top: 140px;
+  }
   &__item {
     display: flex;
     align-items: center;
     p {
-      max-width: 100px;
+      max-width: 122px;
       font-size: 14px;
       margin-left: 20px;
     }

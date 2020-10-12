@@ -3,11 +3,19 @@ $('.slider-top').slick({
   slidesToScroll: 1,
   arrows: false,
   fade: true,
+  responsive: [
+    {
+            breakpoint: 900,
+            settings: {
+              dots: true
+            }
+    }
+  ],
   asNavFor: '.slider-bottom'
 });
 $('.slider-bottom').slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
+  slidesToShow: 4,
+  slidesToScroll: 4,
   asNavFor: '.slider-top',
   focusOnSelect: true,
   nextArrow: '<img class="product-slider-arrow arrow-right" src="product-page/arrowproduct.svg">',
@@ -16,10 +24,41 @@ $('.slider-bottom').slick({
 $('.product-reviews__wrapper').slick({
   slidesToShow: 2,
   infinite: false,
+  responsive: [
+    {
+            breakpoint: 900,
+            settings: {
+              arrows: false,
+              slidesToShow: 0.8,
+            }
+    }
+],
   nextArrow: '<img class="product-reviews-slider-arrow right-arrow" src="./icons/topslider/right-arrow.svg">',
   prevArrow: '<img class="product-reviews-slider-arrow left-arrow" src="./icons/topslider/left-arrow.svg">',
 });
-
+$('.product-info__choise-color').slick({
+  slidesToShow: 3,
+  mobileFirst: true,
+  responsive: [
+        {
+                breakpoint: 900,
+                settings: 'unslick'
+        }
+  ],
+  arrows: false
+});
+$('.product-features__wrapper').slick({
+  mobileFirst: true,
+  infinite: false,
+  slidesToShow: 1.2,
+  responsive: [
+        {
+                breakpoint: 900,
+                settings: 'unslick',
+        }
+  ],
+  arrows: false
+});
 const showMoreProductDescBtn = document.querySelector('.product-desc__show-more'),
   moreTextProductDesc = document.querySelector('.product-desc__more-text'),
   reviewTexts = document.querySelectorAll('.product-reviews__card-bottom p')
@@ -76,4 +115,19 @@ addToCartBtnProduct.addEventListener('click', () => {
   addToCartBtnProduct.style.color = '#282724'
   addToCartBtnProduct.style.border = '1px solid #ED1C24'
   addToCartBtnProduct.disabled = true
+})
+
+// back in history btn
+
+document.querySelector('.back-to-catalog').addEventListener('click', () => {
+  window.history.back()
+})
+
+
+document.querySelectorAll('.product-info__choise-color img').forEach(img => {
+  img.addEventListener('click', () => {
+    document.querySelector('.product-info__choise-color img.selected').classList.remove('selected')
+    img.classList.add('selected')
+    
+  })
 })

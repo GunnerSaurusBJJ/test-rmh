@@ -31,10 +31,10 @@ sidebarItems[1].addEventListener('mouseleave', () => {
   }
 })
 
-sidebarItems[3].addEventListener('mouseover', () => changeImagePath(chairImage, './img/sidebar/chair-hover.svg'))
+sidebarItems[3].addEventListener('mouseover', () => changeImagePath(chairImage, './img/sidebar/chair-hover.png'))
 sidebarItems[3].addEventListener('mouseleave', () => {
   if (!openedSideBar.classList.contains('open-sidebar')) {
-    changeImagePath(chairImage, './img/sidebar/chair.svg')
+    changeImagePath(chairImage, './img/sidebar/chair.png')
   }
 })
 
@@ -57,7 +57,7 @@ function toggleClassSidebar (e) {
   if (e.target === closeSideBarBtn.querySelector('img')) {
     changeImagePath(sofaImage, './img/sidebar/sofa.svg')
     changeImagePath(bedImage, './img/sidebar/bed.svg')
-    changeImagePath(chairImage, './img/sidebar/chair.svg')
+    changeImagePath(chairImage, './img/sidebar/chair.png')
   }
 }
 
@@ -68,7 +68,7 @@ document.addEventListener('click', (e) => {
     openedSideBar.classList.remove('open-sidebar')
     changeImagePath(sofaImage, './img/sidebar/sofa.svg')
     changeImagePath(bedImage, './img/sidebar/bed.svg')
-    changeImagePath(chairImage, './img/sidebar/chair.svg')
+    changeImagePath(chairImage, './img/sidebar/chair.png')
   }
 })
 function changeImagePath (element, path) {
@@ -120,4 +120,11 @@ document.querySelectorAll('.mobile-sidebar-categories__item').forEach(item => {
 
 mobileSubcategoryTitle.querySelector('img').addEventListener('click', () => {
   document.querySelector('.mobile-subcategory').classList.remove('mobile-subcategory-opened')
+})
+
+document.querySelector('.footer-subscribe__top-btn').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 })

@@ -45,7 +45,7 @@
     <div class="sidebar-item sidebar-products" id="chair">
       <img
         class="sidebar-item__chair-image"
-        src="./img/sidebar/chair.svg"
+        src="./img/sidebar/chair.png"
         alt="chair"
       />
       <a class="sidebar-link" href="#">Стулья</a>
@@ -193,7 +193,7 @@
       <div class="mobile-sidebar-categories__item">
         <div class="mobile-sidebar-categories__item-title">
           <div>
-            <img src="./img/sidebar/chair-hover.svg" alt="img" />
+            <img src="./img/sidebar/chair-hover.png" alt="img" />
           </div>
           <p>Стулья</p>
           <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
@@ -353,7 +353,9 @@
         <span class="burger-line"></span>
       </div>
       <div class="mobile-navbar__logo">
-        <img src="img/mobile/mobile-logo.svg" alt="img" />
+        <a href="index.html">
+          <img src="img/mobile/mobile-logo.svg" alt="img" />
+        </a>
       </div>
       <div class="mobile-navbar__links">
         <img src="icons/mobile/mobile-search.svg" alt="img" />
@@ -367,6 +369,9 @@
     <div class="container">
       <div class="product-preview-wrapper">
           <div class="product-slider">
+            <button class="back-to-catalog only-mobile">
+              <img src="./icons/mobile/back-arrow-mobile.svg" alt="img">
+            </button>
             <div class="slider-top">
               <div>
                 <img src="product-page/pr01.png" alt="img">
@@ -401,11 +406,15 @@
                 <img src="product-page/pr04.png" alt="img">
               </div>
               <div>
-                <img src="product-page/pr03.png" alt="img">
-              </div>
-              <div>
                 <img src="product-page/pr05.png" alt="img">
               </div>
+              <div>
+                <img src="product-page/pr03.png" alt="img">
+              </div>
+            </div>
+            <div class="video-product-fixed">
+              <img src="./product-page/video-product.png" alt="img">
+              <span>2 видео</span>
             </div>
           </div>
         <div class="product-info">
@@ -437,7 +446,7 @@
             </div>
           </div>
           <div class="product-info__choise-color">
-            <img src="product-page/pr02.png" alt="img">
+            <img class="selected" src="product-page/pr02.png" alt="img">
             <img src="product-page/pr02.png" alt="img">
             <img src="product-page/pr02.png" alt="img">
             <img src="product-page/pr02.png" alt="img">
@@ -445,15 +454,15 @@
           <div class="product-info__material-block">
             <img src="product-page/material.svg" alt="img">
             <span>Искусственная шерсть</span>
-            <span class="choose-material">
+            <span class="choose-material no-mobile">
               Подобрать другую ткань
             </span>
           </div>
-          <button class="product-info__btn">
+          <button class="product-info__btn no-mobile">
             <img src="icons/addToCartWhite.svg" alt="img">
             Добавить в корзину
           </button>
-          <div class="product-info__delivery-cost">
+          <div class="product-info__delivery-cost no-mobile">
             <img src="product-page/delivery.svg" alt="img">
             <a href="#">
               Рассчитать стоимость доставки
@@ -661,9 +670,9 @@
           <img class="configuration-main-img" src="./product-page/config_main_img.png" alt="img">
         </div>
         <div class="configuration-light-gray-bg configuration-description-wrapper">
-          <img src="./product-page/pr02.png" alt="img">
+          <img src="./product-page/pr02.png" class="no-mobile" alt="img">
           <p class="configuration-description">
-            Шагающий механизм, который приподнимает сидение и, выдвигая 
+            Шагающий механизм, который приподнимает сидение и, выдвигая <br>
             его вверх и вперед, раскладывает диван до широкого ровного спального места – для этого останется просто опустить спинку дивана по аналогии 
             с «еврокнижкой». 
           </p>
@@ -691,7 +700,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="no-mobile">
             <p>Спальное место</p>
             <div class="configuration-sizes">
               <div>
@@ -714,7 +723,29 @@
             </div>
           </div>
         </div>
-        <div class="configuration-light-gray-bg">
+        <div class="only-mobile configuration-light-gray-bg">
+          <p>Спальное место</p>
+          <div class="configuration-sizes">
+            <div>
+             <span>
+              длина
+             </span>  <br> 160 см
+            </div>
+            <img src="./product-page/multiply.svg" alt="img">
+            <div>
+             <span>
+              ширина
+             </span>  <br> 120 см
+            </div>
+            <img src="./product-page/multiply.svg" alt="img">
+            <div>
+             <span>
+              высота
+             </span>  <br> 40 см
+            </div>
+          </div>
+        </div>
+        <div class="configuration-light-gray-bg mobile-gray">
           <div>
             <p>Посадочное место</p>
             <div class="configuration-sizes">
@@ -733,7 +764,7 @@
           </div>
         </div>
         <div class="configuration-madeof">
-          <div class="configuration-gray-bg">
+          <div class="configuration-gray-bg mobile-light-gray">
             <div class="madeof-title">Состав</div>
             <div class="madeof-row">
               <div class="madeof-item">
@@ -754,7 +785,7 @@
               </div>
             </div>
           </div>
-          <div class="configuration-light-gray-bg">
+          <div class="configuration-light-gray-bg mobile-gray">
             <div class="madeof-row">
               <div class="madeof-item">
                 <span>
@@ -774,7 +805,7 @@
               </div>
             </div>
           </div>
-          <div class="configuration-gray-bg">
+          <div class="configuration-gray-bg mobile-light-gray">
             <div class="madeof-row">
               <div class="madeof-item">
                 <span>
@@ -790,6 +821,18 @@
                 </span>
                 <p>
                   нет
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="configuration-light-gray-bg mobile-gray">
+            <div class="madeof-row">
+              <div class="madeof-item">
+                <span>
+                  Тип матраса: 
+                </span>
+                <p>
+                  пружинный
                 </p>
               </div>
             </div>
@@ -965,7 +1008,7 @@
       <h2 class="similar-products__title product-page-title">Похожие товары</h2>
       <div class="similar-products__wrapper">
         <div class="similar-products__card">
-          <span class="similar-products__card-discount">-35 %</span>
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
           <img src="https://via.placeholder.com/198" alt="img">
           <div class="similar-products__card-title">
             Каир Textile Grey 
@@ -979,7 +1022,7 @@
           </div>
         </div>
         <div class="similar-products__card">
-          <span class="similar-products__card-discount">-35 %</span>
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
           <img src="https://via.placeholder.com/198" alt="img">
           <div class="similar-products__card-title">
             Каир Textile Grey 
@@ -993,7 +1036,7 @@
           </div>
         </div>
         <div class="similar-products__card">
-          <span class="similar-products__card-discount">-35 %</span>
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
           <img src="https://via.placeholder.com/198" alt="img">
           <div class="similar-products__card-title">
             Каир Textile Grey 
@@ -1007,7 +1050,7 @@
           </div>
         </div>
         <div class="similar-products__card">
-          <span class="similar-products__card-discount">-35 %</span>
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
           <img src="https://via.placeholder.com/198" alt="img">
           <div class="similar-products__card-title">
             Каир Textile Grey 
@@ -1021,7 +1064,7 @@
           </div>
         </div>
         <div class="similar-products__card">
-          <span class="similar-products__card-discount">-35 %</span>
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
           <img src="https://via.placeholder.com/198" alt="img">
           <div class="similar-products__card-title">
             Каир Textile Grey 
@@ -1035,7 +1078,111 @@
           </div>
         </div>
         <div class="similar-products__card">
-          <span class="similar-products__card-discount">-35 %</span>
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
+          <img src="https://via.placeholder.com/198" alt="img">
+          <div class="similar-products__card-title">
+            Каир Textile Grey 
+          </div>
+          <div class="similar-products__card-subtitle">
+            Диван прямой
+          </div>
+          <div class="similar-products__card-price">
+            <span class="similar-products__card-new-price">32 100 ₽</span>
+            <span class="similar-products__card-old-price">34 000 ₽</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="create-your-design">
+    <div class="container">
+     <div class="create-your-design__wrapper">
+      <div class="create-your-design__title">
+        Создай свой диван
+      </div>
+      <div class="create-your-design__subtitle">
+        Скидки всю осень, на выбор цвета и ткани, 
+        подбери свой идеал, воплати мечту
+      </div>
+     </div>
+    </div>
+  </section>
+  <section class="similar-products">
+    <div class="container">
+      <h2 class="similar-products__title product-page-title">Вам может понравится</h2>
+      <div class="similar-products__wrapper">
+        <div class="similar-products__card">
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
+          <img src="https://via.placeholder.com/198" alt="img">
+          <div class="similar-products__card-title">
+            Каир Textile Grey 
+          </div>
+          <div class="similar-products__card-subtitle">
+            Диван прямой
+          </div>
+          <div class="similar-products__card-price">
+            <span class="similar-products__card-new-price">32 100 ₽</span>
+            <span class="similar-products__card-old-price">34 000 ₽</span>
+          </div>
+        </div>
+        <div class="similar-products__card">
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
+          <img src="https://via.placeholder.com/198" alt="img">
+          <div class="similar-products__card-title">
+            Каир Textile Grey 
+          </div>
+          <div class="similar-products__card-subtitle">
+            Диван прямой
+          </div>
+          <div class="similar-products__card-price">
+            <span class="similar-products__card-new-price">32 100 ₽</span>
+            <span class="similar-products__card-old-price">34 000 ₽</span>
+          </div>
+        </div>
+        <div class="similar-products__card">
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
+          <img src="https://via.placeholder.com/198" alt="img">
+          <div class="similar-products__card-title">
+            Каир Textile Grey 
+          </div>
+          <div class="similar-products__card-subtitle">
+            Диван прямой
+          </div>
+          <div class="similar-products__card-price">
+            <span class="similar-products__card-new-price">32 100 ₽</span>
+            <span class="similar-products__card-old-price">34 000 ₽</span>
+          </div>
+        </div>
+        <div class="similar-products__card">
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
+          <img src="https://via.placeholder.com/198" alt="img">
+          <div class="similar-products__card-title">
+            Каир Textile Grey 
+          </div>
+          <div class="similar-products__card-subtitle">
+            Диван прямой
+          </div>
+          <div class="similar-products__card-price">
+            <span class="similar-products__card-new-price">32 100 ₽</span>
+            <span class="similar-products__card-old-price">34 000 ₽</span>
+          </div>
+        </div>
+        <div class="similar-products__card">
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
+          <img src="https://via.placeholder.com/198" alt="img">
+          <div class="similar-products__card-title">
+            Каир Textile Grey 
+          </div>
+          <div class="similar-products__card-subtitle">
+            Диван прямой
+          </div>
+          <div class="similar-products__card-price">
+            <span class="similar-products__card-new-price">32 100 ₽</span>
+            <span class="similar-products__card-old-price">34 000 ₽</span>
+          </div>
+        </div>
+        <div class="similar-products__card">
+          <span class="similar-products__card-discount">-35 <span>%</span></span>
           <img src="https://via.placeholder.com/198" alt="img">
           <div class="similar-products__card-title">
             Каир Textile Grey 
@@ -1054,20 +1201,21 @@
   <footer class="footer">
     <div class="footer-subscribe">
       <p class="footer-subscribe__text">
-        Хотите раньше всех узнавать о новых коллекциях?
-        Подпишитесь на нашу рассылку
+        Хотите раньше всех узнавать о новых коллекциях? <br> Подпишитесь на нашу
+        рассылку
       </p>
       <div class="footer-subscribe__input">
-        <input type="text" placeholder="Ваш Email">
+        <input type="text" placeholder="Ваш Email" />
         <div class="footer-subscribe__btn">Подписаться</div>
       </div>
+      <button class="footer-subscribe__top-btn">
+        <img src="./icons/footer/footer-topimg.svg" alt="img">
+      </button>
     </div>
-    <div class="container">
+    <div class="no-mobile">
       <div class="footer-links-blocks">
         <div class="footer-links">
-          <div class="footer-links__title">
-            КАТАЛОГ
-          </div>
+          <div class="footer-links__title">КАТАЛОГ</div>
           <a href="#" class="footer-link">Диваны</a>
           <a href="#" class="footer-link">Кровати</a>
           <a href="#" class="footer-link">Стулья</a>
@@ -1075,9 +1223,7 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            КОМПАНИЯ
-          </div>
+          <div class="footer-links__title">КОМПАНИЯ</div>
           <a href="#" class="footer-link">О магазине</a>
           <a href="#" class="footer-link">Реквизиты</a>
           <a href="#" class="footer-link">Контакты</a>
@@ -1086,9 +1232,7 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            ПОМОЩЬ
-          </div>
+          <div class="footer-links__title">ПОМОЩЬ</div>
           <a href="#" class="footer-link">Доставка</a>
           <a href="#" class="footer-link">Оплата</a>
           <a href="#" class="footer-link">Возврат товара</a>
@@ -1096,50 +1240,111 @@
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            КОНТАКТЫ
-          </div>
+          <div class="footer-links__title">КОНТАКТЫ</div>
           <div class="footer-links__city">
-            <p>
-              Санкт - Петербург: 
-              отдел продаж
-            </p>
+            <p>Санкт - Петербург: отдел продаж</p>
             <span>+7 800 100-0-100</span>
           </div>
           <div class="footer-links__city">
-            <p>
-              Москва: отдел продаж
-            </p>
+            <p>Москва: отдел продаж</p>
             <span>+7 800 100-0-100</span>
           </div>
         </div>
 
         <div class="footer-links">
-          <div class="footer-links__title">
-            МЫ В СОЦ.СЕТЯХ
-          </div>
+          <div class="footer-links__title">МЫ В СОЦ.СЕТЯХ</div>
           <div class="footer-socials">
             <a href="#">
-              <img src="./icons/footer/insta.svg" alt="img">
+              <img src="./icons/footer/insta.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/tw.svg" alt="img">
+              <img src="./icons/footer/tw.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/vk.svg" alt="img">
+              <img src="./icons/footer/vk.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/ok.svg" alt="img">
+              <img src="./icons/footer/ok.svg" alt="img" />
             </a>
 
             <a href="#">
-              <img src="./icons/footer/Fb.svg" alt="img">
+              <img src="./icons/footer/Fb.svg" alt="img" />
             </a>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="mobile-footer-links only-mobile">
+      <div class="mobile-footer-links__item">
+        <div class="mobile-footer-links__title">
+          <h5>Каталог</h5>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-footer-links__collapse links-hidden">
+          <a href="#">Диваны</a>
+          <a href="#">Кровати</a>
+          <a href="#">Стулья</a>
+          <a href="#">Кресла</a>
+        </div>
+      </div>
+      <div class="mobile-footer-links__item">
+        <div class="mobile-footer-links__title">
+          <h5>О компании</h5>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-footer-links__collapse links-hidden">
+          <a href="#">О магазине</a>
+          <a href="#">Реквизиты</a>
+          <a href="#">Контакты</a>
+          <a href="#">Шоу-румы</a>
+          <a href="#">Блог</a>
+        </div>
+      </div>
+      <div class="mobile-footer-links__item">
+        <div class="mobile-footer-links__title">
+          <h5>Помощь</h5>
+          <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+        </div>
+        <div class="mobile-footer-links__collapse links-hidden">
+          <a href="#">Доставка</a>
+          <a href="#">Оплата</a>
+          <a href="#">Возврат товара</a>
+          <a href="#">Служба поддержки</a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-footer__socials only-mobile">
+      <a href="#">
+        <img src="./icons/footer/insta.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/tw.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/vk.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/ok.svg" alt="img" />
+      </a>
+
+      <a href="#">
+        <img src="./icons/footer/Fb.svg" alt="img" />
+      </a>
+    </div>
+    <div class="mobile-footer-contacts only-mobile">
+      <div class="mobile-footer-contacts__block">
+        <div class="mobile-footer-contacts__city">Санкт - Петербург</div>
+        <div class="mobile-footer-contacts__phone">+7 800 100-0-100</div>
+      </div>
+      <div class="mobile-footer-contacts__block">
+        <div class="mobile-footer-contacts__city">Москва</div>
+        <div class="mobile-footer-contacts__phone">+7 800 100-0-100</div>
       </div>
     </div>
   </footer>
