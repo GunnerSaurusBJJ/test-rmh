@@ -101,6 +101,7 @@
   padding: 7px 20px;
   top: 24px;
   left: 29px;
+  backdrop-filter: blur(3px);
   @media #{$media-to-xs} {
     font-size: 12px;
   }
@@ -263,6 +264,7 @@
       height: 50px;
       margin-right: 16px;
       border-radius: 5px;
+      margin-bottom: 14px;
     }
   }
 }
@@ -276,6 +278,7 @@
   padding: 7px 20px;
   left: 14px;
   top: 14px;
+  backdrop-filter: blur(3px);
 }
 .mobile-blog-caption {
   font-size: 12px;
@@ -290,6 +293,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 8px;
+    width: 90%;
   }
   p {
     font-size: 16px;
@@ -303,6 +307,7 @@
   span {
     color: #A7A8B3;
     font-size: 14px;
+    margin-right: 12px;
   }
 }
 .mobile-images-wrapper {

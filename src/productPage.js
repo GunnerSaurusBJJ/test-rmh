@@ -101,7 +101,8 @@ document.addEventListener('click', (e) => {
   }
 })
 
-document.querySelectorAll('.choose-material-main__right-row-main .item img').forEach(item => {
+
+document.querySelectorAll('.select-img').forEach(item => {
   item.addEventListener('click', () => {
     document.querySelector('.material-selected').classList.remove('material-selected')
     item.classList.add('material-selected')

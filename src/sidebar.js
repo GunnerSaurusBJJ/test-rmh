@@ -31,6 +31,13 @@ sidebarItems[1].addEventListener('mouseleave', () => {
   }
 })
 
+sidebarItems[2].addEventListener('mouseover', () => changeImagePath(armchairImage, './img/sidebar/armchair-hover.png'))
+sidebarItems[2].addEventListener('mouseleave', () => {
+  if (!openedSideBar.classList.contains('open-sidebar')) {
+    changeImagePath(armchairImage, './img/sidebar/armchair.svg')
+  }
+})
+
 sidebarItems[3].addEventListener('mouseover', () => changeImagePath(chairImage, './img/sidebar/chair-hover.png'))
 sidebarItems[3].addEventListener('mouseleave', () => {
   if (!openedSideBar.classList.contains('open-sidebar')) {
@@ -58,6 +65,7 @@ function toggleClassSidebar (e) {
     changeImagePath(sofaImage, './img/sidebar/sofa.svg')
     changeImagePath(bedImage, './img/sidebar/bed.svg')
     changeImagePath(chairImage, './img/sidebar/chair.png')
+    changeImagePath(armchairImage, './img/sidebar/armchair.svg')
   }
 }
 
@@ -69,6 +77,7 @@ document.addEventListener('click', (e) => {
     changeImagePath(sofaImage, './img/sidebar/sofa.svg')
     changeImagePath(bedImage, './img/sidebar/bed.svg')
     changeImagePath(chairImage, './img/sidebar/chair.png')
+    changeImagePath(armchairImage, './img/sidebar/armchair.svg')
   }
 })
 function changeImagePath (element, path) {
@@ -122,9 +131,28 @@ mobileSubcategoryTitle.querySelector('img').addEventListener('click', () => {
   document.querySelector('.mobile-subcategory').classList.remove('mobile-subcategory-opened')
 })
 
-document.querySelector('.footer-subscribe__top-btn').addEventListener('click', () => {
+let scrollToTopBtn = document.querySelector('.footer-subscribe__top-btn')
+
+scrollToTopBtn.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
+})
+
+let subscribeTopBlock = document.querySelector('.footer-subscribe__main')
+
+window.addEventListener('scroll', () => {
+  if (pageYOffset > 200) {
+    scrollToTopBtn.classList.remove('hide-btn')
+  } else {
+    scrollToTopBtn.classList.add('hide-btn')
+  }
+  if (document.querySelector('.footer-subscribe__input').getBoundingClientRect().top + 32 <= 882) {
+    scrollToTopBtn.classList.add('absolute-btn')
+    scrollToTopBtn.classList.remove('fixed-btn')
+  } else if (document.querySelector('.footer-subscribe__input').getBoundingClientRect().top + 32 >= 882) {
+    scrollToTopBtn.classList.add('fixed-btn')
+    scrollToTopBtn.classList.remove('absolute-btn')
+  }
 })

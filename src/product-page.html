@@ -412,7 +412,7 @@
                 <img src="product-page/pr03.png" alt="img">
               </div>
             </div>
-            <div class="video-product-fixed">
+            <div class="video-product-fixed no-mobile">
               <img src="./product-page/video-product.png" alt="img">
               <span>2 видео</span>
             </div>
@@ -457,6 +457,9 @@
             <span class="choose-material no-mobile">
               Подобрать другую ткань
             </span>
+            <span class="choose-material only-mobile">
+              Подробнее о ткане
+            </span>
           </div>
           <button class="product-info__btn no-mobile">
             <img src="icons/addToCartWhite.svg" alt="img">
@@ -498,11 +501,15 @@
           </div>
         </div>
       </div>
-      <div class="choose-material-main">
         <div class="choose-material-main__left">
-          <img src="https://via.placeholder.com/415" alt="img">
+          <div class="material-slider">
+            <img src="https://via.placeholder.com/415" alt="img">
+            <img class="material-arrow left" src="./icons/topslider/left-arrow.svg">
+            <img class="material-arrow right" src="./icons/topslider/right-arrow.svg">
+          </div>
           <p>Микрофибра – ткань высокой прочности с широкой цветовой гаммой. Особо тонкие волокна в составе полотна объясняют ее название.</p>
-          <button>
+          <button class="add-to-cart-btn">
+            <img src="icons/addToCartWhite.svg" alt="img">
             Добавить в корзину
           </button>
         </div>
@@ -517,31 +524,59 @@
             </div>
             <div class="choose-material-main__right-row-main">
               <div class="item">
-                <img src="https://via.placeholder.com/50" class="material-selected" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img material-selected" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
             </div>
@@ -556,27 +591,167 @@
             </div>
             <div class="choose-material-main__right-row-main">
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+            </div>
+            <div class="choose-material-main__right-row-main">
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+            </div>
+            <div class="choose-material-main__right-row-main">
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
+                <span>2</span>
+              </div>
+              <div class="item">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
@@ -595,23 +770,43 @@
             </div>
             <div class="choose-material-main__right-row-main">
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
             </div>
@@ -626,37 +821,64 @@
             </div>
             <div class="choose-material-main__right-row-main">
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
               <div class="item">
-                <img src="https://via.placeholder.com/50" alt="img">
+                <div class="item-hover-img">
+                  <img src="https://via.placeholder.com/50" alt="img">
+                  <span>2</span>
+                </div>
+                <img class="select-img" src="https://via.placeholder.com/50" alt="img">
                 <span>2</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <!-- !CONFIGURATION -->
@@ -670,7 +892,7 @@
           <img class="configuration-main-img" src="./product-page/config_main_img.png" alt="img">
         </div>
         <div class="configuration-light-gray-bg configuration-description-wrapper">
-          <img src="./product-page/pr02.png" class="no-mobile" alt="img">
+          <img src="./product-page/pr10.png" class="no-mobile" alt="img">
           <p class="configuration-description">
             Шагающий механизм, который приподнимает сидение и, выдвигая <br>
             его вверх и вперед, раскладывает диван до широкого ровного спального места – для этого останется просто опустить спинку дивана по аналогии 
@@ -780,7 +1002,7 @@
                   Механизм:
                 </span>
                 <p>
-                  итальянская раскадушка
+                  итальянская раскладушка
                 </p>
               </div>
             </div>
@@ -1101,7 +1323,7 @@
         Создай свой диван
       </div>
       <div class="create-your-design__subtitle">
-        Скидки всю осень, на выбор цвета и ткани, 
+        Скидки всю осень, <br> на выбор цвета и ткани, 
         подбери свой идеал, воплати мечту
       </div>
      </div>
@@ -1109,7 +1331,7 @@
   </section>
   <section class="similar-products">
     <div class="container">
-      <h2 class="similar-products__title product-page-title">Вам может понравится</h2>
+      <h2 class="similar-products__title product-page-title">Вам может понравиться</h2>
       <div class="similar-products__wrapper">
         <div class="similar-products__card">
           <span class="similar-products__card-discount">-35 <span>%</span></span>

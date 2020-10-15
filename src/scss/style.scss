@@ -54,9 +54,9 @@ input {
 }
 .img-magnifier-container {
   position: relative;
-  margin-left: 250px;
+  z-index: 3;
+  margin-right: 3.81944vw;
 }
-
 .img-magnifier-glass {
   position: absolute;
   border: 1.5px solid #FFFFFF;
@@ -76,7 +76,9 @@ input {
 input {
   caret-color: $red;
 }
-
+html {
+  overflow-x: hidden;
+}
 @import "_styles";
 @import "_header";
 @import "_sidebar";

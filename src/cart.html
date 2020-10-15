@@ -386,7 +386,7 @@
               <div class="item-color">
                 Цвет: <span>темно-синий</span>
               </div>
-              <div class="item-material-changed-row">
+              <div class="item-material-changed-row no-mobile">
                 <div class="item-material-changed">
                   <img src="https://via.placeholder.com/30" alt="img">
                   <p>Alur Plein - Алюр Плейн</p>
@@ -395,6 +395,7 @@
                 <div class="item-material-changed__price">
                   24 900 ₽
                 </div>
+                <img src="./img/mobile/mobile-close-material.svg" alt="img">
               </div>
             </div>
             <div class="item-quantity">
@@ -408,7 +409,7 @@
             </div>
             <div class="item-price">
               <div class="item-price__old">
-                49 000 ₽
+                <span>49 000 ₽</span>
                 <span>-35%</span>
               </div>
               <div class="item-price__new">
@@ -418,6 +419,18 @@
             <button class="cart__trash">
               <img src="./icons/trash.svg" alt="img">
             </button>
+            <div class="item-material-changed-row only-mobile">
+              <div class="item-material-changed">
+                <img src="https://via.placeholder.com/30" alt="img">
+                <p>Alur Plein - Алюр Плейн</p>
+                <span>Изменить обивку</span>
+              </div>
+                <img src="./img/mobile/mobile-close-material.svg" alt="img">
+            </div>
+            <div class="item-material-changed__price only-mobile">
+              24 900 ₽
+            </div>
+            
           </div>
           <div class="cart__item">
             <img src="img/cart-sof.png" alt="img">
@@ -446,7 +459,7 @@
             </div>
             <div class="item-price">
               <div class="item-price__old">
-                49 000 ₽
+                <span>49 000 ₽</span>
                 <span>-35%</span>
               </div>
               <div class="item-price__new">
@@ -458,7 +471,7 @@
             </button>
           </div>
         </div>
-        <div class="cart-summary">
+        <div class="cart-summary no-mobile">
           <div class="cart-summary__title">
             Ваш заказ
           </div>
@@ -502,6 +515,43 @@
     </div>
   </section>
   <section class="cart-delivery">
+    <div class="cart-summary only-mobile">
+      <div class="cart-summary__title">
+        Ваш заказ
+      </div>
+      <div class="cart-summary__row">
+        <div class="cart-summary__row-left">
+          Товар (<span class="cart-summary__qty">2</span>)
+        </div>
+        <div class="cart-summary__row-right">
+          70 229 ₽
+        </div>
+      </div>
+      <div class="cart-summary__row">
+        <div class="cart-summary__row-left">
+          Доставка
+        </div>
+        <div class="cart-summary__row-right">
+          0 ₽
+        </div>
+      </div>
+      <div class="cart-summary__row">
+        <div class="cart-summary__row-left">
+          Скидка:
+        </div>
+        <div class="cart-summary__row-right discount">
+          - 17 060 ₽
+        </div>
+      </div>
+      <div class="cart-summary__total">
+        <div class="cart-summary__total-left">
+          Итого:
+        </div>
+        <div class="cart-summary__total-right">
+          53 169 ₽
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="cart-delivery__title">
         Способ доставки
@@ -535,7 +585,7 @@
   <section class="address">
     <div class="container">
       <div class="address-info">
-        <div class="address-card cart-address-card">
+        <div class="address-card cart-address-card no-mobile">
           <div class="address-card__title">
             Склад RM Home
           </div>
@@ -580,10 +630,6 @@
         <div class="cart-data__item">
           <label for="name">Имя</label>
           <input type="text" placeholder="Имя">
-        </div>
-        <div class="cart-data__item">
-          <label for="name">Фамилия</label>
-          <input type="text" placeholder="Фамилия">
         </div>
         <div class="cart-data__item">
           <label for="name">Контактный телефон</label>

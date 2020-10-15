@@ -24,6 +24,8 @@
       margin-right: 0;
       font-size: 14px;
       padding-top: 20px;
+      padding-bottom: 16px;
+      width: 100%;
     }
   }
   &__input {
@@ -58,10 +60,14 @@
     border: none;
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     right: 32px;
-    top: 50%;
+    bottom: 32px;
     transform: translateY(-50%);
+    transition: 0.4s;
+    @media #{$media-to-xs} {
+      display: none;
+    }
     img {
       width: 22px;
       padding-bottom: 2px;
@@ -236,4 +242,19 @@
 
 .links-hidden {
   display: none;
+}
+
+.hide-btn {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.fixed-btn {
+  position: fixed;
+  top: auto
+}
+.absolute-btn {
+  position: absolute;
+  top: 50%
 }

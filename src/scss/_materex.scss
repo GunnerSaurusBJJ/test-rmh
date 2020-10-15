@@ -11,6 +11,7 @@
   display: flex;
   align-self: center;
   padding-left: 80px;
+  justify-content: space-between;
   @media #{$media-to-xs} {
     padding: 0;
     position: relative;
@@ -19,7 +20,9 @@
 }
 .banner-img {
   width: 528px;
-  height: 270px;
+  height: 230px;
+  margin-top: 40px;
+  margin-right: 4.86111vw;
   @media #{$media-to-xs} {
     height: 190px;
   }
@@ -111,4 +114,12 @@
       font-size: 14px;
     }
   }
+}
+
+.border-ex-img {
+  position: absolute;
+  top: 0;
+  right: 4.6vw;
+  height: 98%;
+  width: 650px;
 }
