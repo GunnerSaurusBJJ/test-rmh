@@ -143,18 +143,18 @@ scrollToTopBtn.addEventListener('click', () => {
 let subscribeInput = document.querySelector('.footer-subscribe__input')
 
 window.addEventListener('scroll', () => {
+  let ifInputVisible = window.pageYOffset + subscribeInput.getBoundingClientRect().top + parseFloat(getComputedStyle(scrollToTopBtn).getPropertyValue('bottom')) + (scrollToTopBtn.clientHeight / 2) + subscribeInput.clientHeight < window.pageYOffset + document.documentElement.clientHeight
+
   if (pageYOffset > 200) {
     scrollToTopBtn.classList.remove('hide-btn')
   } else {
     scrollToTopBtn.classList.add('hide-btn')
   }
-  if (subscribeInput.getBoundingClientRect().top + pageYOffset + 32 <= scrollToTopBtn.getBoundingClientRect().top + pageYOffset) {
+  if (ifInputVisible) {
     scrollToTopBtn.classList.add('absolute-btn')
     scrollToTopBtn.classList.remove('fixed-btn')
-  } else if (subscribeInput.getBoundingClientRect().top + 32 >= scrollToTopBtn.getBoundingClientRect().top + pageYOffset) {
-    scrollToTopBtn.classList.add('fixed-btn')
-    scrollToTopBtn.classList.remove('absolute-btn')
-  } else if (!(window.pageYOffset + scrollToTopBtn.getBoundingClientRect().top + scrollToTopBtn.clientHeight + 56 < window.pageYOffset + document.documentElement.clientHeight)){
+  }
+  if (!ifInputVisible) {
     scrollToTopBtn.classList.add('fixed-btn')
     scrollToTopBtn.classList.remove('absolute-btn')
   }
