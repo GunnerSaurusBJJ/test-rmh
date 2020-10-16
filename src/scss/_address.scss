@@ -20,7 +20,8 @@
   display: flex;
   justify-content: flex-end;
   iframe {
-    width: 66.73vw;
+    // width: 66.73vw;
+    width: calc(100% - 22.916vw);
     @media #{$media-to-xs} {
       height: 160px;
       width: 100%;

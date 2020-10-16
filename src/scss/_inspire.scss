@@ -134,31 +134,31 @@
   }
 }
 .collection-left-point-1 {
-  right: calc(11.148% - 10px);;
-  top: calc(15.3333% - 10px);
+  right: calc(33% - 10px);;
+  top: calc(45% - 10px);
 }
 .collection-left-point-2 {
-  right: calc(42% - 10px);
-  top: calc(50% - 10px);
+  right: calc(47% - 10px);
+  top: calc(70% - 10px);
 }
 .collection-left-point-3 {
-  right: calc(61% - 10px);
-  top: calc(51% - 10px);
+  right: calc(79% - 10px);
+  top: calc(65% - 10px);
 }
 .collection-right-point-1 {
-  right: calc(61% - 10px);
-  top: calc(19% - 10px);
+  right: calc(42% - 10px);
+  top: calc(65% - 10px);
 }
 .collection-card-opened {
   width: 215px;
-  height: 320px;
   background: #fff;
   border-radius: 5px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 24px 16px;
   z-index: 10;
+  padding-bottom: 24px;
+  transition: .4s;
   @media #{$media-to-xs} {
     padding: 12px;
     width: 140px;
@@ -171,6 +171,8 @@
     font-weight: normal;
     font-size: 16px;
     margin-top: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
     @media #{$media-to-xs} {
      font-size: 14px;
      margin-top: 0;
@@ -181,6 +183,8 @@
     font-size: 12px;
     margin-top: 4px;
     margin-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   &__color-title {
     font-size: 12px;
@@ -188,6 +192,8 @@
   }
   &__btns {
     margin-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
     button {
       border-radius: 5px;
       width: 16px;
@@ -197,7 +203,7 @@
     }
   }
   &__more {
-    width: 100%;
+    width: 85%;
     font-weight: bold;
     font-size: 14px;
     padding: 10px;
@@ -205,6 +211,7 @@
     border-radius: 10px;
     background: #fff;
     display: block;
+    margin: 0 auto;
     @media #{$media-to-xs} {
       display: none;
      }

@@ -399,3 +399,22 @@ $(document).ready(function(){
 });
 
 
+document.querySelectorAll('.card-hover-img').forEach(card => {
+  let srcDefault = card.querySelector('a img').src
+  let whiteLine = card.querySelector('.white-hover-slide-line')
+  let hoverSlideImgs = card.querySelectorAll('.hover-slide-img')
+  if (!Array.from(hoverSlideImgs).length) {
+    whiteLine.style.width = '100%'
+  }
+  whiteLine.style.width = 100 / Array.from(hoverSlideImgs).length + '%'
+  hoverSlideImgs.forEach((item, idx) => {
+    item.addEventListener('mouseover', () => {
+      card.querySelector('a img').src = item.dataset.src
+      whiteLine.style.left = parseFloat(whiteLine.style.width) * idx + '%'
+    })
+    item.addEventListener('mouseleave', () => {
+      card.querySelector('a img').src = srcDefault
+      whiteLine.style.left = 0
+    })
+  })
+})

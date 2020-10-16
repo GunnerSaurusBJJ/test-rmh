@@ -18,3 +18,5 @@ if (window.innerWidth > 900) {
     }
   }
 }
+// cart__item
+// document.querySelector('.cart-address-map').clientWidth = document.querySelector('.cart-items-wrapper').clientWidth

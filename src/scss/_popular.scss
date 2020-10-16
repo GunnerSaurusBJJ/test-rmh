@@ -84,7 +84,7 @@
     
   }
   .card-to-favorite {
-    right: 36px;
+    right: 18px;
     top: 26px;
     position: absolute;
     cursor: pointer;
@@ -125,7 +125,7 @@
   .card-title {
     font-size: 18px;
     font-weight: normal;
-    margin-top: 110px;
+    margin-top: 85px;
     margin-left: 10px;
   }
   .card-subtitle {
@@ -273,7 +273,7 @@
       line-height: 24px;
     }
   }
-  padding: 30px;
+  padding: 30px 16px;
   &:hover {
     .add-to-cart-wrapper {
       opacity: 1;
@@ -368,9 +368,9 @@
   background: transparent;
   padding: 15px;
   margin-top: 20px;
-  width: 86%;
+  width: 98%;
   font-weight: bold;
-  margin: 0 auto 0 22px;
+  margin: 0 auto 0 6px;
   display: block;
   font-size: 14px;
   &:hover {
@@ -402,10 +402,10 @@
   position: absolute;
   height: 5px;
   background: rgba(0, 0, 0, 0.5);
-  width: 77%;
+  width: 87%;
   top: 8px;
-  left: 50%;
-  transform: translateX(-51%);
+  left: 51%;
+  transform: translateX(-52%);
   border-radius: 5px;
 }
 .white-hover-slide-line {
