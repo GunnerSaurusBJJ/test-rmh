@@ -140,7 +140,7 @@ scrollToTopBtn.addEventListener('click', () => {
   });
 })
 
-let subscribeTopBlock = document.querySelector('.footer-subscribe__main')
+let subscribeInput = document.querySelector('.footer-subscribe__input')
 
 window.addEventListener('scroll', () => {
   if (pageYOffset > 200) {
@@ -148,10 +148,13 @@ window.addEventListener('scroll', () => {
   } else {
     scrollToTopBtn.classList.add('hide-btn')
   }
-  if (document.querySelector('.footer-subscribe__input').getBoundingClientRect().top + 32 <= 882) {
+  if (subscribeInput.getBoundingClientRect().top + pageYOffset + 32 <= scrollToTopBtn.getBoundingClientRect().top + pageYOffset) {
     scrollToTopBtn.classList.add('absolute-btn')
     scrollToTopBtn.classList.remove('fixed-btn')
-  } else if (document.querySelector('.footer-subscribe__input').getBoundingClientRect().top + 32 >= 882) {
+  } else if (subscribeInput.getBoundingClientRect().top + 32 >= scrollToTopBtn.getBoundingClientRect().top + pageYOffset) {
+    scrollToTopBtn.classList.add('fixed-btn')
+    scrollToTopBtn.classList.remove('absolute-btn')
+  } else if (!(window.pageYOffset + scrollToTopBtn.getBoundingClientRect().top + scrollToTopBtn.clientHeight + 56 < window.pageYOffset + document.documentElement.clientHeight)){
     scrollToTopBtn.classList.add('fixed-btn')
     scrollToTopBtn.classList.remove('absolute-btn')
   }
