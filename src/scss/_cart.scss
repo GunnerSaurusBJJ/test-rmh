@@ -98,6 +98,9 @@
       align-self: flex-end;
       margin-bottom: 5px;
     }
+    @media #{$media-xl-up} {
+      margin-left: 15vw;
+    }
     &__num {
       margin-left: 16px;
       margin-right: 16px;
@@ -453,6 +456,9 @@
   align-items: center;
   position: absolute;
   margin-top: 20px;
+  @media #{$media-xl-up} {
+    width: 100%;
+  }
   @media #{$media-to-xs} {
     position: static;
     grid-column: 1 / -1;
@@ -502,6 +508,9 @@
       margin-top: 16px;
       justify-self: flex-start;
       margin-left: 0;
+    }
+    @media #{$media-xl-up} {
+      margin-left: 21vw;
     }
     & ~ img {
       margin-left: 93px;

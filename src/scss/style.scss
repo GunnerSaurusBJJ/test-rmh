@@ -33,23 +33,6 @@ input {
     padding-right: 0px;
   }
 }
-// .modal {
-//   background: rgba(0, 0, 0, 0.5);
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   z-index: 99999;
-//   visibility: hidden;
-//   opacity: 0;
-//   transition: .4s;
-// }
-// .show-modal {
-//   visibility: visible;
-//   opacity: 1;
-//   transition: .4s;
-// }
 .modal-discount-wrapper {
   background: #fff;
   border-radius: 10px;
@@ -58,6 +41,9 @@ input {
   text-align: center;
   position: relative;
   animation: show .4s;
+  @media #{$media-to-xs} {
+    width: calc(100% - 42px);
+  }
 }
 .display-none {
   display: none;

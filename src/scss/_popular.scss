@@ -42,7 +42,7 @@
 }
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 30px;
   @media #{$media-to-xs} {
     grid-template-columns: repeat(2, 1fr);
@@ -95,7 +95,8 @@
   }
   .card-discount {
     position: absolute;
-    top: -10px;
+    top: -6px;
+    left: 4px;
     z-index: 17;
     span {
       background-color: $red;
@@ -296,6 +297,9 @@
     margin-right: 16px;
     height: 160px;
   }
+  @media #{$media-xl-up} {
+    height: 240px;
+  }
   div {
     position: absolute;
     left: 70px;
@@ -315,6 +319,10 @@
   }
   img {
     width: 60%;
+    @media #{$media-xl-up} {
+     margin-right: 130px;
+     width: 40%;
+    }
   }
   &__title {
     font-weight: bold;
@@ -413,4 +421,113 @@
   background-color: #fff;
   height: 5px;
   position: absolute;
+}
+
+.action {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  cursor: pointer;
+  @media #{$media-to-xs} {
+    top: -2px;
+    right: 6px;
+  }
+  & ~ img {
+    position: absolute;
+    top: 21px;
+    width: 37px !important;
+    right: 16.3px;
+    z-index: 10;
+    z-index: 5;
+  }
+}
+
+.line {
+  margin: 10px;
+}
+.line:nth-of-type(1) {
+  transform: rotate(0deg);
+}
+.line:nth-of-type(2) {
+  transform: rotate(45deg);
+}
+.line:nth-of-type(3) {
+  transform: rotate(90deg);
+}
+.line:nth-of-type(4) {
+  transform: rotate(135deg);
+}
+.line:nth-of-type(5) {
+  transform: rotate(180deg);
+}
+.line:nth-of-type(6) {
+  transform: rotate(225deg);
+}
+.line:nth-of-type(7) {
+  transform: rotate(270deg);
+}
+.line:nth-of-type(8) {
+  transform: rotate(315deg);
+}
+.line.active:before {
+  content: '';
+  width: 2px;
+  background: red;
+  position: absolute;
+  top: -4.5vh;
+  left: -0.18vh;
+  will-change: top, height;
+  animation: line1 .3s ease-out 1;
+}
+.favorite-icon-product.active {
+  animation: grow-shrink .3s ease 1;
+  fill: red;
+}
+.favorite-icon-product.love {
+  fill: red;
+  stroke: none;
+}
+.favorite-icon-product {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  stroke: #000;
+  position: absolute;
+  right: 0;
+  top: 7px;
+  @media #{$media-to-xs} {
+    right: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+  }
+}
+@keyframes line1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    top: -4.5vh;
+  }
+  65% {
+    height: 9vh;
+  }
+  100% {
+    height: 0.36vh;
+    top: -18vh;
+  }
+}
+
+@keyframes grow-shrink {
+  40% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

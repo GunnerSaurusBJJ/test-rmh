@@ -13,7 +13,7 @@
 }
 .images-wrapper {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   grid-gap: 20px;
   margin-top: 20px;
 }
@@ -226,7 +226,7 @@
 }
 .blog-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   @media #{$media-to-xs} {
     display: flex;

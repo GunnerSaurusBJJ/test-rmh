@@ -31,13 +31,6 @@ document.addEventListener('click', (e) => {
   }
 })
 
-sidebarFilterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.nextElementSibling.classList.toggle('content-hidden')
-    btn.children[0].classList.toggle('sidebar-arrow-rotate')
-  })
-})
-
 allFiltersBtn.addEventListener('click', () => {
   document.querySelector('.filter-sidebar-background').classList.add('filter-sidebar-background-visible')
   document.querySelector('.catalog-filter-sidebar').classList.add('sidebar-filter-visible')
@@ -416,5 +409,35 @@ document.querySelectorAll('.card-hover-img').forEach(card => {
       card.querySelector('a img').src = srcDefault
       whiteLine.style.left = 0
     })
+  })
+})
+
+document.querySelectorAll('.card').forEach(card => {
+  card.querySelectorAll('.love.action').forEach(item => {
+    item.addEventListener('click', () => addToFavIconActive(card, '.favorite-icon-product', '.line'))
+  })
+  if (window.innerWidth < 576) {
+    card.querySelectorAll('.favorite-mobile.only-mobile').forEach(item => 
+      item.addEventListener('click', () => addToFavIconActive(card, '.favorite-mobile.only-mobile .favorite-icon-product', '.favorite-mobile.only-mobile .line')))
+  }
+})
+
+function addToFavIconActive (card, iconClass, lineClass) {
+  card.querySelector(iconClass).classList.toggle('love')
+  card.querySelectorAll(lineClass).forEach(i => i.classList.add('active'))
+  card.querySelector(iconClass).classList.add('active')
+  setTimeout(() => {
+    card.querySelectorAll(lineClass).forEach(i => i.classList.remove('active'))
+    card.querySelector(iconClass).classList.remove('active')
+  }, 300);
+}
+
+sidebarFilterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.nextElementSibling.style.maxHeight) {
+      btn.nextElementSibling.style.maxHeight = null;
+    } else {
+      btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + "px";
+    } 
   })
 })

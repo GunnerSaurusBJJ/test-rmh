@@ -183,3 +183,24 @@ document.querySelectorAll('.card-hover-img').forEach(card => {
     })
   })
 })
+
+// active favorite icon 
+document.querySelectorAll('.card').forEach(card => {
+  card.querySelectorAll('.love.action').forEach(item => {
+    item.addEventListener('click', () => addToFavIconActive(card, '.favorite-icon-product', '.line'))
+  })
+  if (window.innerWidth < 576) {
+    card.querySelectorAll('.favorite-mobile.only-mobile').forEach(item => 
+      item.addEventListener('click', () => addToFavIconActive(card, '.favorite-mobile.only-mobile .favorite-icon-product', '.favorite-mobile.only-mobile .line')))
+  }
+})
+
+function addToFavIconActive (card, iconClass, lineClass) {
+  card.querySelector(iconClass).classList.toggle('love')
+  card.querySelectorAll(lineClass).forEach(i => i.classList.add('active'))
+  card.querySelector(iconClass).classList.add('active')
+  setTimeout(() => {
+    card.querySelectorAll(lineClass).forEach(i => i.classList.remove('active'))
+    card.querySelector(iconClass).classList.remove('active')
+  }, 300);
+}

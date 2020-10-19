@@ -13,6 +13,7 @@
   padding-left: 80px;
   justify-content: space-between;
   @media #{$media-to-xs} {
+    height: 190px;
     padding: 0;
     position: relative;
     overflow: hidden;
@@ -33,7 +34,7 @@
   @media #{$media-to-xs} {
     padding: 20px;
     padding-right: 0;
-    width: 50%;
+    width: 58%;
   }
   &__title {
     font-weight: bold;
@@ -70,7 +71,7 @@
     padding: 14px 0;
     margin-top: 35px;
     @media #{$media-to-xs} {
-      margin-top: 20px;
+      margin-top: 12px;
       max-width: 140px;
       height: 40px;
       padding: 0;
@@ -85,12 +86,15 @@
   position: absolute;
   height: 90%;
   top: 10px;
+  @media #{$media-to-xs} {
+    left: 170px;
+  }
 }
 
 .example-types {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
 }
 

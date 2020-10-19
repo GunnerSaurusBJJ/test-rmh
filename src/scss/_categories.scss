@@ -1,6 +1,6 @@
 .categories-wrapper {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 20px;
   justify-content: space-between;
   @media(min-width: 1440px) {
