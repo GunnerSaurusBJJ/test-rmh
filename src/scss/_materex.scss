@@ -6,7 +6,7 @@
   }
 }
 .example-banner {
-  background-color: #0081A7;
+  background-color: #0081a7;
   border-radius: 10px;
   display: flex;
   align-self: center;
@@ -47,7 +47,7 @@
     }
   }
   &__desc {
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 0.54;
     max-width: 300px;
     margin-top: 10px;
@@ -77,8 +77,8 @@
       padding: 0;
     }
     &:hover {
-      border: 1.5px solid #CBCBCB;
-      transition: .2s;
+      border: 1.5px solid #cbcbcb;
+      transition: 0.2s;
     }
   }
 }
@@ -94,7 +94,7 @@
 .example-types {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
 }
 

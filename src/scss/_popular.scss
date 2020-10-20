@@ -34,8 +34,8 @@
         margin-left: -10px;
       }
       &:hover {
-        color: #0B729E;
-        transition: .2s;
+        color: #0b729e;
+        transition: 0.2s;
       }
     }
   }
@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   @media #{$media-to-xs} {
-    border: 1px solid #D2D7E3;
+    border: 1px solid #d2d7e3;
   }
   .card-hover-img {
     position: absolute;
@@ -64,7 +64,7 @@
     opacity: 0;
     width: 100%;
     z-index: 10;
-    transition: all .4s;
+    transition: all 0.4s;
     img {
       width: 100%;
       margin: 0 auto;
@@ -81,7 +81,6 @@
   .hover-slide-img {
     width: 100%;
     height: 300px;
-    
   }
   .card-to-favorite {
     right: 18px;
@@ -132,7 +131,7 @@
   .card-subtitle {
     font-weight: normal;
     font-size: 14px;
-    color: #A7A8B3;
+    color: #a7a8b3;
     margin-left: 10px;
   }
   .card-tooltip {
@@ -145,7 +144,7 @@
     color: #fff;
     width: max-content;
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity 0.3s;
     &::after {
       content: '';
       width: 0;
@@ -156,7 +155,7 @@
       position: absolute;
       border-style: solid;
       border-width: 10px 9px 0 9px;
-      border-color:rgba(0, 0, 0, 0.7) transparent transparent transparent;
+      border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
       line-height: 0px;
       _border-color: #007bff #000000 #000000 #000000;
       _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
@@ -175,7 +174,7 @@
   }
   .card-icon__wrapper {
     position: relative;
-    &:hover{
+    &:hover {
       .card-tooltip {
         opacity: 1;
       }
@@ -197,7 +196,7 @@
         padding: 3px 7px;
         border-radius: 5px;
         &:hover {
-          border: 1px solid #A7A8B3;
+          border: 1px solid #a7a8b3;
         }
         span {
           font-size: 12px;
@@ -220,6 +219,8 @@
   .card-colors {
     font-size: 14px;
     &__btns {
+      display: flex;
+      align-items: center;
       margin-top: 10px;
       button {
         height: 16px;
@@ -232,7 +233,7 @@
           content: '';
           height: 20px;
           width: 20px;
-          border: 1px solid #A7A8B3;
+          border: 1px solid #a7a8b3;
           background: transparent;
           position: absolute;
           border-radius: 5px;
@@ -242,18 +243,18 @@
         }
       }
       .yellow {
-        background-color: #FED60E;
+        background-color: #fed60e;
       }
       .blue {
-        background-color: #6E67C6;
+        background-color: #6e67c6;
       }
       .light {
-        background-color: #CDDAE2;
+        background-color: #cddae2;
       }
     }
   }
   .old-price {
-    color: #A7A8B3;
+    color: #a7a8b3;
     font-size: 14px;
     text-decoration: line-through;
     text-align: right;
@@ -278,7 +279,7 @@
   &:hover {
     .add-to-cart-wrapper {
       opacity: 1;
-      transition: all .4s;
+      transition: all 0.4s;
     }
     box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.07);
     border-radius: 10px;
@@ -289,7 +290,7 @@
   display: flex;
   justify-content: flex-end;
   border-radius: 10px;
-  background: #FFE677;
+  background: #ffe677;
   margin-bottom: 60px;
   position: relative;
   @media #{$media-to-xs} {
@@ -320,8 +321,8 @@
   img {
     width: 60%;
     @media #{$media-xl-up} {
-     margin-right: 130px;
-     width: 40%;
+      margin-right: 130px;
+      width: 40%;
     }
   }
   &__title {
@@ -342,7 +343,7 @@
   }
 }
 .card-size__button-selected {
-  border: 1px solid #A7A8B3 !important;
+  border: 1px solid #a7a8b3 !important;
   font-weight: bold;
 }
 .card-colors__selected {
@@ -350,7 +351,7 @@
     content: '';
     height: 20px;
     width: 20px;
-    border: 1px solid #A7A8B3;
+    border: 1px solid #a7a8b3;
     background: transparent;
     position: absolute;
     border-radius: 5px;
@@ -372,7 +373,7 @@
 }
 .card_add-to-cart {
   border-radius: 10px;
-  border: 1.5px solid #ED1C24;
+  border: 1.5px solid #ed1c24;
   background: transparent;
   padding: 15px;
   margin-top: 20px;
@@ -382,8 +383,8 @@
   display: block;
   font-size: 14px;
   &:hover {
-    border: 1.5px solid #D00A12;
-    transition: .2s;
+    border: 1.5px solid #d00a12;
+    transition: 0.2s;
   }
 }
 
@@ -391,7 +392,7 @@
   @media #{$media-xs-up} {
     opacity: 0;
     visibility: hidden;
-    transition: all .4s;
+    transition: all 0.4s;
   }
 }
 .card:hover .card-hover-img {
@@ -479,10 +480,10 @@
   top: -4.5vh;
   left: -0.18vh;
   will-change: top, height;
-  animation: line1 .3s ease-out 1;
+  animation: line1 0.3s ease-out 1;
 }
 .favorite-icon-product.active {
-  animation: grow-shrink .3s ease 1;
+  animation: grow-shrink 0.3s ease 1;
   fill: red;
 }
 .favorite-icon-product.love {

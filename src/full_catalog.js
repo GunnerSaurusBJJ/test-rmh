@@ -5,11 +5,20 @@ const sortBtn = document.querySelector('.full-catalog-filters-sort'),
   sidebarFilterBtns = document.querySelectorAll('.catalog-filter-sidebar__btn'),
   allFiltersBtn = document.querySelector('.all-filters'),
   closeSideBarFilter = document.querySelector('.close-sidebar-filter')
+dropdownMenuAnimated = document.querySelector('.dropdown_menu--animated')
+sortBtn.addEventListener('click', (e) => {
+  if (e.target === sortBtn || e.target === sortBtn.querySelector('span') || e.target === sortBtn.querySelector('img')) {
+    dropdownMenuAnimated.classList.toggle('display-block')
+    sortBtn.querySelector('img').style.transform = dropdownMenuAnimated.classList.contains('display-block') ? 'rotate(180deg)' : 'rotate(0)'
+  }
+})
 
-sortBtn.addEventListener('click', () => {
-  document.querySelectorAll('.dropdown_menu li').forEach((i) => i.classList.toggle('display-block'))
-  document.querySelector('.dropdown_menu--animated').classList.toggle('display-block')
-  arrowSortBtn.classList.toggle('rotate-arrow')
+dropdownMenuAnimated.querySelectorAll('li').forEach((li) => {
+  li.addEventListener('click', (e) => {
+    dropdownMenuAnimated.classList.remove('display-block')
+    sortBtn.querySelector('span').textContent = li.textContent
+    sortBtn.querySelector('img').style.transform = 'rotate(0)'
+  })
 })
 
 let filterBackGround = document.querySelector('.filter-sidebar-background')
@@ -18,18 +27,60 @@ document.addEventListener('click', (e) => {
     document.documentElement.style.overflow = 'auto'
     filterBackGround.classList.remove('filter-sidebar-background-visible')
     document.querySelector('.catalog-filter-sidebar').classList.remove('choose-material-visible')
+    document.querySelector('.catalog-filter-sidebar').classList.remove('sidebar-filter-visible')
+    sidebarFilterBtns.forEach((btn) => {
+      let content = btn.nextElementSibling
+      content.style.maxHeight = null
+      btn.querySelector('img').style.transform = 'rotate(0deg)'
+    })
   }
 })
 
-allFiltersBtn.addEventListener('click', () => {
+function openFilterSidebar() {
   document.querySelector('.filter-sidebar-background').classList.add('filter-sidebar-background-visible')
   document.querySelector('.catalog-filter-sidebar').classList.add('sidebar-filter-visible')
   document.querySelector('html').style.overflow = 'hidden'
+}
+
+function closeAllAccordeons() {
+  sidebarFilterBtns.forEach((btn) => {
+    let content = btn.nextElementSibling
+    content.style.maxHeight = null
+    btn.querySelector('img').style.transform = 'rotate(0deg)'
+  })
+}
+
+allFiltersBtn.addEventListener('click', () => {
+  openFilterSidebar()
+  sidebarFilterBtns.forEach((btn) => {
+    let content = btn.nextElementSibling
+    content.style.maxHeight = content.scrollHeight + 'px'
+    btn.querySelector('img').style.transform = 'rotate(180deg)'
+  })
 })
+
+// opened accordeon depends on btn
+
+const filterBtnsIds = ['#category-btn', '#form-btn', '#price-btn', '#size-btn', '#color-btn', '#type-cover-btn']
+const sidebarFilterBtnsIds = ['#category', '#form', '#price', '#size', '#color', '#type-cover']
+
+filterBtnsIds.forEach((btn, idx) => {
+  document.querySelector(btn).addEventListener('click', (e) => {
+    if (e.target !== document.querySelector(btn).querySelector('img')) {
+      openFilterSidebar()
+      let content = document.querySelector(`.catalog-filter-sidebar ${sidebarFilterBtnsIds[idx]} .catalog-filter-sidebar__content`)
+      content.style.maxHeight = content.scrollHeight + 'px'
+    }
+  })
+})
+
+// close sidebar filter
 
 closeSideBarFilter.addEventListener('click', () => {
   document.querySelector('.filter-sidebar-background').classList.remove('filter-sidebar-background-visible')
+  document.querySelector('.catalog-filter-sidebar').classList.remove('sidebar-filter-visible')
   document.querySelector('html').style.overflow = 'scroll'
+  closeAllAccordeons()
 })
 
 // Range slider
@@ -116,7 +167,10 @@ inputRight.addEventListener('input', () => {
 // sidebar filter section
 let watchFilteredBtn = document.querySelector('.watch-filtered-btn')
 
-watchFilteredBtn.addEventListener('click', addCounterToBtn)
+watchFilteredBtn.addEventListener('click', () => {
+  addCounterToBtn()
+  closeAllAccordeons()
+})
 
 function addCounterToBtn() {
   document.querySelector('.filter-sidebar-background').classList.remove('filter-sidebar-background-visible')
@@ -135,13 +189,18 @@ function addCounterToBtn() {
     categoryFilterBtn.style.background = '#F5F6FA'
     categoryFilterBtn.style.color = '#282724'
   }
+
   if (document.querySelector('#remove-category-btn')) {
     document.querySelector('#remove-category-btn').addEventListener('click', () => {
-      categoryCheckboxes.forEach((item) => (item.checked = false))
-      categoryCount = 0
-      categoryCountText.textContent = ''
-      categoryFilterBtn.style.background = '#F5F6FA'
-      categoryFilterBtn.style.color = '#282724'
+      setTimeout(() => {
+        // if remove timeout sidebar won't be closed by click on the croos image on filter btn
+        categoryCheckboxes.forEach((item) => (item.checked = false))
+        categoryCount = 0
+        categoryCountText.textContent = ''
+        categoryFilterBtn.style.background = '#F5F6FA'
+        categoryFilterBtn.style.color = '#282724'
+        document.querySelector('.chosen-filter.category').textContent = ''
+      }, 0)
     })
   }
   let categoryArray = []
@@ -163,13 +222,18 @@ function addCounterToBtn() {
     formFilterBtn.style.background = '#F5F6FA'
     formFilterBtn.style.color = '#282724'
   }
+
   if (document.querySelector('#remove-form-btn')) {
     document.querySelector('#remove-form-btn').addEventListener('click', () => {
-      formCheckboxes.forEach((item) => (item.checked = false))
-      formCount = 0
-      formCountText.textContent = ''
-      formFilterBtn.style.background = '#F5F6FA'
-      formFilterBtn.style.color = '#282724'
+      setTimeout(() => {
+        formCheckboxes.forEach((item) => (item.checked = false))
+        formCount = 0
+        formCountText.textContent = ''
+        formFilterBtn.style.background = '#F5F6FA'
+        formFilterBtn.style.color = '#282724'
+        document.querySelector('.chosen-filter.form').textContent = ''
+      }, 0)
+      // if remove timeout sidebar won't be closed by click on the croos image on filter btn
     })
   }
   let formArray = []
@@ -193,11 +257,15 @@ function addCounterToBtn() {
   }
   if (document.querySelector('#remove-size-btn')) {
     document.querySelector('#remove-size-btn').addEventListener('click', () => {
-      sizeCheckboxes.forEach((item) => (item.checked = false))
-      sizeCount = 0
-      sizeCountText.textContent = ''
-      sizeFilterBtn.style.background = '#F5F6FA'
-      sizeFilterBtn.style.color = '#282724'
+      setTimeout(() => {
+        sizeCheckboxes.forEach((item) => (item.checked = false))
+        sizeCount = 0
+        sizeCountText.textContent = ''
+        sizeFilterBtn.style.background = '#F5F6FA'
+        sizeFilterBtn.style.color = '#282724'
+        document.querySelector('.chosen-filter.size').textContent = ''
+      }, 0)
+      // if remove timeout sidebar won't be closed by click on the croos image on filter btn
     })
   }
   let sizeArray = []
@@ -221,11 +289,15 @@ function addCounterToBtn() {
   }
   if (document.querySelector('#remove-color-btn')) {
     document.querySelector('#remove-color-btn').addEventListener('click', () => {
-      colorCheckboxes.forEach((item) => (item.checked = false))
-      colorCount = 0
-      colorCountText.textContent = ''
-      colorFilterBtn.style.background = '#F5F6FA'
-      colorFilterBtn.style.color = '#282724'
+      setTimeout(() => {
+        colorCheckboxes.forEach((item) => (item.checked = false))
+        colorCount = 0
+        colorCountText.textContent = ''
+        colorFilterBtn.style.background = '#F5F6FA'
+        colorFilterBtn.style.color = '#282724'
+        document.querySelector('.chosen-filter.color').textContent = ''
+      }, 0)
+      // if remove timeout sidebar won't be closed by click on the croos image on filter btn
     })
   }
   let colorArray = []
@@ -250,11 +322,15 @@ function addCounterToBtn() {
   }
   if (document.querySelector('#remove-type-btn')) {
     document.querySelector('#remove-type-btn').addEventListener('click', () => {
-      typeCheckboxes.forEach((item) => (item.checked = false))
-      typeCount = 0
-      typeCountText.textContent = ''
-      typeFilterBtn.style.background = '#F5F6FA'
-      typeFilterBtn.style.color = '#282724'
+      setTimeout(() => {
+        typeCheckboxes.forEach((item) => (item.checked = false))
+        typeCount = 0
+        typeCountText.textContent = ''
+        typeFilterBtn.style.background = '#F5F6FA'
+        typeFilterBtn.style.color = '#282724'
+        document.querySelector('.chosen-filter.type-cover').textContent = ''
+      }, 0)
+      // if remove timeout sidebar won't be closed by click on the croos image on filter btn
     })
   }
   let typeArray = []
@@ -263,9 +339,6 @@ function addCounterToBtn() {
       typeArray.push(item.parentElement.textContent)
       document.querySelector('.chosen-filter.type-cover').textContent = typeArray
     }
-  })
-  document.querySelectorAll('.catalog-filter-sidebar__content').forEach((item) => {
-    item.classList.add('content-hidden')
   })
 }
 // filters count
@@ -421,10 +494,13 @@ function addToFavIconActive(card, iconClass, lineClass) {
 
 sidebarFilterBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    if (btn.nextElementSibling.style.maxHeight) {
-      btn.nextElementSibling.style.maxHeight = null
+    let content = btn.nextElementSibling
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null
+      btn.querySelector('img').style.transform = 'rotate(0deg)'
     } else {
-      btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px'
+      content.style.maxHeight = content.scrollHeight + 'px'
+      btn.querySelector('img').style.transform = 'rotate(180deg)'
     }
   })
 })
