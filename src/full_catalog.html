@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>rmh catalog</title>
   </head>
@@ -19,35 +15,19 @@
         </a>
       </div>
       <div class="sidebar-item sidebar-products" id="sofa">
-        <img
-          class="sidebar-item__sofa-image"
-          src="./img/sidebar/sofa.svg"
-          alt="sofa"
-        />
+        <img class="sidebar-item__sofa-image" src="./img/sidebar/sofa.svg" alt="sofa" />
         <a class="sidebar-link" href="#">Диваны</a>
       </div>
       <div class="sidebar-item sidebar-products" id="bed">
-        <img
-          class="sidebar-item__bed-image"
-          src="./img/sidebar/bed.svg"
-          alt="bed"
-        />
+        <img class="sidebar-item__bed-image" src="./img/sidebar/bed.svg" alt="bed" />
         <a class="sidebar-link" href="#">Кровати</a>
       </div>
       <div class="sidebar-item sidebar-products" id="armchair">
-        <img
-          class="sidebar-item__armchair-image"
-          src="./img/sidebar/armchair.svg"
-          alt="armchair"
-        />
+        <img class="sidebar-item__armchair-image" src="./img/sidebar/armchair.svg" alt="armchair" />
         <a class="sidebar-link" href="#">Кресла</a>
       </div>
       <div class="sidebar-item sidebar-products" id="chair">
-        <img
-          class="sidebar-item__chair-image"
-          src="./img/sidebar/chair.png"
-          alt="chair"
-        />
+        <img class="sidebar-item__chair-image" src="./img/sidebar/chair.png" alt="chair" />
         <a class="sidebar-link" href="#">Стулья</a>
       </div>
       <div class="sidebar-item item-promo">
@@ -290,9 +270,7 @@
           <div class="mobile-subcategory-product__info">
             <h5>Каир Textile Grey</h5>
             <p>Диван прямой</p>
-            <div class="mobile-subcategory-product__oldprice">
-              49 000 ₽ <span>-35 %</span>
-            </div>
+            <div class="mobile-subcategory-product__oldprice">49 000 ₽ <span>-35 %</span></div>
             <div class="mobile-subcategory-product__newprice">40 100 ₽</div>
           </div>
         </div>
@@ -408,9 +386,9 @@
     <section class="full-catalog-filters">
       <div class="container">
         <div class="full-catalog-filters__wrapper">
-          <div class="full-catalog-filters__btn full-catalog-filters-sort">
+          <div class="full-catalog-filters__btn full-catalog-filters-sort dropdown-sort-btn dropdown-10">
             <span> По популярности </span>
-            <ul class="sort-list sort-list-visible">
+            <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-10">
               <li>
                 <label class="radio-container"
                   >По популярности
@@ -463,11 +441,7 @@
         <div class="catalog-filter-sidebar">
           <div class="catalog-filter-sidebar__title">
             <h4>Фильтр</h4>
-            <img
-              class="close-sidebar-filter"
-              src="./icons/close.svg"
-              alt="img"
-            />
+            <img class="close-sidebar-filter" src="./icons/close.svg" alt="img" />
           </div>
           <div class="catalog-filter-sidebar__choise-item" id="category">
             <div class="catalog-filter-sidebar__btn">
@@ -481,7 +455,6 @@
               <div class="chosen-filter category"></div>
             </div>
             <div class="catalog-filter-sidebar__content content-hidden">
-
               <div class="catalog-filter-sidebar__content-item">
                 <input class="inp-cbx" id="cat-chb-1" type="checkbox" />
                 <label class="cbx" for="cat-chb-1">
@@ -533,7 +506,7 @@
                 >
                 <input class="inp-cbx" id="cat-chb-4" type="checkbox" />
               </div>
-              
+
               <div class="catalog-filter-sidebar__content-item">
                 <input class="inp-cbx" id="cat-chb-5" type="checkbox" />
                 <label class="cbx" for="cat-chb-5">
@@ -546,7 +519,7 @@
                 >
                 <input class="inp-cbx" id="cat-chb-5" type="checkbox" />
               </div>
-              
+
               <div class="catalog-filter-sidebar__content-item">
                 <input class="inp-cbx" id="cat-chb-6" type="checkbox" />
                 <label class="cbx" for="cat-chb-6">
@@ -559,7 +532,6 @@
                 >
                 <input class="inp-cbx" id="cat-chb-6" type="checkbox" />
               </div>
-              
             </div>
           </div>
           <div class="catalog-filter-sidebar__choise-item" id="form">
@@ -638,20 +610,8 @@
               </div>
               <div class="catalog-filter-sidebar-slider">
                 <div class="multi-range-slider">
-                  <input
-                    type="range"
-                    id="input-left"
-                    min="0"
-                    max="100000"
-                    value="10000"
-                  />
-                  <input
-                    type="range"
-                    id="input-right"
-                    min="0"
-                    max="100000"
-                    value="100000"
-                  />
+                  <input type="range" id="input-left" min="0" max="100000" value="10000" />
+                  <input type="range" id="input-right" min="0" max="100000" value="100000" />
 
                   <div class="slider">
                     <div class="track"></div>
@@ -889,8 +849,18 @@
                 <svg display="none">
                   <symbol id="fav" viewBox="0 0 25 22">
                     <g>
-                      <path d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path
+                        d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </g>
                   </symbol>
                 </svg>
@@ -914,17 +884,9 @@
                 <div class="card-discount">
                   <span>-35%</span>
                 </div>
-                <img
-                  src="./icons/navbar/favorite.svg"
-                  class="mobile-card-to-favorite only-mobile"
-                  alt="favorite"
-                />
+                <img src="./icons/navbar/favorite.svg" class="mobile-card-to-favorite only-mobile" alt="favorite" />
                 <a href="product-page.html">
-                  <img
-                    src="./img/popular/popular_01.png"
-                    alt="img"
-                    class="card-image-prev"
-                  />
+                  <img src="./img/popular/popular_01.png" alt="img" class="card-image-prev" />
                 </a>
               </div>
             </div>
@@ -941,9 +903,7 @@
             <div class="card-sizes">
               <p class="card-sizes__title">Размеры</p>
               <div class="card-sizes__btns">
-                <button class="card-size__button card-size__button-selected">
-                  160<span>см</span>
-                </button>
+                <button class="card-size__button card-size__button-selected">160<span>см</span></button>
                 <button class="card-size__button">180<span>см</span></button>
               </div>
             </div>
@@ -960,11 +920,7 @@
                 <div class="old-price">55 000 ₽</div>
                 <div class="new-price">45 100 ₽</div>
               </div>
-              <img
-                src="./icons/navbar/cart.svg"
-                class="only-mobile"
-                alt="cart"
-              />
+              <img src="./icons/navbar/cart.svg" class="only-mobile" alt="cart" />
             </div>
             <div class="add-to-cart-wrapper no-mobile">
               <button class="card_add-to-cart">Добавить в корзину</button>
@@ -983,8 +939,18 @@
                 <svg display="none">
                   <symbol id="fav" viewBox="0 0 25 22">
                     <g>
-                      <path d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path
+                        d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </g>
                   </symbol>
                 </svg>
@@ -1008,17 +974,9 @@
                 <div class="card-discount">
                   <span>-35%</span>
                 </div>
-                <img
-                  src="./icons/navbar/favorite.svg"
-                  class="mobile-card-to-favorite only-mobile"
-                  alt="favorite"
-                />
+                <img src="./icons/navbar/favorite.svg" class="mobile-card-to-favorite only-mobile" alt="favorite" />
                 <a href="product-page.html">
-                  <img
-                    src="./img/popular/popular_01.png"
-                    alt="img"
-                    class="card-image-prev"
-                  />
+                  <img src="./img/popular/popular_01.png" alt="img" class="card-image-prev" />
                 </a>
               </div>
             </div>
@@ -1035,9 +993,7 @@
             <div class="card-sizes">
               <p class="card-sizes__title">Размеры</p>
               <div class="card-sizes__btns">
-                <button class="card-size__button card-size__button-selected">
-                  160<span>см</span>
-                </button>
+                <button class="card-size__button card-size__button-selected">160<span>см</span></button>
                 <button class="card-size__button">180<span>см</span></button>
               </div>
             </div>
@@ -1054,11 +1010,7 @@
                 <div class="old-price">55 000 ₽</div>
                 <div class="new-price">45 100 ₽</div>
               </div>
-              <img
-                src="./icons/navbar/cart.svg"
-                class="only-mobile"
-                alt="cart"
-              />
+              <img src="./icons/navbar/cart.svg" class="only-mobile" alt="cart" />
             </div>
             <div class="add-to-cart-wrapper no-mobile">
               <button class="card_add-to-cart">Добавить в корзину</button>
@@ -1077,8 +1029,18 @@
                 <svg display="none">
                   <symbol id="fav" viewBox="0 0 25 22">
                     <g>
-                      <path d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path
+                        d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </g>
                   </symbol>
                 </svg>
@@ -1102,17 +1064,9 @@
                 <div class="card-discount">
                   <span>-35%</span>
                 </div>
-                <img
-                  src="./icons/navbar/favorite.svg"
-                  class="mobile-card-to-favorite only-mobile"
-                  alt="favorite"
-                />
+                <img src="./icons/navbar/favorite.svg" class="mobile-card-to-favorite only-mobile" alt="favorite" />
                 <a href="product-page.html">
-                  <img
-                    src="./img/popular/popular_01.png"
-                    alt="img"
-                    class="card-image-prev"
-                  />
+                  <img src="./img/popular/popular_01.png" alt="img" class="card-image-prev" />
                 </a>
               </div>
             </div>
@@ -1129,9 +1083,7 @@
             <div class="card-sizes">
               <p class="card-sizes__title">Размеры</p>
               <div class="card-sizes__btns">
-                <button class="card-size__button card-size__button-selected">
-                  160<span>см</span>
-                </button>
+                <button class="card-size__button card-size__button-selected">160<span>см</span></button>
                 <button class="card-size__button">180<span>см</span></button>
               </div>
             </div>
@@ -1148,11 +1100,7 @@
                 <div class="old-price">55 000 ₽</div>
                 <div class="new-price">45 100 ₽</div>
               </div>
-              <img
-                src="./icons/navbar/cart.svg"
-                class="only-mobile"
-                alt="cart"
-              />
+              <img src="./icons/navbar/cart.svg" class="only-mobile" alt="cart" />
             </div>
             <div class="add-to-cart-wrapper no-mobile">
               <button class="card_add-to-cart">Добавить в корзину</button>
@@ -1171,8 +1119,18 @@
                 <svg display="none">
                   <symbol id="fav" viewBox="0 0 25 22">
                     <g>
-                      <path d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path
+                        d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </g>
                   </symbol>
                 </svg>
@@ -1196,17 +1154,9 @@
                 <div class="card-discount">
                   <span>-35%</span>
                 </div>
-                <img
-                  src="./icons/navbar/favorite.svg"
-                  class="mobile-card-to-favorite only-mobile"
-                  alt="favorite"
-                />
+                <img src="./icons/navbar/favorite.svg" class="mobile-card-to-favorite only-mobile" alt="favorite" />
                 <a href="product-page.html">
-                  <img
-                    src="./img/popular/popular_01.png"
-                    alt="img"
-                    class="card-image-prev"
-                  />
+                  <img src="./img/popular/popular_01.png" alt="img" class="card-image-prev" />
                 </a>
               </div>
             </div>
@@ -1223,9 +1173,7 @@
             <div class="card-sizes">
               <p class="card-sizes__title">Размеры</p>
               <div class="card-sizes__btns">
-                <button class="card-size__button card-size__button-selected">
-                  160<span>см</span>
-                </button>
+                <button class="card-size__button card-size__button-selected">160<span>см</span></button>
                 <button class="card-size__button">180<span>см</span></button>
               </div>
             </div>
@@ -1242,11 +1190,7 @@
                 <div class="old-price">55 000 ₽</div>
                 <div class="new-price">45 100 ₽</div>
               </div>
-              <img
-                src="./icons/navbar/cart.svg"
-                class="only-mobile"
-                alt="cart"
-              />
+              <img src="./icons/navbar/cart.svg" class="only-mobile" alt="cart" />
             </div>
             <div class="add-to-cart-wrapper no-mobile">
               <button class="card_add-to-cart">Добавить в корзину</button>
@@ -1262,27 +1206,15 @@
                 <a href="product-page.html">
                   <img src="img/card-hover.png" alt="img" />
                 </a>
-                <img
-                  src="./icons/add-to-favorite.svg"
-                  class="card-to-favorite"
-                  alt="favorite"
-                />
+                <img src="./icons/add-to-favorite.svg" class="card-to-favorite" alt="favorite" />
               </div>
               <div class="card-image">
                 <div class="card-discount">
                   <span>-35%</span>
                 </div>
-                <img
-                  src="./icons/navbar/favorite.svg"
-                  class="mobile-card-to-favorite only-mobile"
-                  alt="favorite"
-                />
+                <img src="./icons/navbar/favorite.svg" class="mobile-card-to-favorite only-mobile" alt="favorite" />
                 <a href="product-page.html">
-                  <img
-                    src="./img/popular/popular_01.png"
-                    alt="img"
-                    class="card-image-prev"
-                  />
+                  <img src="./img/popular/popular_01.png" alt="img" class="card-image-prev" />
                 </a>
               </div>
             </div>
@@ -1299,9 +1231,7 @@
             <div class="card-sizes">
               <p class="card-sizes__title">Размеры</p>
               <div class="card-sizes__btns">
-                <button class="card-size__button card-size__button-selected">
-                  160<span>см</span>
-                </button>
+                <button class="card-size__button card-size__button-selected">160<span>см</span></button>
                 <button class="card-size__button">180<span>см</span></button>
               </div>
             </div>
@@ -1318,11 +1248,7 @@
                 <div class="old-price">55 000 ₽</div>
                 <div class="new-price">45 100 ₽</div>
               </div>
-              <img
-                src="./icons/navbar/cart.svg"
-                class="only-mobile"
-                alt="cart"
-              />
+              <img src="./icons/navbar/cart.svg" class="only-mobile" alt="cart" />
             </div>
             <div class="add-to-cart-wrapper no-mobile">
               <button class="card_add-to-cart">Добавить в корзину</button>
@@ -1338,23 +1264,14 @@
       <div class="container">
         <div class="help-section__wrapper">
           <div class="help-section-info">
-            <div class="help-section__title">
-              Помощь в подборе идеальной мебели
-            </div>
-            <div class="help-section__subtitle">
-              Не можете определится с цветом дивана или его формой, цветом ножек
-              и пуговец наши специалисты помогут в этом.
-            </div>
+            <div class="help-section__title">Помощь в подборе идеальной мебели</div>
+            <div class="help-section__subtitle">Не можете определится с цветом дивана или его формой, цветом ножек и пуговец наши специалисты помогут в этом.</div>
             <div class="help-section__input-wrapper">
               <input type="text" placeholder="Имя" />
               <input type="text" placeholder="Имя" />
               <button>Позвонить мне</button>
             </div>
-            <img
-              class="no-mobile"
-              src="./full-catalog/img/help-sofa.png"
-              alt="img"
-            />
+            <img class="no-mobile" src="./full-catalog/img/help-sofa.png" alt="img" />
           </div>
         </div>
         <div class="help-section-features">
@@ -1466,7 +1383,7 @@
             <h5>Каталог</h5>
             <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
           </div>
-          <div class="mobile-footer-links__collapse links-hidden">
+          <div class="mobile-footer-links__collapse">
             <a href="#">Диваны</a>
             <a href="#">Кровати</a>
             <a href="#">Стулья</a>
@@ -1478,7 +1395,7 @@
             <h5>О компании</h5>
             <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
           </div>
-          <div class="mobile-footer-links__collapse links-hidden">
+          <div class="mobile-footer-links__collapse">
             <a href="#">О магазине</a>
             <a href="#">Реквизиты</a>
             <a href="#">Контакты</a>
@@ -1491,7 +1408,7 @@
             <h5>Помощь</h5>
             <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
           </div>
-          <div class="mobile-footer-links__collapse links-hidden">
+          <div class="mobile-footer-links__collapse">
             <a href="#">Доставка</a>
             <a href="#">Оплата</a>
             <a href="#">Возврат товара</a>
@@ -1531,15 +1448,8 @@
         </div>
       </div>
     </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./sidebar.js"></script>
     <script src="./full_catalog.js"></script>
   </body>

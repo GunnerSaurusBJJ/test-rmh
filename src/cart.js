@@ -1,6 +1,8 @@
-document.querySelectorAll('.cart-delivery__type').forEach(item => {
+document.querySelectorAll('.cart-delivery__type').forEach((item) => {
   item.addEventListener('click', () => {
-    document.querySelector('.cart-delivery__type-selected').classList.remove('cart-delivery__type-selected')
+    document
+      .querySelector('.cart-delivery__type-selected')
+      .classList.remove('cart-delivery__type-selected')
     item.classList.add('cart-delivery__type-selected')
   })
 })

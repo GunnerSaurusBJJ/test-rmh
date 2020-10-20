@@ -1,17 +1,17 @@
 const sidebarItems = document.querySelectorAll('.sidebar-products'),
-openedSideBar = document.querySelector('.sidebar-opened'),
-openedSideBarBackGround = document.querySelector('.sidebar-opened-background')
-closeSideBarBtn = document.querySelector('.close-sidebar'),
-sofaImage = document.querySelector('.sidebar-item__sofa-image'),
-bedImage = document.querySelector('.sidebar-item__bed-image'),
-armchairImage = document.querySelector('.sidebar-item__armchair-image'),
-chairImage = document.querySelector('.sidebar-item__chair-image'),
-sidebarClock = document.querySelector('.sidebar-opened__clock')
+  openedSideBar = document.querySelector('.sidebar-opened'),
+  openedSideBarBackGround = document.querySelector('.sidebar-opened-background'),
+  closeSideBarBtn = document.querySelector('.close-sidebar'),
+  sofaImage = document.querySelector('.sidebar-item__sofa-image'),
+  bedImage = document.querySelector('.sidebar-item__bed-image'),
+  armchairImage = document.querySelector('.sidebar-item__armchair-image'),
+  chairImage = document.querySelector('.sidebar-item__chair-image'),
+  sidebarClock = document.querySelector('.sidebar-opened__clock')
 
-var date = new Date();
-let countDownDateForProductOfTheDay = date.setDate(date.getDate() + 1);
+var date = new Date()
+let countDownDateForProductOfTheDay = date.setDate(date.getDate() + 1)
 
-sidebarItems.forEach(item => {
+sidebarItems.forEach((item) => {
   item.addEventListener('click', toggleClassSidebar)
 })
 
@@ -45,7 +45,7 @@ sidebarItems[3].addEventListener('mouseleave', () => {
   }
 })
 
-function toggleClassSidebar (e) {
+function toggleClassSidebar(e) {
   let title = document.querySelector('.sidebar-opened-title h2')
   openedSideBar.classList.toggle('open-sidebar')
   openedSideBarBackGround.classList.toggle('sidebar-background-visible')
@@ -57,7 +57,7 @@ function toggleClassSidebar (e) {
     chair: 'Стулья',
   }
   Object.entries(obj).forEach(([key, value]) => {
-    if (e.target.parentElement.id === key || e.target.id === key ) {
+    if (e.target.parentElement.id === key || e.target.id === key) {
       title.textContent = value
     }
   })
@@ -80,27 +80,31 @@ document.addEventListener('click', (e) => {
     changeImagePath(armchairImage, './img/sidebar/armchair.svg')
   }
 })
-function changeImagePath (element, path) {
+function changeImagePath(element, path) {
   element.src = path
   return
 }
 
 setInterval(() => {
-  let now = new Date().getTime();
-  let distance = countDownDateForProductOfTheDay - now;
-  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  sidebarClock.innerHTML = hours + "ч | "
-  + minutes + "м | " + seconds + "с ";
-}, 1000);
+  let now = new Date().getTime()
+  let distance = countDownDateForProductOfTheDay - now
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000)
+  sidebarClock.innerHTML = hours + 'ч | ' + minutes + 'м | ' + seconds + 'с '
+}, 1000)
 
-document.querySelectorAll('.mobile-footer-links__title').forEach(item => {
-  item.addEventListener('click', () => {
-    item.nextElementSibling.classList.toggle('links-hidden')
-    item.querySelector('img').style.transform = !item.nextElementSibling.classList.contains('links-hidden')
-    ? 'rotate(180deg)'
-    : 'rotate(0deg)'
+// toggle footer items
+
+document.querySelectorAll('.mobile-footer-links__title').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    if (btn.nextElementSibling.style.maxHeight) {
+      btn.nextElementSibling.style.maxHeight = null
+      btn.querySelector('img').style.transform = 'rotate(0)'
+    } else {
+      btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px'
+      btn.querySelector('img').style.transform = 'rotate(180deg)'
+    }
   })
 })
 
@@ -120,7 +124,7 @@ if (mobileSidebar.classList.contains('mobile-sidebar-opened')) {
 
 let mobileSubcategoryTitle = document.querySelector('.mobile-subcategory-title')
 
-document.querySelectorAll('.mobile-sidebar-categories__item').forEach(item => {
+document.querySelectorAll('.mobile-sidebar-categories__item').forEach((item) => {
   item.addEventListener('click', () => {
     mobileSubcategoryTitle.children[1].textContent = item.firstElementChild.children[1].textContent
     document.querySelector('.mobile-subcategory').classList.add('mobile-subcategory-opened')
@@ -136,14 +140,20 @@ let scrollToTopBtn = document.querySelector('.footer-subscribe__top-btn')
 scrollToTopBtn.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
-  });
+    behavior: 'smooth',
+  })
 })
 
 let subscribeInput = document.querySelector('.footer-subscribe__input')
 
 window.addEventListener('scroll', () => {
-  let ifInputVisible = window.pageYOffset + subscribeInput.getBoundingClientRect().top + parseFloat(getComputedStyle(scrollToTopBtn).getPropertyValue('bottom')) + (scrollToTopBtn.clientHeight / 2) + subscribeInput.clientHeight < window.pageYOffset + document.documentElement.clientHeight
+  let ifInputVisible =
+    window.pageYOffset +
+      subscribeInput.getBoundingClientRect().top +
+      parseFloat(getComputedStyle(scrollToTopBtn).getPropertyValue('bottom')) +
+      scrollToTopBtn.clientHeight / 2 +
+      subscribeInput.clientHeight <
+    window.pageYOffset + document.documentElement.clientHeight
 
   if (pageYOffset > 200) {
     scrollToTopBtn.classList.remove('hide-btn')

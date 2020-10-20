@@ -30,7 +30,7 @@
   &::after {
     content: '';
     position: absolute;
-    background: #D2D7E3;
+    background: #d2d7e3;
     width: 87%;
     height: 1px;
     bottom: -30px;
@@ -49,7 +49,7 @@
   }
 }
 .full-catalog-image__wrap {
-  background: #F5F6FA;
+  background: #f5f6fa;
   border-radius: 10px;
   height: 90px;
   width: 110px;
@@ -74,7 +74,7 @@
   }
   &__btn {
     outline: none;
-    background: #F5F6FA;
+    background: #f5f6fa;
     border-radius: 4px;
     padding: 5px 12px;
     cursor: pointer;
@@ -97,7 +97,7 @@
     }
   }
   .full-catalog-filters-sort {
-    background: #2E394D;
+    background: #2e394d;
     color: #fff;
     position: relative;
   }
@@ -111,7 +111,7 @@
     width: 150%;
     left: 0;
     z-index: 40;
-    transition: .3s;
+    transition: 0.3s;
     li {
       margin-top: 10px;
     }
@@ -175,7 +175,7 @@
   transform: scale(1);
   border: 1px solid #cccfdb;
   transition: all 0.2s ease;
-  box-shadow: 0 1px 1px rgba(0,16,75,0.05);
+  box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
 }
 .cbx span:first-child svg {
   position: absolute;
@@ -244,5 +244,66 @@
 @keyframes wave {
   50% {
     transform: scale(0.9);
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+.dropdown-sort-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #c06162;
+  background: #34495e;
+  position: relative;
+  font-size: 18px;
+  perspective: 1000px;
+  z-index: 100;
+}
+.dropdown-sort-btn:hover {
+  cursor: pointer;
+}
+.dropdown_menu {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  width: max-content;
+  perspective: 1000px;
+  z-index: -1;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.07);
+}
+.dropdown_menu li {
+  display: none;
+  color: #fff;
+  background-color: #fff;
+  padding: 2px 20px;
+  font-size: 16px;
+  opacity: 0;
+  width: max-content;
+}
+
+.dropdown_menu--animated {
+  display: none;
+}
+.dropdown_menu--animated li {
+  display: block;
+  opacity: 1;
+}
+.dropdown_menu-10 {
+  animation: rotateY 600ms ease-in-out forwards;
+  transform-origin: top center;
+}
+@keyframes rotateY {
+  0% {
+    transform: rotateY(90deg);
+  }
+  80% {
+    transform: rotateY(-10deg);
+  }
+  100% {
+    transform: rotateY(0);
   }
 }
