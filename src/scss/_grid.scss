@@ -1,14 +1,39 @@
-
 $xs: 375px;
+$md: 768px;
 $xl: 1600px;
 
-$screen: "only screen";
-$media-to-xs: "#{$screen} and (max-width: #{$xs})"; // up to 375px
-$media-xs-up: "#{$screen} and (min-width: #{$xs + 1})"; // from 376px
-$media-to-xl: "#{$screen} and (max-width: #{$xl + 1})"; // up to 1660px
-$media-xl-up: "#{$screen} and (min-width: #{$xl + 1})"; // from 1660px
+$screen: 'only screen';
+$media-to-xs: '#{$screen} and (max-width: #{$xs})'; // up to 375px
+$media-xs-up: '#{$screen} and (min-width: #{$xs + 1})'; // from 376px
+$media-to-xl: '#{$screen} and (max-width: #{$xl + 1})'; // up to 1660px
+$media-xl-up: '#{$screen} and (min-width: #{$xl + 1})'; // from 1660px
+$media-to-md: '#{$screen} and (max-width: #{$md})'; // up to 768px
+$media-md-up: '#{$screen} and (min-width: #{$md + 1})'; // from 768px
+$media-md-only: '#{$screen} and (min-width: #{$xs + 1}) and (max-width: #{$md})'; // min 375 max 768px
+
 .no-mobile {
   @media #{$media-to-xs} {
+    display: none !important;
+  }
+}
+
+.only-tablet {
+  @media #{$media-to-xs} {
+    display: none !important;
+  }
+  @media #{$media-md-up} {
+    display: none !important;
+  }
+}
+
+.only-desktop {
+  @media #{$media-to-md} {
+    display: none !important;
+  }
+}
+
+.no-desktop {
+  @media #{$media-md-up} {
     display: none !important;
   }
 }

@@ -426,6 +426,12 @@ $(document).ready(function () {
     mobileFirst: true,
     responsive: [
       {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
         breakpoint: 900,
         settings: 'unslick',
       },
@@ -439,6 +445,12 @@ $(document).ready(function () {
     mobileFirst: true,
     infinite: false,
     responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
       {
         breakpoint: 900,
         settings: 'unslick',
@@ -504,3 +516,23 @@ sidebarFilterBtns.forEach((btn) => {
     }
   })
 })
+document.querySelectorAll('.card').forEach((card) => {
+  card.querySelectorAll('.love.action').forEach((item) => {
+    item.addEventListener('click', () => addToFavIconActive(card, '.favorite-icon-product', '.line'))
+  })
+  if (window.innerWidth < 800) {
+    card
+      .querySelectorAll('.favorite-mobile.no-desktop')
+      .forEach((item) => item.addEventListener('click', () => addToFavIconActive(card, '.favorite-mobile.no-desktop .favorite-icon-product', '.favorite-mobile.no-desktop .line')))
+  }
+})
+
+function addToFavIconActive(card, iconClass, lineClass) {
+  card.querySelector(iconClass).classList.toggle('love')
+  card.querySelectorAll(lineClass).forEach((i) => i.classList.add('active'))
+  card.querySelector(iconClass).classList.add('active')
+  setTimeout(() => {
+    card.querySelectorAll(lineClass).forEach((i) => i.classList.remove('active'))
+    card.querySelector(iconClass).classList.remove('active')
+  }, 300)
+}

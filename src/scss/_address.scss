@@ -1,6 +1,6 @@
 .address {
   margin-top: 40px;
-  @media #{$media-to-xs} {
+  @media #{$media-to-md} {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -22,17 +22,20 @@
   iframe {
     // width: 66.73vw;
     width: calc(100% - 22.916vw);
-    @media #{$media-to-xs} {
-      height: 160px;
+    @media #{$media-to-md} {
+      height: 220px;
       width: 100%;
       border-radius: 10px;
+    }
+    @media #{$media-to-xs} {
+      height: 160px;
     }
   }
 }
 .scroll-up-main {
   border-radius: 10px;
-  border: 1px solid #ED1C24;
-  background: #FFFFFF;
+  border: 1px solid #ed1c24;
+  background: #ffffff;
   outline: none;
   font-weight: bold;
   font-size: 14px;
@@ -49,13 +52,13 @@
   transform: translateY(-50%);
   background: #fff;
   border-radius: 10px;
-  border: 1px solid #D2D7E3;
+  border: 1px solid #d2d7e3;
   max-width: 420px;
   padding: 30px;
   &__title {
     color: #282724;
     font-weight: bold;
-    font-size: 24px; 
+    font-size: 24px;
   }
   &__street {
     font-weight: normal;
@@ -66,7 +69,7 @@
   }
   &__schedule {
     &-title {
-      color: #A7A8B3;
+      color: #a7a8b3;
       font-weight: normal;
       font-size: 14px;
     }
@@ -81,7 +84,7 @@
   }
   &__contacts {
     span {
-      color: #A7A8B3;
+      color: #a7a8b3;
       font-weight: normal;
       font-size: 14px;
     }
@@ -103,8 +106,8 @@
     padding: 11px 30px;
     margin-top: 22px;
     &:hover {
-      background: #D00A12;
-      transition: .2s;
+      background: #d00a12;
+      transition: 0.2s;
     }
   }
   &__images {

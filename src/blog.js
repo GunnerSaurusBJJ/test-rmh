@@ -3,7 +3,7 @@ $('.blog-head__wrapper').slick({
   mobileFirst: true,
   responsive: [
     {
-      breakpoint: 900,
+      breakpoint: 576,
       settings: 'unslick',
     },
   ],

@@ -8,7 +8,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="sidebar no-mobile">
+    <div class="sidebar only-desktop">
       <div class="logo">
         <a href="index.html">
           <img src="./img/sidebar/logo.svg" alt="logo" />
@@ -40,7 +40,7 @@
         <img src="./icons/sidebar/whatsapp.svg" alt="whatsapp" />
       </div>
     </div>
-    <div class="sidebar-opened-background no-mobile">
+    <div class="sidebar-opened-background only-desktop">
       <div class="sidebar-opened">
         <div class="sidebar-opened-title">
           <h2>Диваны</h2>
@@ -111,85 +111,87 @@
         </div>
       </div>
     </div>
-    <div class="mobile-sidebar only-mobile">
-      <div class="mobile-sidebar__top">
-        <a href="index.html">
-          <img src="img/mobile/mobile-logo.svg" alt="img" />
-        </a>
-      </div>
-      <div class="mobile-sidebar-search">
-        <input type="text" class="search" placeholder="Поиск" />
-        <img src="./icons/navbar/search.svg" alt="search" />
-      </div>
-      <div class="mobile-sidebar-categories">
-        <div class="mobile-sidebar-categories__item">
-          <div class="mobile-sidebar-categories__item-title">
-            <div>
-              <img src="./img/sidebar/sofa-hover.svg" alt="img" />
+    <div class="mobile-sidebar-background no-desktop">
+      <div class="mobile-sidebar no-desktop">
+        <div class="mobile-sidebar__top">
+          <a href="index.html">
+            <img src="img/mobile/mobile-logo.png" alt="img" />
+          </a>
+        </div>
+        <div class="mobile-sidebar-search">
+          <input type="text" class="search" placeholder="Поиск" />
+          <img src="./icons/navbar/search.svg" alt="search" />
+        </div>
+        <div class="mobile-sidebar-categories">
+          <div class="mobile-sidebar-categories__item">
+            <div class="mobile-sidebar-categories__item-title">
+              <div>
+                <img src="./img/sidebar/sofa-hover.svg" alt="img" />
+              </div>
+              <p>Диваны</p>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
             </div>
-            <p>Диваны</p>
-            <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            <div class="mobile-sidebar-categories__item-content"></div>
           </div>
-          <div class="mobile-sidebar-categories__item-content"></div>
-        </div>
-        <div class="mobile-sidebar-categories__item">
-          <div class="mobile-sidebar-categories__item-title">
-            <div>
-              <img src="./img/sidebar/bed-hover.svg" alt="img" />
+          <div class="mobile-sidebar-categories__item">
+            <div class="mobile-sidebar-categories__item-title">
+              <div>
+                <img src="./img/sidebar/bed-hover.svg" alt="img" />
+              </div>
+              <p>Кровати</p>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
             </div>
-            <p>Кровати</p>
-            <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            <div class="mobile-sidebar-categories__item-content"></div>
           </div>
-          <div class="mobile-sidebar-categories__item-content"></div>
-        </div>
-        <div class="mobile-sidebar-categories__item">
-          <div class="mobile-sidebar-categories__item-title">
-            <div>
-              <img src="./img/sidebar/armchair-hover.png" alt="img" />
+          <div class="mobile-sidebar-categories__item">
+            <div class="mobile-sidebar-categories__item-title">
+              <div>
+                <img src="./img/sidebar/armchair-hover.png" alt="img" />
+              </div>
+              <p>Кресла</p>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
             </div>
-            <p>Кресла</p>
-            <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            <div class="mobile-sidebar-categories__item-content"></div>
           </div>
-          <div class="mobile-sidebar-categories__item-content"></div>
-        </div>
-        <div class="mobile-sidebar-categories__item">
-          <div class="mobile-sidebar-categories__item-title">
-            <div>
-              <img src="./img/sidebar/chair-hover.png" alt="img" />
+          <div class="mobile-sidebar-categories__item">
+            <div class="mobile-sidebar-categories__item-title">
+              <div>
+                <img src="./img/sidebar/chair-hover.png" alt="img" />
+              </div>
+              <p>Стулья</p>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
             </div>
-            <p>Стулья</p>
-            <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            <div class="mobile-sidebar-categories__item-content"></div>
           </div>
-          <div class="mobile-sidebar-categories__item-content"></div>
-        </div>
-        <div class="mobile-sidebar-categories__item">
-          <div class="mobile-sidebar-categories__item-title">
-            <div>
-              <img src="./img/sidebar/promo.svg" alt="img" />
+          <div class="mobile-sidebar-categories__item">
+            <div class="mobile-sidebar-categories__item-title">
+              <div>
+                <img src="./img/sidebar/promo.svg" alt="img" />
+              </div>
+              <p>Акции</p>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
             </div>
-            <p>Акции</p>
-            <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            <div class="mobile-sidebar-categories__item-content"></div>
           </div>
-          <div class="mobile-sidebar-categories__item-content"></div>
         </div>
-      </div>
-      <div class="mobile-sidebar-bottom">
-        <div class="mobile-sidebar-bottom__item">
-          <img src="./icons/sidebar/location.svg" alt="img" />
-          <p>Санкт - Петербург</p>
-        </div>
-        <div class="mobile-sidebar-bottom__item">
-          <img src="./icons/sidebar/phone.svg" alt="img" />
-          <p>+7 800 100-0-100г</p>
-        </div>
-        <div class="mobile-sidebar-bottom__item">
-          <img src="./icons/sidebar/whatsapp.svg" alt="img" />
-          <p>Связаться через WhatsApp</p>
+        <div class="mobile-sidebar-bottom">
+          <div class="mobile-sidebar-bottom__item">
+            <img src="./icons/sidebar/location.svg" alt="img" />
+            <p>Санкт - Петербург</p>
+          </div>
+          <div class="mobile-sidebar-bottom__item">
+            <img src="./icons/sidebar/phone.svg" alt="img" />
+            <p>+7 800 100-0-100г</p>
+          </div>
+          <div class="mobile-sidebar-bottom__item">
+            <img src="./icons/sidebar/whatsapp.svg" alt="img" />
+            <p>Связаться через WhatsApp</p>
+          </div>
         </div>
       </div>
     </div>
     <!-- mobile-subcategory-opened -->
-    <div class="mobile-subcategory only-mobile">
+    <div class="mobile-subcategory no-desktop">
       <div class="mobile-subcategory-title">
         <img src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
         <p></p>
@@ -278,7 +280,7 @@
     </div>
     <!-- !HEADER -->
     <header class="header">
-      <div class="container no-mobile">
+      <div class="container only-desktop">
         <div class="header-navbar">
           <div class="navbar-links">
             <a class="navbar-links__link" href="#">Доставка и оплата</a>
@@ -302,17 +304,21 @@
           </div>
         </div>
       </div>
-      <div class="mobile-navbar only-mobile">
+      <div class="mobile-navbar no-desktop">
         <div class="mobile-navbar__burger">
           <span class="burger-line"></span>
         </div>
         <div class="mobile-navbar__logo">
           <a href="index.html">
-            <img src="img/mobile/mobile-logo.svg" alt="img" />
+            <img src="img/mobile/mobile-logo.png" alt="img" />
           </a>
         </div>
+        <div class="navbar-search only-tablet">
+          <input type="text" class="search" placeholder="Поиск" />
+          <img src="./icons/navbar/search.svg" alt="search" />
+        </div>
         <div class="mobile-navbar__links">
-          <img src="icons/mobile/mobile-search.svg" alt="img" />
+          <img class="only-mobile" src="icons/mobile/mobile-search.svg" alt="img" />
           <img src="./icons/navbar/favorite.svg" alt="favorite" />
           <img src="./icons/navbar/cart.svg" alt="cart" />
         </div>
@@ -330,7 +336,7 @@
                 <div class="item-desc">3-местный диван-кровать, Энхель темно-синий</div>
                 <div class="item-size">Размер: <span>160 cм</span></div>
                 <div class="item-color">Цвет: <span>темно-синий</span></div>
-                <div class="item-material-changed-row no-mobile">
+                <div class="item-material-changed-row only-desktop">
                   <div class="item-material-changed">
                     <img src="https://via.placeholder.com/30" alt="img" />
                     <p>Alur Plein - Алюр Плейн</p>
@@ -359,7 +365,7 @@
               <button class="cart__trash">
                 <img src="./icons/trash.svg" alt="img" />
               </button>
-              <div class="item-material-changed-row only-mobile">
+              <div class="item-material-changed-row no-desktop">
                 <div class="item-material-changed">
                   <img src="https://via.placeholder.com/30" alt="img" />
                   <p>Alur Plein - Алюр Плейн</p>
@@ -367,7 +373,7 @@
                 </div>
                 <img src="./img/mobile/mobile-close-material.svg" alt="img" />
               </div>
-              <div class="item-material-changed__price only-mobile">24 900 ₽</div>
+              <div class="item-material-changed__price no-desktop">24 900 ₽</div>
             </div>
             <div class="cart__item">
               <img src="img/cart-sof.png" alt="img" />
@@ -463,7 +469,7 @@
     <section class="address">
       <div class="container">
         <div class="address-info">
-          <div class="address-card cart-address-card no-mobile">
+          <div class="address-card cart-address-card only-desktop">
             <div class="address-card__title">Склад RM Home</div>
             <div class="address-card__street">г.Москва, ул. Большая Переяславская, 10, (ст. метро Проспект Мира)</div>
             <div class="address-card__schedule">
@@ -481,11 +487,19 @@
           </div>
           <div class="address-map cart-address-map">
             <iframe
+              class="cart-map"
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A3585012a40db44aa9d3a38bff65c76627e932508a9bc038297e613cf7f597d97&amp;source=constructor"
               width="961"
               height="543"
               frameborder="0"
             ></iframe>
+          </div>
+        </div>
+        <div class="cart-payment">
+          <div class="cart-payment__title">Способы оплаты</div>
+          <div class="cart-payment__wrapper">
+            <div class="cart-payment__type cart-payment__type-selected">Наличными</div>
+            <div class="cart-payment__type">В кредит</div>
           </div>
         </div>
       </div>
@@ -521,11 +535,11 @@
             <div class="footer-subscribe__btn">Подписаться</div>
           </div>
         </div>
-        <button class="footer-subscribe__top-btn">
+        <button class="footer-subscribe__top-btn hide-btn only-desktop">
           <img src="./icons/footer/footer-topimg.svg" alt="img" />
         </button>
       </div>
-      <div class="no-mobile">
+      <div class="only-desktop">
         <div class="footer-container">
           <div class="footer-links-blocks">
             <div class="footer-links">
@@ -592,7 +606,7 @@
           </div>
         </div>
       </div>
-      <div class="mobile-footer-links only-mobile">
+      <div class="mobile-footer-links no-desktop">
         <div class="mobile-footer-links__item">
           <div class="mobile-footer-links__title">
             <h5>Каталог</h5>
@@ -631,7 +645,7 @@
           </div>
         </div>
       </div>
-      <div class="mobile-footer__socials only-mobile">
+      <div class="mobile-footer__socials no-desktop">
         <a href="#">
           <img src="./icons/footer/insta.svg" alt="img" />
         </a>
@@ -652,7 +666,7 @@
           <img src="./icons/footer/Fb.svg" alt="img" />
         </a>
       </div>
-      <div class="mobile-footer-contacts only-mobile">
+      <div class="mobile-footer-contacts no-desktop">
         <div class="mobile-footer-contacts__block">
           <div class="mobile-footer-contacts__city">Санкт - Петербург</div>
           <div class="mobile-footer-contacts__phone">+7 800 100-0-100</div>

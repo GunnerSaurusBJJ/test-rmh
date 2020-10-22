@@ -8,7 +8,7 @@
     <title>rmh</title>
   </head>
   <body>
-    <div class="sidebar no-mobile">
+    <div class="sidebar only-desktop">
       <div class="logo">
         <a href="index.html">
           <img src="./img/sidebar/logo.svg" alt="logo" />
@@ -40,7 +40,7 @@
         <img src="./icons/sidebar/whatsapp.svg" alt="whatsapp" />
       </div>
     </div>
-    <div class="sidebar-opened-background no-mobile">
+    <div class="sidebar-opened-background only-desktop">
       <div class="sidebar-opened">
         <div class="sidebar-opened-title">
           <h2>Диваны</h2>
@@ -126,85 +126,87 @@
         </div>
       </div>
     </div>
-    <div class="mobile-sidebar only-mobile">
-      <div class="mobile-sidebar__top">
-        <a href="index.html">
-          <img src="img/mobile/mobile-logo.svg" alt="img" />
-        </a>
-      </div>
-      <div class="mobile-sidebar-search">
-        <input type="text" class="search" placeholder="Поиск" />
-        <img src="./icons/navbar/search.svg" alt="search" />
-      </div>
-      <div class="mobile-sidebar-categories">
-        <div class="mobile-sidebar-categories__item">
-          <div class="mobile-sidebar-categories__item-title">
-            <div>
-              <img src="./img/sidebar/sofa-hover.svg" alt="img" />
+    <div class="mobile-sidebar-background no-desktop">
+      <div class="mobile-sidebar no-desktop">
+        <div class="mobile-sidebar__top">
+          <a href="index.html">
+            <img src="img/mobile/mobile-logo.png" alt="img" />
+          </a>
+        </div>
+        <div class="mobile-sidebar-search">
+          <input type="text" class="search" placeholder="Поиск" />
+          <img src="./icons/navbar/search.svg" alt="search" />
+        </div>
+        <div class="mobile-sidebar-categories">
+          <div class="mobile-sidebar-categories__item">
+            <div class="mobile-sidebar-categories__item-title">
+              <div>
+                <img src="./img/sidebar/sofa-hover.svg" alt="img" />
+              </div>
+              <p>Диваны</p>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
             </div>
-            <p>Диваны</p>
-            <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            <div class="mobile-sidebar-categories__item-content"></div>
           </div>
-          <div class="mobile-sidebar-categories__item-content"></div>
-        </div>
-        <div class="mobile-sidebar-categories__item">
-          <div class="mobile-sidebar-categories__item-title">
-            <div>
-              <img src="./img/sidebar/bed-hover.svg" alt="img" />
+          <div class="mobile-sidebar-categories__item">
+            <div class="mobile-sidebar-categories__item-title">
+              <div>
+                <img src="./img/sidebar/bed-hover.svg" alt="img" />
+              </div>
+              <p>Кровати</p>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
             </div>
-            <p>Кровати</p>
-            <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            <div class="mobile-sidebar-categories__item-content"></div>
           </div>
-          <div class="mobile-sidebar-categories__item-content"></div>
-        </div>
-        <div class="mobile-sidebar-categories__item">
-          <div class="mobile-sidebar-categories__item-title">
-            <div>
-              <img src="./img/sidebar/armchair-hover.png" alt="img" />
+          <div class="mobile-sidebar-categories__item">
+            <div class="mobile-sidebar-categories__item-title">
+              <div>
+                <img src="./img/sidebar/armchair-hover.png" alt="img" />
+              </div>
+              <p>Кресла</p>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
             </div>
-            <p>Кресла</p>
-            <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            <div class="mobile-sidebar-categories__item-content"></div>
           </div>
-          <div class="mobile-sidebar-categories__item-content"></div>
-        </div>
-        <div class="mobile-sidebar-categories__item">
-          <div class="mobile-sidebar-categories__item-title">
-            <div>
-              <img src="./img/sidebar/chair-hover.png" alt="img" />
+          <div class="mobile-sidebar-categories__item">
+            <div class="mobile-sidebar-categories__item-title">
+              <div>
+                <img src="./img/sidebar/chair-hover.png" alt="img" />
+              </div>
+              <p>Стулья</p>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
             </div>
-            <p>Стулья</p>
-            <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            <div class="mobile-sidebar-categories__item-content"></div>
           </div>
-          <div class="mobile-sidebar-categories__item-content"></div>
-        </div>
-        <div class="mobile-sidebar-categories__item">
-          <div class="mobile-sidebar-categories__item-title">
-            <div>
-              <img src="./img/sidebar/promo.svg" alt="img" />
+          <div class="mobile-sidebar-categories__item">
+            <div class="mobile-sidebar-categories__item-title">
+              <div>
+                <img src="./img/sidebar/promo.svg" alt="img" />
+              </div>
+              <p>Акции</p>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
             </div>
-            <p>Акции</p>
-            <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            <div class="mobile-sidebar-categories__item-content"></div>
           </div>
-          <div class="mobile-sidebar-categories__item-content"></div>
         </div>
-      </div>
-      <div class="mobile-sidebar-bottom">
-        <div class="mobile-sidebar-bottom__item">
-          <img src="./icons/sidebar/location.svg" alt="img" />
-          <p>Санкт - Петербург</p>
-        </div>
-        <div class="mobile-sidebar-bottom__item">
-          <img src="./icons/sidebar/phone.svg" alt="img" />
-          <p>+7 800 100-0-100г</p>
-        </div>
-        <div class="mobile-sidebar-bottom__item">
-          <img src="./icons/sidebar/whatsapp.svg" alt="img" />
-          <p>Связаться через WhatsApp</p>
+        <div class="mobile-sidebar-bottom">
+          <div class="mobile-sidebar-bottom__item">
+            <img src="./icons/sidebar/location.svg" alt="img" />
+            <p>Санкт - Петербург</p>
+          </div>
+          <div class="mobile-sidebar-bottom__item">
+            <img src="./icons/sidebar/phone.svg" alt="img" />
+            <p>+7 800 100-0-100г</p>
+          </div>
+          <div class="mobile-sidebar-bottom__item">
+            <img src="./icons/sidebar/whatsapp.svg" alt="img" />
+            <p>Связаться через WhatsApp</p>
+          </div>
         </div>
       </div>
     </div>
     <!-- mobile-subcategory-opened -->
-    <div class="mobile-subcategory only-mobile">
+    <div class="mobile-subcategory no-desktop">
       <div class="mobile-subcategory-title">
         <img src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
         <p></p>
@@ -293,7 +295,7 @@
     </div>
     <!-- !HEADER -->
     <header class="header">
-      <div class="container no-mobile">
+      <div class="container only-desktop">
         <div class="header-navbar">
           <div class="navbar-links">
             <a class="navbar-links__link" href="#">Доставка и оплата</a>
@@ -317,17 +319,21 @@
           </div>
         </div>
       </div>
-      <div class="mobile-navbar only-mobile">
+      <div class="mobile-navbar no-desktop">
         <div class="mobile-navbar__burger">
           <span class="burger-line"></span>
         </div>
         <div class="mobile-navbar__logo">
           <a href="index.html">
-            <img src="img/mobile/mobile-logo.svg" alt="img" />
+            <img src="img/mobile/mobile-logo.png" alt="img" />
           </a>
         </div>
+        <div class="navbar-search only-tablet">
+          <input type="text" class="search" placeholder="Поиск" />
+          <img src="./icons/navbar/search.svg" alt="search" />
+        </div>
         <div class="mobile-navbar__links">
-          <img src="icons/mobile/mobile-search.svg" alt="img" />
+          <img class="only-mobile" src="icons/mobile/mobile-search.svg" alt="img" />
           <img src="./icons/navbar/favorite.svg" alt="favorite" />
           <img src="./icons/navbar/cart.svg" alt="cart" />
         </div>
@@ -367,7 +373,7 @@
     <!-- !CATEGORIES -->
     <section class="categories">
       <div class="container">
-        <div class="categories-wrapper no-mobile">
+        <div class="categories-wrapper only-desktop">
           <div class="categories__item">
             <a href="#" class="categories-item__link">
               <img src="./img/toppage_categories/01.png" alt="01" />
@@ -417,7 +423,7 @@
             </a>
           </div>
         </div>
-        <div class="mobile-categories-wrapper only-mobile">
+        <div class="mobile-categories-wrapper no-desktop">
           <div class="mobile-categories__item">
             <a href="#" class="mobile-categories-item__link">
               <img src="./img/toppage_categories/01.png" alt="01" />
@@ -471,100 +477,7 @@
         <div class="wrapper">
           <div class="card">
             <div class="card-top-image-wrapper">
-              <div class="card-hover-img no-mobile">
-                <div class="hover-slide-line">
-                  <div class="white-hover-slide-line"></div>
-                </div>
-                <a href="product-page.html">
-                  <img src="img/card-hover.png" alt="img" />
-                  <div class="hover-slide-img" data-src="img/card-hover.png"></div>
-                  <div class="hover-slide-img" data-src="./img/popular/popular_01.png"></div>
-                  <div class="hover-slide-img" data-src="./img/popular/popular_02.png"></div>
-                </a>
-                <svg display="none">
-                  <symbol id="fav" viewBox="0 0 25 22">
-                    <g>
-                      <path
-                        d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </symbol>
-                </svg>
-                <div class="love action no-mobile">
-                  <svg class="favorite-icon-product">
-                    <use xlink:href="#fav"></use>
-                  </svg>
-                </div>
-                <div class="send action"></div>
-                <div class="more action"></div>
-              </div>
-              <div class="card-image">
-                <div class="card-discount">
-                  <span>-35%</span>
-                </div>
-                <div class="favorite-mobile only-mobile">
-                  <div class="love action">
-                    <svg class="favorite-icon-product">
-                      <use xlink:href="#fav"></use>
-                    </svg>
-                  </div>
-                  <div class="send action"></div>
-                  <div class="more action"></div>
-                </div>
-                <a href="product-page.html">
-                  <img src="./img/popular/popular_01.png" alt="img" class="card-image-prev" />
-                </a>
-              </div>
-            </div>
-            <div class="card-icons no-mobile">
-              <div class="card-icon__wrapper">
-                <div class="card-tooltip">Легко чистить</div>
-                <div>
-                  <img src="./icons/popular/popular_03.svg" alt="img" />
-                </div>
-              </div>
-            </div>
-            <h5 class="card-title">Энхель</h5>
-            <p class="card-subtitle">Диван прямой</p>
-            <div class="card-sizes">
-              <p class="card-sizes__title">Размеры</p>
-              <div class="card-sizes__btns">
-                <button class="card-size__button card-size__button-selected">160<span>см</span></button>
-                <button class="card-size__button">180<span>см</span></button>
-              </div>
-            </div>
-            <div class="card-params">
-              <div class="card-colors no-mobile">
-                <p class="card-colors__title">Цвет</p>
-                <div class="card-colors__btns">
-                  <button class="yellow card-colors__selected"></button>
-                  <button class="blue"></button>
-                  <button class="light"></button>
-                </div>
-              </div>
-              <div class="card-price">
-                <div class="old-price">55 000 ₽</div>
-                <div class="new-price">45 100 ₽</div>
-              </div>
-              <img src="./icons/navbar/cart.svg" class="only-mobile" alt="cart" />
-            </div>
-            <div class="add-to-cart-wrapper no-mobile">
-              <button class="card_add-to-cart">Добавить в корзину</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-top-image-wrapper">
-              <div class="card-hover-img no-mobile">
+              <div class="card-hover-img only-desktop">
                 <div class="hover-slide-line">
                   <div class="white-hover-slide-line"></div>
                 </div>
@@ -585,7 +498,26 @@
                 <div class="card-discount">
                   <span>-35%</span>
                 </div>
-                <div class="favorite-mobile only-mobile">
+                <svg display="none">
+                  <symbol id="fav" viewBox="0 0 25 22">
+                    <g>
+                      <path
+                        d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </symbol>
+                </svg>
+
+                <div class="favorite-mobile no-desktop">
                   <div class="love action">
                     <svg class="favorite-icon-product">
                       <use xlink:href="#fav"></use>
@@ -632,7 +564,7 @@
               </div>
             </div>
             <div class="card-params">
-              <div class="card-colors no-mobile">
+              <div class="card-colors only-desktop">
                 <p class="card-colors__title">Цвет</p>
                 <div class="card-colors__btns">
                   <button class="yellow card-colors__selected"></button>
@@ -644,14 +576,103 @@
                 <div class="old-price">55 000 ₽</div>
                 <div class="new-price">45 100 ₽</div>
               </div>
-              <img src="./icons/navbar/cart.svg" class="only-mobile" alt="cart" />
+              <img src="./icons/navbar/cart.svg" class="no-desktop" alt="cart" />
             </div>
-            <div class="add-to-cart-wrapper no-mobile">
+            <div class="add-to-cart-wrapper only-desktop">
               <button class="card_add-to-cart">Добавить в корзину</button>
             </div>
           </div>
 
-          <div class="card no-mobile">
+          <div class="card">
+            <div class="card-top-image-wrapper">
+              <div class="card-hover-img only-desktop">
+                <div class="hover-slide-line">
+                  <div class="white-hover-slide-line"></div>
+                </div>
+                <a href="product-page.html">
+                  <img src="img/card-hover.png" alt="img" />
+                  <div class="hover-slide-img" data-src="img/card-hover.png"></div>
+                  <div class="hover-slide-img" data-src="./img/popular/popular_01.png"></div>
+                </a>
+                <div class="love action">
+                  <svg class="favorite-icon-product">
+                    <use xlink:href="#fav"></use>
+                  </svg>
+                </div>
+                <div class="send action"></div>
+                <div class="more action"></div>
+              </div>
+              <div class="card-image">
+                <div class="card-discount">
+                  <span>-35%</span>
+                </div>
+                <div class="favorite-mobile no-desktop">
+                  <div class="love action">
+                    <svg class="favorite-icon-product">
+                      <use xlink:href="#fav"></use>
+                    </svg>
+                  </div>
+                  <div class="send action"></div>
+                  <div class="more action"></div>
+                </div>
+                <a href="product-page.html">
+                  <img src="./img/popular/popular_01.png" alt="img" class="card-image-prev" />
+                </a>
+              </div>
+            </div>
+
+            <div class="card-icons no-mobile">
+              <div class="card-icon__wrapper">
+                <div class="card-tooltip">Легко чистить</div>
+                <div>
+                  <img src="./icons/popular/popular_02.svg" alt="img" />
+                </div>
+              </div>
+              <div class="card-icon__wrapper">
+                <div class="card-tooltip">Легко чистить</div>
+                <div>
+                  <img src="./icons/popular/popular_03.svg" alt="img" />
+                </div>
+              </div>
+              <div class="card-icon__wrapper">
+                <div class="card-tooltip">Легко чистить</div>
+                <div>
+                  <img src="./icons/popular/popular_01.svg" alt="img" />
+                </div>
+              </div>
+            </div>
+            <h5 class="card-title">Энхель</h5>
+            <p class="card-subtitle">Диван прямой</p>
+            <div class="card-sizes">
+              <p class="card-sizes__title">Размеры</p>
+              <div class="card-sizes__btns">
+                <button class="card-size__button card-size__button-selected">160<span>см</span></button>
+                <button class="card-size__button">180<span>см</span></button>
+                <button class="card-size__button">200<span>см</span></button>
+                <button class="card-size__button">220<span>см</span></button>
+              </div>
+            </div>
+            <div class="card-params">
+              <div class="card-colors only-desktop">
+                <p class="card-colors__title">Цвет</p>
+                <div class="card-colors__btns">
+                  <button class="yellow card-colors__selected"></button>
+                  <button class="blue"></button>
+                  <button class="light"></button>
+                </div>
+              </div>
+              <div class="card-price">
+                <div class="old-price">55 000 ₽</div>
+                <div class="new-price">45 100 ₽</div>
+              </div>
+              <img src="./icons/navbar/cart.svg" class="no-desktop" alt="cart" />
+            </div>
+            <div class="add-to-cart-wrapper only-desktop">
+              <button class="card_add-to-cart">Добавить в корзину</button>
+            </div>
+          </div>
+
+          <div class="card only-desktop">
             <div class="card-top-image-wrapper">
               <div class="card-hover-img">
                 <div class="hover-slide-line">
@@ -725,7 +746,7 @@
             </div>
           </div>
 
-          <div class="card no-mobile">
+          <div class="card only-desktop">
             <div class="card-top-image-wrapper">
               <div class="card-hover-img">
                 <div class="hover-slide-line">
@@ -895,7 +916,7 @@
           </div>
           <img id="myimage" class="mobile-example-img only-mobile" src="./img/material_ex/ex_02.png" alt="img" />
         </div>
-        <div class="example-types no-mobile">
+        <div class="example-types only-desktop">
           <div class="type-image">
             <img src="./img/material_ex/types011.png" alt="img" />
             <span>Кровати</span>
@@ -917,7 +938,7 @@
             <span>Пуфы</span>
           </div>
         </div>
-        <div class="mobile-example-types only-mobile">
+        <div class="mobile-example-types no-desktop">
           <div class="type-image">
             <img src="./img/material_ex/types011.png" alt="img" />
             <span>Кровати</span>
@@ -947,100 +968,7 @@
         <div class="wrapper">
           <div class="card">
             <div class="card-top-image-wrapper">
-              <div class="card-hover-img no-mobile">
-                <div class="hover-slide-line">
-                  <div class="white-hover-slide-line"></div>
-                </div>
-                <a href="product-page.html">
-                  <img src="img/card-hover.png" alt="img" />
-                  <div class="hover-slide-img" data-src="img/card-hover.png"></div>
-                  <div class="hover-slide-img" data-src="./img/popular/popular_01.png"></div>
-                  <div class="hover-slide-img" data-src="./img/popular/popular_02.png"></div>
-                </a>
-                <svg display="none">
-                  <symbol id="fav" viewBox="0 0 25 22">
-                    <g>
-                      <path
-                        d="M12.7847 6.34317C12.7847 3.61335 10.3259 1.40039 7.29275 1.40039C4.25962 1.40039 1.80078 3.61335 1.80078 6.34317C1.80078 11.2859 3.99757 14.01 12.7847 20.6003"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12.7856 6.34317C12.7856 3.61335 15.2444 1.40039 18.2776 1.40039C21.3107 1.40039 23.7695 3.61335 23.7695 6.34317C23.7695 9.10113 23.0856 10.0185 20.9544 12.9116C20.643 13.3343 20.3007 13.7635 19.9252 14.2008C19.0008 15.2771 16.563 17.5578 16.0808 17.9711C15.1019 18.81 14.0075 19.6839 12.7856 20.6003"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </symbol>
-                </svg>
-                <div class="love action no-mobile">
-                  <svg class="favorite-icon-product">
-                    <use xlink:href="#fav"></use>
-                  </svg>
-                </div>
-                <div class="send action"></div>
-                <div class="more action"></div>
-              </div>
-              <div class="card-image">
-                <div class="card-discount">
-                  <span>-35%</span>
-                </div>
-                <div class="favorite-mobile only-mobile">
-                  <div class="love action">
-                    <svg class="favorite-icon-product">
-                      <use xlink:href="#fav"></use>
-                    </svg>
-                  </div>
-                  <div class="send action"></div>
-                  <div class="more action"></div>
-                </div>
-                <a href="product-page.html">
-                  <img src="./img/popular/popular_01.png" alt="img" class="card-image-prev" />
-                </a>
-              </div>
-            </div>
-            <div class="card-icons no-mobile">
-              <div class="card-icon__wrapper">
-                <div class="card-tooltip">Легко чистить</div>
-                <div>
-                  <img src="./icons/popular/popular_03.svg" alt="img" />
-                </div>
-              </div>
-            </div>
-            <h5 class="card-title">Энхель</h5>
-            <p class="card-subtitle">Диван прямой</p>
-            <div class="card-sizes">
-              <p class="card-sizes__title">Размеры</p>
-              <div class="card-sizes__btns">
-                <button class="card-size__button card-size__button-selected">160<span>см</span></button>
-                <button class="card-size__button">180<span>см</span></button>
-              </div>
-            </div>
-            <div class="card-params">
-              <div class="card-colors no-mobile">
-                <p class="card-colors__title">Цвет</p>
-                <div class="card-colors__btns">
-                  <button class="yellow card-colors__selected"></button>
-                  <button class="blue"></button>
-                  <button class="light"></button>
-                </div>
-              </div>
-              <div class="card-price">
-                <div class="old-price">55 000 ₽</div>
-                <div class="new-price">45 100 ₽</div>
-              </div>
-              <img src="./icons/navbar/cart.svg" class="only-mobile" alt="cart" />
-            </div>
-            <div class="add-to-cart-wrapper no-mobile">
-              <button class="card_add-to-cart">Добавить в корзину</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-top-image-wrapper">
-              <div class="card-hover-img no-mobile">
+              <div class="card-hover-img only-desktop">
                 <div class="hover-slide-line">
                   <div class="white-hover-slide-line"></div>
                 </div>
@@ -1061,7 +989,7 @@
                 <div class="card-discount">
                   <span>-35%</span>
                 </div>
-                <div class="favorite-mobile only-mobile">
+                <div class="favorite-mobile no-desktop">
                   <div class="love action">
                     <svg class="favorite-icon-product">
                       <use xlink:href="#fav"></use>
@@ -1108,7 +1036,7 @@
               </div>
             </div>
             <div class="card-params">
-              <div class="card-colors no-mobile">
+              <div class="card-colors only-desktop">
                 <p class="card-colors__title">Цвет</p>
                 <div class="card-colors__btns">
                   <button class="yellow card-colors__selected"></button>
@@ -1120,14 +1048,103 @@
                 <div class="old-price">55 000 ₽</div>
                 <div class="new-price">45 100 ₽</div>
               </div>
-              <img src="./icons/navbar/cart.svg" class="only-mobile" alt="cart" />
+              <img src="./icons/navbar/cart.svg" class="no-desktop" alt="cart" />
             </div>
-            <div class="add-to-cart-wrapper no-mobile">
+            <div class="add-to-cart-wrapper only-desktop">
               <button class="card_add-to-cart">Добавить в корзину</button>
             </div>
           </div>
 
-          <div class="card no-mobile">
+          <div class="card">
+            <div class="card-top-image-wrapper">
+              <div class="card-hover-img only-desktop">
+                <div class="hover-slide-line">
+                  <div class="white-hover-slide-line"></div>
+                </div>
+                <a href="product-page.html">
+                  <img src="img/card-hover.png" alt="img" />
+                  <div class="hover-slide-img" data-src="img/card-hover.png"></div>
+                  <div class="hover-slide-img" data-src="./img/popular/popular_01.png"></div>
+                </a>
+                <div class="love action">
+                  <svg class="favorite-icon-product">
+                    <use xlink:href="#fav"></use>
+                  </svg>
+                </div>
+                <div class="send action"></div>
+                <div class="more action"></div>
+              </div>
+              <div class="card-image">
+                <div class="card-discount">
+                  <span>-35%</span>
+                </div>
+                <div class="favorite-mobile no-desktop">
+                  <div class="love action">
+                    <svg class="favorite-icon-product">
+                      <use xlink:href="#fav"></use>
+                    </svg>
+                  </div>
+                  <div class="send action"></div>
+                  <div class="more action"></div>
+                </div>
+                <a href="product-page.html">
+                  <img src="./img/popular/popular_01.png" alt="img" class="card-image-prev" />
+                </a>
+              </div>
+            </div>
+
+            <div class="card-icons no-mobile">
+              <div class="card-icon__wrapper">
+                <div class="card-tooltip">Легко чистить</div>
+                <div>
+                  <img src="./icons/popular/popular_02.svg" alt="img" />
+                </div>
+              </div>
+              <div class="card-icon__wrapper">
+                <div class="card-tooltip">Легко чистить</div>
+                <div>
+                  <img src="./icons/popular/popular_03.svg" alt="img" />
+                </div>
+              </div>
+              <div class="card-icon__wrapper">
+                <div class="card-tooltip">Легко чистить</div>
+                <div>
+                  <img src="./icons/popular/popular_01.svg" alt="img" />
+                </div>
+              </div>
+            </div>
+            <h5 class="card-title">Энхель</h5>
+            <p class="card-subtitle">Диван прямой</p>
+            <div class="card-sizes">
+              <p class="card-sizes__title">Размеры</p>
+              <div class="card-sizes__btns">
+                <button class="card-size__button card-size__button-selected">160<span>см</span></button>
+                <button class="card-size__button">180<span>см</span></button>
+                <button class="card-size__button">200<span>см</span></button>
+                <button class="card-size__button">220<span>см</span></button>
+              </div>
+            </div>
+            <div class="card-params">
+              <div class="card-colors only-desktop">
+                <p class="card-colors__title">Цвет</p>
+                <div class="card-colors__btns">
+                  <button class="yellow card-colors__selected"></button>
+                  <button class="blue"></button>
+                  <button class="light"></button>
+                </div>
+              </div>
+              <div class="card-price">
+                <div class="old-price">55 000 ₽</div>
+                <div class="new-price">45 100 ₽</div>
+              </div>
+              <img src="./icons/navbar/cart.svg" class="no-desktop" alt="cart" />
+            </div>
+            <div class="add-to-cart-wrapper only-desktop">
+              <button class="card_add-to-cart">Добавить в корзину</button>
+            </div>
+          </div>
+
+          <div class="card only-desktop">
             <div class="card-top-image-wrapper">
               <div class="card-hover-img">
                 <div class="hover-slide-line">
@@ -1201,7 +1218,7 @@
             </div>
           </div>
 
-          <div class="card no-mobile">
+          <div class="card only-desktop">
             <div class="card-top-image-wrapper">
               <div class="card-hover-img">
                 <div class="hover-slide-line">
@@ -1354,7 +1371,8 @@
             <h1 class="discount-banner__title">Невероятные скидки</h1>
             <p class="discount-banner__subtitle">Осенняя распродажа в самом разагре успей купить мебель по выгодной цене</p>
           </div>
-          <img src="./img/popular/bg-discount.png" alt="img" />
+          <img class="no-mobile" src="./img/popular/bg-discount.png" alt="img" />
+          <img class="only-mobile" src="./img/popular/bg-discount-mob.png" alt="img" />
         </div>
       </div>
     </section>
@@ -1362,7 +1380,7 @@
     <section class="inspire">
       <div class="container">
         <div class="inspire-title">Ищите вдохновение с <span>#Remake home</span></div>
-        <div class="images-wrapper no-mobile">
+        <div class="images-wrapper only-desktop">
           <div class="inspire-image">
             <div class="inspire-image--overlay">
               <div class="overlay-info">
@@ -1484,7 +1502,7 @@
             <img src="./img/inspire/inspire03.png" alt="img" />
           </div>
         </div>
-        <div class="mobile-images-wrapper only-mobile">
+        <div class="mobile-images-wrapper no-desktop">
           <div class="inspire-image">
             <div class="inspire-image--overlay">
               <div class="overlay-info">
@@ -1588,7 +1606,7 @@
             <div class="collections-caption">Идеи для кухни</div>
             <div class="collection-info-toggle-wrapper">
               <span class="collection-point collection-left-point-1"></span>
-              <div class="collection-card-opened display-none-anim">
+              <div class="collection-card-opened">
                 <img class="no-mobile" src="./img/collections/colpinimg.png" alt="img" />
                 <h6>Каир Textile Grey</h6>
                 <p>2-местный диван</p>
@@ -1603,7 +1621,7 @@
             </div>
             <div class="collection-info-toggle-wrapper">
               <span class="collection-point collection-left-point-2"></span>
-              <div class="collection-card-opened display-none-anim">
+              <div class="collection-card-opened">
                 <img class="no-mobile" src="./img/collections/colpinimg.png" alt="img" />
                 <h6>Каир Textile Grey</h6>
                 <p>2-местный диван</p>
@@ -1618,7 +1636,7 @@
             </div>
             <div class="collection-info-toggle-wrapper">
               <span class="collection-point collection-left-point-3"></span>
-              <div class="collection-card-opened display-none-anim">
+              <div class="collection-card-opened">
                 <img class="no-mobile" src="./img/collections/colpinimg.png" alt="img" />
                 <h6>Каир Textile Grey</h6>
                 <p>2-местный диван</p>
@@ -1636,7 +1654,7 @@
           <div class="collections-image">
             <div class="collections-caption">Идеи для гостиной</div>
             <span class="collection-point collection-right-point-1"></span>
-            <div class="collection-card-opened display-none-anim">
+            <div class="collection-card-opened">
               <img class="no-mobile" src="./img/collections/colpinimg.png" alt="img" />
               <h6>Каир Textile Grey</h6>
               <p>2-местный диван</p>
@@ -1739,7 +1757,7 @@
       <div class="container">
         <div class="address-title">Адрес нашего магазина</div>
         <div class="address-info">
-          <div class="address-card no-mobile">
+          <div class="address-card only-desktop">
             <div class="address-card__title">Шоу-рум RM Home</div>
             <div class="address-card__street">г.Москва, ул. Большая Переяславская, 10, (ст. метро Проспект Мира)</div>
             <div class="address-card__schedule">
@@ -1786,11 +1804,11 @@
             <div class="footer-subscribe__btn">Подписаться</div>
           </div>
         </div>
-        <button class="footer-subscribe__top-btn hide-btn">
+        <button class="footer-subscribe__top-btn hide-btn only-desktop">
           <img src="./icons/footer/footer-topimg.svg" alt="img" />
         </button>
       </div>
-      <div class="no-mobile">
+      <div class="only-desktop">
         <div class="footer-container">
           <div class="footer-links-blocks">
             <div class="footer-links">
@@ -1857,7 +1875,7 @@
           </div>
         </div>
       </div>
-      <div class="mobile-footer-links only-mobile">
+      <div class="mobile-footer-links no-desktop">
         <div class="mobile-footer-links__item">
           <div class="mobile-footer-links__title">
             <h5>Каталог</h5>
@@ -1896,7 +1914,7 @@
           </div>
         </div>
       </div>
-      <div class="mobile-footer__socials only-mobile">
+      <div class="mobile-footer__socials no-desktop">
         <a href="#">
           <img src="./icons/footer/insta.svg" alt="img" />
         </a>
@@ -1917,7 +1935,7 @@
           <img src="./icons/footer/Fb.svg" alt="img" />
         </a>
       </div>
-      <div class="mobile-footer-contacts only-mobile">
+      <div class="mobile-footer-contacts no-desktop">
         <div class="mobile-footer-contacts__block">
           <div class="mobile-footer-contacts__city">Санкт - Петербург</div>
           <div class="mobile-footer-contacts__phone">+7 800 100-0-100</div>

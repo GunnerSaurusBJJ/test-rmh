@@ -113,6 +113,7 @@ let mobileSidebar = document.querySelector('.mobile-sidebar')
 
 mobileNavbarBurger.addEventListener('click', () => {
   mobileNavbarBurger.classList.toggle('burger-active')
+  document.querySelector('.mobile-sidebar-background').classList.toggle('mobile-sidebar-background--opened')
   mobileSidebar.classList.toggle('mobile-sidebar-opened')
   if (document.querySelector('.mobile-subcategory').classList.contains('mobile-subcategory-opened')) {
     document.querySelector('.mobile-subcategory').classList.remove('mobile-subcategory-opened')

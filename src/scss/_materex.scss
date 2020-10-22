@@ -12,6 +12,12 @@
   align-self: center;
   padding-left: 80px;
   justify-content: space-between;
+  @media #{$media-md-only} {
+    padding-left: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+    overflow: hidden;
+  }
   @media #{$media-to-xs} {
     height: 190px;
     padding: 0;
@@ -106,16 +112,25 @@
     @media #{$media-to-xs} {
       margin-bottom: 8px;
     }
+    @media #{$media-md-only} {
+      width: 94%;
+    }
   }
 }
 
 .mobile-example-types {
   margin-top: 20px;
   margin-bottom: 40px;
+  @media #{$media-md-only} {
+    padding-left: 16px;
+  }
   .type-image + .type-image {
     @media #{$media-to-xs} {
       margin-left: 8px;
       font-size: 14px;
+    }
+    @media #{$media-md-only} {
+      font-size: 18px;
     }
   }
 }

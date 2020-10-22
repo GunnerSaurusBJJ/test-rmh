@@ -1,7 +1,6 @@
-
 .header-navbar {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   font-size: 0.97vw;
   height: 100px;
@@ -9,12 +8,14 @@
 .navbar-links {
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   width: 34.236vw;
 }
 .navbar-search {
   position: relative;
-  // margin-right: 30px;
+  @media #{$media-to-md} {
+    margin: 0 auto;
+  }
   input {
     min-width: 200px;
     width: 36.388vw;
@@ -27,7 +28,10 @@
     border-radius: 10px;
     caret-color: $red;
     &::placeholder {
-      color: #A7A8B3
+      color: #a7a8b3;
+    }
+    @media #{$media-to-md} {
+      width: 400px;
     }
   }
   img {
@@ -67,16 +71,17 @@
   padding-left: 16px;
   padding-right: 16px;
   &__burger {
-    transition: transform .4s;
+    transition: transform 0.4s;
     .burger-line {
-      transition: all .4s;
+      transition: all 0.4s;
       background: #282724;
       width: 16px;
       height: 2px;
       display: block;
       position: relative;
       z-index: 101;
-      &::after, &::before {
+      &::after,
+      &::before {
         content: '';
         background: #282724;
         width: 16px;
@@ -103,10 +108,29 @@
     }
   }
 }
+.mobile-sidebar-background {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+  transition: all 0.4s;
+}
+.mobile-sidebar-background--opened {
+  visibility: visible;
+  opacity: 1;
+}
 .mobile-navbar__burger.burger-active {
   z-index: 101;
   transform: translateX(87vw);
-  transition: transform .4s;
+  transition: transform 0.4s;
+  @media #{$media-xs-up} {
+    transform: translateX(44vw);
+  }
   .burger-line {
     transform: rotate(45deg);
     &::after {
@@ -128,11 +152,14 @@
   z-index: 100;
   background: #fff;
   transform: translateX(-100%);
-  transition: transform .4s;
+  transition: transform 0.4s;
+  @media #{$media-xs-up} {
+    right: 50%;
+  }
 }
 .mobile-sidebar-opened {
   transform: translateX(0);
-  transition: .4s;
+  transition: 0.4s;
 }
 .mobile-sidebar {
   overflow: auto;
@@ -162,7 +189,7 @@
     border-radius: 10px;
     caret-color: $red;
     &::placeholder {
-      color: #A7A8B3
+      color: #a7a8b3;
     }
   }
   img {
@@ -181,7 +208,7 @@
   padding-left: 16px;
   padding-right: 16px;
   &__item {
-    border-bottom: 1px solid #D2D7E3;
+    border-bottom: 1px solid #d2d7e3;
     min-height: 50px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -208,12 +235,12 @@
       margin-right: auto;
     }
     :first-child {
-     flex: 0 1 70px;
-     img {
-       display: block;
-       margin: 0 auto;
-       transform: rotate(0deg);
-     }
+      flex: 0 1 70px;
+      img {
+        display: block;
+        margin: 0 auto;
+        transform: rotate(0deg);
+      }
     }
     :last-child {
       transform: rotate(-90deg);
@@ -223,7 +250,7 @@
 .mobile-sidebar-bottom {
   padding: 24px 16px;
   margin-top: 100px;
-  background: #F5F6FA;
+  background: #f5f6fa;
   &__item {
     display: flex;
     align-items: center;
@@ -246,13 +273,16 @@
   z-index: 101;
   background: #fff;
   transform: translateX(-100%);
-  transition: transform .4s;
+  transition: transform 0.4s;
   overflow: auto;
+  @media #{$media-md-only} {
+    right: 50%;
+  }
 }
 
 .mobile-subcategory-opened {
   transform: translateX(0);
-  transition: .4s;
+  transition: 0.4s;
 }
 .mobile-subcategory-title {
   font-weight: bold;
@@ -275,7 +305,7 @@
   }
 }
 .mobile-subcategory-item {
-  border-bottom: 1px solid #D2D7E3;
+  border-bottom: 1px solid #d2d7e3;
   margin-left: 16px;
   margin-right: 16px;
 }
@@ -290,9 +320,9 @@
   padding-bottom: 11px;
   font-weight: bold;
   font-size: 14px;
-  border: 1px solid #ED1C24;
+  border: 1px solid #ed1c24;
   border-radius: 10px;
-  background: #FFFFFF;
+  background: #ffffff;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -310,7 +340,7 @@
     :last-child {
       font-weight: bold;
       font-size: 16px;
-      color: #ED1C24;
+      color: #ed1c24;
     }
   }
   &__main {
@@ -324,19 +354,19 @@
       font-weight: normal;
     }
     p {
-      color: #A7A8B3;
+      color: #a7a8b3;
       font-size: 12px;
     }
   }
   &__oldprice {
-    color: #A7A8B3;
+    color: #a7a8b3;
     font-size: 12px;
     text-decoration: line-through;
     margin-top: 16px;
     span {
       font-weight: bold;
       font-size: 10px;
-      background: #ED1C24;
+      background: #ed1c24;
       border-radius: 1px 7px;
       text-decoration: none;
       color: #fff;

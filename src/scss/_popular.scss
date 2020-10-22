@@ -8,6 +8,8 @@
     align-items: flex-end;
     @media #{$media-to-xs} {
       display: block;
+    }
+    @media #{$media-to-md} {
       padding-left: 16px;
       padding-right: 16px;
     }
@@ -15,6 +17,9 @@
       font-size: 48px;
       margin-right: 24px;
       line-height: 38px;
+      @media #{$media-md-only} {
+        font-size: 44px;
+      }
       @media #{$media-to-xs} {
         font-weight: bold;
         font-size: 24px;
@@ -44,6 +49,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 30px;
+  grid-row-gap: 50px;
   @media #{$media-to-xs} {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 20px;
@@ -293,6 +299,11 @@
   background: #ffe677;
   margin-bottom: 60px;
   position: relative;
+  @media #{$media-md-only} {
+    height: 240px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
   @media #{$media-to-xs} {
     margin-left: 16px;
     margin-right: 16px;
@@ -304,18 +315,21 @@
   div {
     position: absolute;
     left: 70px;
-    top: 58px;
+    top: 50%;
+    transform: translateY(-50%);
+    @media #{$media-md-only} {
+      left: 40px;
+    }
+    @media #{$media-to-xs} {
+      left: 20px !important;
+      width: 230px;
+    }
     p {
       width: 490px;
       @media #{$media-to-xs} {
         width: 61%;
         font-size: 14px;
       }
-    }
-    @media #{$media-to-xs} {
-      left: 20px;
-      top: 20px;
-      width: 230px;
     }
   }
   img {
@@ -327,7 +341,9 @@
   }
   &__title {
     font-weight: bold;
-    font-size: 55px;
+    @media #{$media-to-xl} {
+      font-size: 3.8vw;
+    }
     @media #{$media-to-xs} {
       font-size: 20px;
     }
@@ -389,20 +405,20 @@
 }
 
 .card:hover .card-image-prev {
-  @media #{$media-xs-up} {
+  @media #{$media-md-up} {
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s;
   }
 }
 .card:hover .card-hover-img {
-  @media #{$media-xs-up} {
+  @media #{$media-md-up} {
     opacity: 1;
     visibility: visible;
   }
 }
 .card:hover .card-icons {
-  @media #{$media-xs-up} {
+  @media #{$media-md-up} {
     opacity: 0;
     visibility: hidden;
   }
@@ -482,14 +498,7 @@
   will-change: top, height;
   animation: line1 0.3s ease-out 1;
 }
-.favorite-icon-product.active {
-  animation: grow-shrink 0.3s ease 1;
-  fill: red;
-}
-.favorite-icon-product.love {
-  fill: red;
-  stroke: none;
-}
+
 .favorite-icon-product {
   width: 30px;
   height: 30px;
@@ -498,12 +507,23 @@
   position: absolute;
   right: 0;
   top: 7px;
+  @media #{$media-md-only} {
+    top: -26px;
+  }
   @media #{$media-to-xs} {
     right: 0;
     top: 0;
     width: 22px;
     height: 22px;
   }
+}
+.favorite-icon-product.active {
+  animation: grow-shrink 0.3s ease 1;
+  fill: red;
+}
+.favorite-icon-product.love {
+  fill: red;
+  stroke: none;
 }
 @keyframes line1 {
   0% {

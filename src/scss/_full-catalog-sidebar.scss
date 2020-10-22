@@ -299,6 +299,9 @@ input[type='range']::-webkit-slider-thumb {
 .help-section-info {
   padding: 55px 68px 58px 68px;
   position: relative;
+  @media #{$media-md-only} {
+    padding: 40px 0 40px 32px;
+  }
   @media #{$media-to-xs} {
     padding: 20px;
   }
@@ -307,6 +310,9 @@ input[type='range']::-webkit-slider-thumb {
     top: 12px;
     right: 58px;
     width: 34.027vw;
+    @media #{$media-md-only} {
+      width: 355px;
+    }
     @media #{$media-xl-up} {
       width: 500px;
     }
@@ -316,6 +322,10 @@ input[type='range']::-webkit-slider-thumb {
 .help-section__title {
   font-weight: bold;
   font-size: 32px;
+  @media #{$media-md-only} {
+    width: 50%;
+    line-height: 35px;
+  }
   @media #{$media-to-xs} {
     font-size: 20px;
     line-height: 24px;
@@ -329,6 +339,11 @@ input[type='range']::-webkit-slider-thumb {
   opacity: 0.5;
   max-width: 550px;
   margin-bottom: 25px;
+  @media #{$media-md-only} {
+    width: 43%;
+    line-height: 20px;
+    margin-top: 16px;
+  }
   @media #{$media-to-xs} {
     width: 70%;
     margin-top: 8px;
@@ -336,6 +351,9 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .help-section__input-wrapper {
+  @media #{$media-md-only} {
+    display: flex;
+  }
   input {
     border-radius: 10px;
     border: 1px solid #d2d7e3;
@@ -382,6 +400,9 @@ input[type='range']::-webkit-slider-thumb {
   margin-top: 22px;
   margin-left: -40px;
   justify-items: center;
+  @media #{$media-to-md} {
+    grid-gap: 10px;
+  }
   @media #{$media-to-xs} {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 32px;

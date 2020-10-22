@@ -16,7 +16,7 @@
     justify-items: center;
     justify-content: center;
     grid-gap: 50px;
-    @media #{$media-to-xs} {
+    @media #{$media-to-md} {
       display: block;
       padding-left: 16px;
       padding-right: 16px;
@@ -64,7 +64,7 @@
 
 .full-catalog-filters {
   margin-top: 60px;
-  @media #{$media-to-xs} {
+  @media #{$media-to-md} {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -81,6 +81,10 @@
     font-size: 14px;
     display: flex;
     align-items: center;
+    @media #{$media-to-md} {
+      width: max-content !important;
+      display: flex;
+    }
     img {
       margin-left: 10px;
       @media #{$media-to-xs} {
@@ -89,7 +93,7 @@
     }
     &:not(:last-child) {
       margin-right: 15px;
-      @media #{$media-to-xs} {
+      @media #{$media-to-md} {
         margin-right: 8px;
         width: max-content !important;
         display: flex;
@@ -100,6 +104,10 @@
     background: #2e394d;
     color: #fff;
     position: relative;
+    @media #{$media-md-only} {
+      display: flex !important;
+      width: max-content !important;
+    }
   }
   .sort-list {
     position: absolute;
@@ -125,7 +133,9 @@
     font-size: 14px;
     display: flex;
     align-items: center;
-    @media #{$media-to-xs} {
+    @media #{$media-md-only} {
+      display: flex !important;
+      width: max-content !important;
     }
     span {
       margin-left: 7px;

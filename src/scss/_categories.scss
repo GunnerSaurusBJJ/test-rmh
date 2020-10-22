@@ -3,9 +3,9 @@
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 20px;
   justify-content: space-between;
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
     justify-items: center;
-  } 
+  }
 }
 .categories__item {
   width: 100%;
@@ -22,7 +22,7 @@
 }
 
 .mobile-categories-wrapper {
-  @media #{$media-to-xs} {
+  @media #{$media-to-md} {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -34,6 +34,16 @@
     }
   }
   .mobile-categories-item__link {
-    font-size: 14px;
+    @media #{$media-to-md} {
+      font-size: 18px;
+    }
+    @media #{$media-to-xs} {
+      font-size: 14px;
+    }
+    img {
+      @media #{$media-xs-up} {
+        width: 94%;
+      }
+    }
   }
 }

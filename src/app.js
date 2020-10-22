@@ -1,30 +1,22 @@
 $(document).ready(function () {
   $('.slider-wrapper').slick({
-    nextArrow:
-      '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
-    prevArrow:
-      '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
+    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
   })
   $('.mobile-categories-wrapper').slick({
     slidesToShow: 3,
-    nextArrow:
-      '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
-    prevArrow:
-      '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
+    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
   })
   $('.mobile-example-types').slick({
     slidesToShow: 2,
-    nextArrow:
-      '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
-    prevArrow:
-      '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
+    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
   })
   $('.mobile-images-wrapper').slick({
     slidesToShow: 3,
-    nextArrow:
-      '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
-    prevArrow:
-      '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
+    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
   })
 })
 var date = new Date()
@@ -53,20 +45,14 @@ modalDiscount.addEventListener('click', () => {
   modalDiscount.classList.add('out')
 })
 
-cardSizeBtnWrapper.forEach((item, idx) =>
-  toggleUniqueClass(item, idx, 'sizebtn', 'card-size__button-selected')
-)
-cardColorBtnWrapper.forEach((item, idx) =>
-  toggleUniqueClass(item, idx, 'colorbtn', 'card-colors__selected')
-)
+cardSizeBtnWrapper.forEach((item, idx) => toggleUniqueClass(item, idx, 'sizebtn', 'card-size__button-selected'))
+cardColorBtnWrapper.forEach((item, idx) => toggleUniqueClass(item, idx, 'colorbtn', 'card-colors__selected'))
 
 function toggleUniqueClass(item, idx, addedClass, mainClass) {
   return Array.from(item.children).forEach((btn) => {
     btn.classList.add(`${addedClass}${idx}`)
     btn.addEventListener('click', () => {
-      document
-        .querySelector(`.${mainClass}.${addedClass}${idx}`)
-        .classList.remove(`${mainClass}`)
+      document.querySelector(`.${mainClass}.${addedClass}${idx}`).classList.remove(`${mainClass}`)
       btn.classList.add(`${mainClass}`)
     })
   })
@@ -94,8 +80,7 @@ function magnify(imgID, zoom) {
   /* Set background properties for the magnifier glass: */
   glass.style.backgroundImage = "url('" + img.src + "')"
   glass.style.backgroundRepeat = 'no-repeat'
-  glass.style.backgroundSize =
-    img.width * zoom + 'px ' + img.height * zoom + 'px'
+  glass.style.backgroundSize = img.width * zoom + 'px ' + img.height * zoom + 'px'
   bw = 3
   w = glass.offsetWidth / 2
   h = glass.offsetHeight / 2
@@ -133,8 +118,7 @@ function magnify(imgID, zoom) {
     glass.style.top = y - h + 'px'
     /* Display what the magnifier glass "sees": */
     // glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
-    glass.style.backgroundPosition =
-      '-' + (x * zoom - w + bw) + 'px -' + (y * zoom - h + bw) + 'px'
+    glass.style.backgroundPosition = '-' + (x * zoom - w + bw) + 'px -' + (y * zoom - h + bw) + 'px'
   }
 
   function getCursorPos(e) {
@@ -163,21 +147,18 @@ collectionsPoints.forEach((point, index) => {
   point.addEventListener('click', (e) => {
     document.querySelectorAll('.collection-card-opened').forEach((item) => {
       if (item.id !== point.id) {
-        item.classList.add('display-none-anim')
+        item.classList.remove('collection-anim')
       }
     })
     if (window.innerWidth > 500) {
-      point.nextElementSibling.style.right =
-        parseFloat(getComputedStyle(point).getPropertyValue('right')) -
-        230 +
-        'px'
+      point.nextElementSibling.style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - 230 + 'px'
     }
     collectionsPoints.forEach((item) => {
       if (item.id !== point.id) {
         item.classList.remove('collection-point-active')
       }
     })
-    point.nextElementSibling.classList.toggle('display-none-anim')
+    point.nextElementSibling.classList.toggle('collection-anim')
     point.classList.toggle('collection-point-active')
   })
 })
@@ -214,22 +195,12 @@ document.querySelectorAll('.card-hover-img').forEach((card) => {
 // active favorite icon
 document.querySelectorAll('.card').forEach((card) => {
   card.querySelectorAll('.love.action').forEach((item) => {
-    item.addEventListener('click', () =>
-      addToFavIconActive(card, '.favorite-icon-product', '.line')
-    )
+    item.addEventListener('click', () => addToFavIconActive(card, '.favorite-icon-product', '.line'))
   })
-  if (window.innerWidth < 576) {
+  if (window.innerWidth < 800) {
     card
-      .querySelectorAll('.favorite-mobile.only-mobile')
-      .forEach((item) =>
-        item.addEventListener('click', () =>
-          addToFavIconActive(
-            card,
-            '.favorite-mobile.only-mobile .favorite-icon-product',
-            '.favorite-mobile.only-mobile .line'
-          )
-        )
-      )
+      .querySelectorAll('.favorite-mobile.no-desktop')
+      .forEach((item) => item.addEventListener('click', () => addToFavIconActive(card, '.favorite-mobile.no-desktop .favorite-icon-product', '.favorite-mobile.no-desktop .line')))
   }
 })
 
@@ -238,9 +209,7 @@ function addToFavIconActive(card, iconClass, lineClass) {
   card.querySelectorAll(lineClass).forEach((i) => i.classList.add('active'))
   card.querySelector(iconClass).classList.add('active')
   setTimeout(() => {
-    card
-      .querySelectorAll(lineClass)
-      .forEach((i) => i.classList.remove('active'))
+    card.querySelectorAll(lineClass).forEach((i) => i.classList.remove('active'))
     card.querySelector(iconClass).classList.remove('active')
   }, 300)
 }

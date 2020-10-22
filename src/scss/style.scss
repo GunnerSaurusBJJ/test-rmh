@@ -27,7 +27,7 @@ input {
   margin-left: 96px;
   padding-left: 24px;
   padding-right: 34px;
-  @media #{$media-to-xs} {
+  @media #{$media-to-md} {
     margin-left: 0;
     padding-left: 0px;
     padding-right: 0px;
@@ -51,15 +51,19 @@ input {
 .display-block {
   display: block !important;
 }
-.display-none-anim {
-  opacity: 0;
-  visibility: hidden;
+.collection-anim {
+  transform: translateY(-50%) scale(1) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
   transition: 0.4s;
 }
 .img-magnifier-container {
   position: relative;
   z-index: 3;
   margin-right: 3.81944vw;
+  @media #{$media-md-only} {
+    margin-right: -230px;
+  }
 }
 .img-magnifier-glass {
   position: absolute;
