@@ -1392,8 +1392,14 @@
             <div class="help-section__title">Помощь в подборе идеальной мебели</div>
             <div class="help-section__subtitle">Не можете определится с цветом дивана или его формой, цветом ножек и пуговец наши специалисты помогут в этом.</div>
             <div class="help-section__input-wrapper">
-              <input type="text" placeholder="Имя" />
-              <input type="text" placeholder="Имя" />
+              <div>
+                <input type="text" placeholder="Имя" />
+                <label class="help-section__label">Имя</label>
+              </div>
+              <div>
+                <input type="text" placeholder="Телефон" />
+                <label class="help-section__label">Телефон</label>
+              </div>
               <button>Позвонить мне</button>
             </div>
             <img class="no-mobile" src="./full-catalog/img/help-sofa.png" alt="img" />
@@ -1428,6 +1434,7 @@
           </p>
           <div class="footer-subscribe__input">
             <input type="text" placeholder="Ваш Email" />
+            <label class="footer-subscribe__label field-label">Ваш Email</label>
             <div class="footer-subscribe__btn">Подписаться</div>
           </div>
         </div>
@@ -1479,23 +1486,33 @@
               <div class="footer-links__title">МЫ В СОЦ.СЕТЯХ</div>
               <div class="footer-socials">
                 <a href="#">
-                  <img src="./icons/footer/insta.svg" alt="img" />
+                  <svg>
+                    <use xlink:href="sprite.svg#insta-footer"></use>
+                  </svg>
                 </a>
 
                 <a href="#">
-                  <img src="./icons/footer/tw.svg" alt="img" />
+                  <svg>
+                    <use xlink:href="sprite.svg#tw-footer"></use>
+                  </svg>
                 </a>
 
                 <a href="#">
-                  <img src="./icons/footer/vk.svg" alt="img" />
+                  <svg>
+                    <use xlink:href="sprite.svg#vk-footer"></use>
+                  </svg>
                 </a>
 
                 <a href="#">
-                  <img src="./icons/footer/ok.svg" alt="img" />
+                  <svg>
+                    <use xlink:href="sprite.svg#ok-footer"></use>
+                  </svg>
                 </a>
 
                 <a href="#">
-                  <img src="./icons/footer/Fb.svg" alt="img" />
+                  <svg>
+                    <use xlink:href="sprite.svg#fb-footer"></use>
+                  </svg>
                 </a>
               </div>
             </div>

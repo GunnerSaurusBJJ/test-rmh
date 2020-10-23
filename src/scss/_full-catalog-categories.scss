@@ -74,13 +74,17 @@
   }
   &__btn {
     outline: none;
-    background: #f5f6fa;
+    background: rgba(245, 246, 250, 1);
     border-radius: 4px;
     padding: 5px 12px;
     cursor: pointer;
     font-size: 14px;
     display: flex;
     align-items: center;
+    &:hover {
+      transition: 0.2s;
+      background: #ededed;
+    }
     @media #{$media-to-md} {
       width: max-content !important;
       display: flex;
@@ -133,6 +137,11 @@
     font-size: 14px;
     display: flex;
     align-items: center;
+    &:hover {
+      border: 1px solid #d00a12;
+      transition: 0.2s;
+      background: #f7f7f7;
+    }
     @media #{$media-md-only} {
       display: flex !important;
       width: max-content !important;
@@ -269,7 +278,6 @@
   background: #c06162;
   background: #34495e;
   position: relative;
-  font-size: 18px;
   perspective: 1000px;
   z-index: 100;
 }

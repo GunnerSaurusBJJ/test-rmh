@@ -94,6 +94,11 @@
       font-size: 14px;
       line-height: 21px;
       text-decoration-line: underline;
+      cursor: pointer;
+      &:hover {
+        color: #0b729e;
+        transition: 0.2s;
+      }
     }
   }
   &__btn {

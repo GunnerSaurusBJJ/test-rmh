@@ -66,12 +66,16 @@
   }
   &__show-more {
     color: #fff;
-    background: transparent;
+    background: rgba(255, 255, 255, 0);
     border: 1.5px solid #ffffff;
     border-radius: 10px;
     font-size: 14px;
     padding: 10px 75px;
     margin-top: 20px;
+    transition: 0.2s;
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
     @media #{$media-to-xs} {
       padding: 10px 28px;
     }

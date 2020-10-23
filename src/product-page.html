@@ -446,11 +446,11 @@
         <div class="choose-material-main__left">
           <div class="material-slider">
             <img src="https://via.placeholder.com/415" alt="img" />
-            <img class="material-arrow left" src="./icons/topslider/left-arrow.svg" />
-            <img class="material-arrow right" src="./icons/topslider/right-arrow.svg" />
+            <img src="https://via.placeholder.com/415" alt="img" />
+            <img src="https://via.placeholder.com/415" alt="img" />
           </div>
           <p>Микрофибра – ткань высокой прочности с широкой цветовой гаммой. Особо тонкие волокна в составе полотна объясняют ее название.</p>
-          <button class="add-to-cart-btn">
+          <button class="add-to-cart-btn no-mobile">
             <img src="icons/addToCartWhite.svg" alt="img" />
             Добавить в корзину
           </button>
@@ -820,6 +820,12 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="add-to-cart-btn--mobile-wrapper only-mobile">
+          <button class="add-to-cart-btn add-to-cart-btn--mobile only-mobile">
+            <img src="icons/addToCartWhite.svg" alt="img" />
+            Добавить в корзину
+          </button>
         </div>
       </div>
     </div>
@@ -1285,6 +1291,7 @@
           </p>
           <div class="footer-subscribe__input">
             <input type="text" placeholder="Ваш Email" />
+            <label class="footer-subscribe__label field-label">Ваш Email</label>
             <div class="footer-subscribe__btn">Подписаться</div>
           </div>
         </div>
@@ -1336,23 +1343,33 @@
               <div class="footer-links__title">МЫ В СОЦ.СЕТЯХ</div>
               <div class="footer-socials">
                 <a href="#">
-                  <img src="./icons/footer/insta.svg" alt="img" />
+                  <svg>
+                    <use xlink:href="sprite.svg#insta-footer"></use>
+                  </svg>
                 </a>
 
                 <a href="#">
-                  <img src="./icons/footer/tw.svg" alt="img" />
+                  <svg>
+                    <use xlink:href="sprite.svg#tw-footer"></use>
+                  </svg>
                 </a>
 
                 <a href="#">
-                  <img src="./icons/footer/vk.svg" alt="img" />
+                  <svg>
+                    <use xlink:href="sprite.svg#vk-footer"></use>
+                  </svg>
                 </a>
 
                 <a href="#">
-                  <img src="./icons/footer/ok.svg" alt="img" />
+                  <svg>
+                    <use xlink:href="sprite.svg#ok-footer"></use>
+                  </svg>
                 </a>
 
                 <a href="#">
-                  <img src="./icons/footer/Fb.svg" alt="img" />
+                  <svg>
+                    <use xlink:href="sprite.svg#fb-footer"></use>
+                  </svg>
                 </a>
               </div>
             </div>

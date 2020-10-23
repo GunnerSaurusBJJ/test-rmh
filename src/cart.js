@@ -25,3 +25,9 @@ if (window.innerWidth > 576) {
     }
   }
 }
+
+document.querySelectorAll('.cart-data__item .label-focus').forEach((i) => {
+  i.addEventListener('click', function () {
+    this.previousElementSibling.focus()
+  })
+})

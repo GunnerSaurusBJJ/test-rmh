@@ -23,7 +23,7 @@ var date = new Date()
 let countDownDiscountModal = date.setDate(date.getDate() + 3)
 
 const modalDiscountClock = document.querySelector('.modal-discount__clock'),
-  modalDiscount = document.querySelector('#modal-container'),
+  modalDiscount = document.querySelector('.modal-background'),
   modalCloseBtn = document.querySelector('.modal-close'),
   cardSizeBtnWrapper = document.querySelectorAll('.card-sizes__btns'),
   cardColorBtnWrapper = document.querySelectorAll('.card-colors__btns')
@@ -38,11 +38,11 @@ setInterval(() => {
 }, 1000)
 
 setTimeout(() => {
-  modalDiscount.classList.add('one')
+  modalDiscount.classList.add('show-modal')
 }, 5000)
 
 modalDiscount.addEventListener('click', () => {
-  modalDiscount.classList.add('out')
+  modalDiscount.classList.remove('show-modal')
 })
 
 cardSizeBtnWrapper.forEach((item, idx) => toggleUniqueClass(item, idx, 'sizebtn', 'card-size__button-selected'))

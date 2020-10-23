@@ -74,6 +74,60 @@ $('.product-features__wrapper').slick({
   ],
   arrows: false,
 })
+
+$('.choose-material-top__params').slick({
+  mobileFirst: true,
+  infinite: false,
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: 'unslick',
+    },
+  ],
+  arrows: false,
+})
+
+$('.material-slider').slick({
+  infinite: false,
+  slidesToShow: 1,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 800,
+      settings: {
+        dots: true,
+      },
+    },
+  ],
+  nextArrow: '<img class="material-choise-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
+  prevArrow: '<img class="material-choise-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+})
+
+document.querySelectorAll('.choose-material-main__right-row-main').forEach((item) => {
+  if (Array.from(item.children).length > 6) {
+    $(item).slick({
+      mobileFirst: true,
+      infinite: false,
+      slidesToShow: 6.2,
+      responsive: [
+        {
+          breakpoint: 800,
+          settings: 'unslick',
+        },
+      ],
+      arrows: false,
+    })
+  }
+})
+
+let materialChoiseSliderItemsQty = document.querySelectorAll('.material-slider img')
+let materialSlider = document.querySelector('.material-slider')
+
+document.querySelectorAll('.material-slider .slick-dots li button').forEach((btn) => {
+  btn.style.width = materialSlider.clientWidth / (Array.from(materialChoiseSliderItemsQty).length - 2) - 20 + 'px'
+})
+
 const showMoreProductDescBtn = document.querySelector('.product-desc__show-more'),
   moreTextProductDesc = document.querySelector('.product-desc__more-text'),
   reviewTexts = document.querySelectorAll('.product-reviews__card-bottom p')
@@ -92,14 +146,16 @@ reviewTexts.forEach((text) => {
   }
 })
 
-const anotherMaterialBtn = document.querySelector('.choose-material'),
+const anotherMaterialBtn = document.querySelectorAll('.choose-material'),
   anotherMaterialBackGround = document.querySelector('.choose-sidebar-background')
 anotherMaterialSidebar = document.querySelector('.choose-material-sidebar')
 
-anotherMaterialBtn.addEventListener('click', () => {
-  document.documentElement.style.overflow = 'hidden'
-  anotherMaterialBackGround.classList.add('choose-sidebar-background-visible')
-  anotherMaterialSidebar.classList.add('choose-material-visible')
+anotherMaterialBtn.forEach((i) => {
+  i.addEventListener('click', () => {
+    document.documentElement.style.overflow = 'hidden'
+    anotherMaterialBackGround.classList.add('choose-sidebar-background-visible')
+    anotherMaterialSidebar.classList.add('choose-material-visible')
+  })
 })
 
 document.querySelector('.choose-material-top__title img').addEventListener('click', () => {

@@ -170,3 +170,7 @@ window.addEventListener('scroll', () => {
     scrollToTopBtn.classList.remove('absolute-btn')
   }
 })
+
+document.querySelector('.footer-subscribe__label').addEventListener('click', function () {
+  this.previousElementSibling.focus()
+})

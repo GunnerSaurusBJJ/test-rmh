@@ -536,3 +536,9 @@ function addToFavIconActive(card, iconClass, lineClass) {
     card.querySelector(iconClass).classList.remove('active')
   }, 300)
 }
+
+document.querySelectorAll('.help-section__label').forEach((i) => {
+  i.addEventListener('click', function () {
+    this.previousElementSibling.focus()
+  })
+})

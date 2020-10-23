@@ -341,9 +341,7 @@
   }
   &__title {
     font-weight: bold;
-    @media #{$media-to-xl} {
-      font-size: 3.8vw;
-    }
+    font-size: 55px;
     @media #{$media-to-xs} {
       font-size: 20px;
     }
@@ -352,6 +350,7 @@
     font-weight: normal;
     font-size: 18px;
     max-width: 540px;
+    line-height: 25px;
     @media #{$media-to-xs} {
       font-size: 12px;
       width: 50%;
@@ -398,9 +397,11 @@
   margin: 0 auto 0 6px;
   display: block;
   font-size: 14px;
+  transition: 0.4s;
   &:hover {
     border: 1.5px solid #d00a12;
     transition: 0.2s;
+    background: #f7f7f7;
   }
 }
 
@@ -441,7 +442,7 @@
 }
 
 .action {
-  height: 20px;
+  height: 3px;
   width: 20px;
   position: absolute;
   top: 20px;
@@ -500,6 +501,7 @@
 }
 
 .favorite-icon-product {
+  cursor: pointer;
   width: 30px;
   height: 30px;
   fill: #fff;
