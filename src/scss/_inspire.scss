@@ -82,9 +82,8 @@
   font-size: 42px;
   margin-top: 40px;
   margin-bottom: 20px;
-  @media #{$media-to-md} {
-    padding-left: 16px;
-    padding-right: 16px;
+  @media #{$media-to-xs} {
+    font-size: 24px;
   }
 }
 .collections-wrapper {
@@ -123,6 +122,9 @@
   backdrop-filter: blur(3px);
   @media #{$media-to-xs} {
     font-size: 12px;
+    padding: 4.5px 12px;
+    top: 16px;
+    left: 16px;
   }
 }
 .collection-point {

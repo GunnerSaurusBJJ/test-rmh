@@ -390,11 +390,34 @@
     </section>
     <!-- !FULL CATALOG FILTERS -->
     <section class="full-catalog-filters">
+      <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-10 no-desktop-slider">
+        <li>
+          <label class="radio-container"
+            >По популярности
+            <input type="radio" checked="checked" name="radio" />
+            <span class="radio-checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label class="radio-container"
+            >По скидке
+            <input type="radio" name="radio" />
+            <span class="radio-checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label class="radio-container"
+            >Сначала дорогие
+            <input type="radio" name="radio" />
+            <span class="radio-checkmark"></span>
+          </label>
+        </li>
+      </ul>
       <div class="container">
         <div class="full-catalog-filters__wrapper">
           <div class="full-catalog-filters__btn full-catalog-filters-sort dropdown-sort-btn dropdown-10">
             <span> По популярности </span>
-            <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-10">
+            <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-10 only-desktop-slider">
               <li>
                 <label class="radio-container"
                   >По популярности
@@ -419,22 +442,22 @@
             </ul>
             <img src="./full-catalog/img/arrow-filter.svg" alt="img" />
           </div>
-          <div class="full-catalog-filters__btn" id="category-btn">
+          <div class="full-catalog-filters__btn no-mobile" id="category-btn">
             <span> Категория <span class="category-count"></span> </span>
           </div>
-          <div class="full-catalog-filters__btn" id="form-btn">
+          <div class="full-catalog-filters__btn no-mobile" id="form-btn">
             <span> Форма <span class="form-count"></span> </span>
           </div>
-          <div class="full-catalog-filters__btn" id="price-btn">
+          <div class="full-catalog-filters__btn no-mobile" id="price-btn">
             <span> Цена </span>
           </div>
-          <div class="full-catalog-filters__btn" id="size-btn">
+          <div class="full-catalog-filters__btn no-mobile" id="size-btn">
             <span> Размер <span class="size-count"></span> </span>
           </div>
-          <div class="full-catalog-filters__btn" id="color-btn">
+          <div class="full-catalog-filters__btn no-mobile" id="color-btn">
             <span> Цвет <span class="color-count"></span> </span>
           </div>
-          <div class="full-catalog-filters__btn" id="type-cover-btn">
+          <div class="full-catalog-filters__btn no-mobile" id="type-cover-btn">
             <span> Тип обивки <span class="type-cover-count"></span> </span>
           </div>
           <div class="all-filters">
@@ -449,7 +472,7 @@
             <h4>Фильтр</h4>
             <img class="close-sidebar-filter" src="./icons/close.svg" alt="img" />
           </div>
-          <div class="catalog-filter-sidebar__choise-item" id="category">
+          <div class="catalog-filter-sidebar__choise-item no-mobile" id="category">
             <div class="catalog-filter-sidebar__btn">
               Категория
               <svg class="inline-svg">
@@ -540,7 +563,7 @@
               </div>
             </div>
           </div>
-          <div class="catalog-filter-sidebar__choise-item" id="form">
+          <div class="catalog-filter-sidebar__choise-item no-mobile" id="form">
             <div class="catalog-filter-sidebar__btn">
               Форма
               <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
@@ -598,7 +621,7 @@
               </div>
             </div>
           </div>
-          <div class="catalog-filter-sidebar__choise-item" id="price">
+          <div class="catalog-filter-sidebar__choise-item no-mobile" id="price">
             <div class="catalog-filter-sidebar__btn">
               Цена
               <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
@@ -629,7 +652,7 @@
               </div>
             </div>
           </div>
-          <div class="catalog-filter-sidebar__choise-item" id="size">
+          <div class="catalog-filter-sidebar__choise-item no-mobile" id="size">
             <div class="catalog-filter-sidebar__btn">
               Размер
               <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
@@ -686,7 +709,7 @@
               </div>
             </div>
           </div>
-          <div class="catalog-filter-sidebar__choise-item" id="is-cover">
+          <div class="catalog-filter-sidebar__choise-item no-mobile" id="is-cover">
             <div class="catalog-filter-sidebar__btn">
               Съемный чехол
               <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
@@ -718,7 +741,7 @@
               </div>
             </div>
           </div>
-          <div class="catalog-filter-sidebar__choise-item" id="color">
+          <div class="catalog-filter-sidebar__choise-item no-mobile" id="color">
             <div class="catalog-filter-sidebar__btn">
               Цвет
               <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
@@ -787,7 +810,7 @@
               </div>
             </div>
           </div>
-          <div class="catalog-filter-sidebar__choise-item" id="type-cover">
+          <div class="catalog-filter-sidebar__choise-item no-mobile" id="type-cover">
             <div class="catalog-filter-sidebar__btn">
               Тип обивки
               <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
@@ -829,6 +852,397 @@
                   <span>Ткань</span></label
                 >
                 <input class="inp-cbx" id="material-chb-3" type="checkbox" />
+              </div>
+            </div>
+          </div>
+          <div class="catalog-filter-mobile-item only-mobile">
+            <div class="item-cat">
+              <span>Категория</span>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            </div>
+            <div class="catalog-filter-sidebar-subcategory only-mobile">
+              <div class="title">
+                <img class="back-to-all" src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
+                <h4>Категория</h4>
+                <img class="close-sidebar-filter" src="./icons/close.svg" alt="img" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-cat-1" type="checkbox" />
+                <label class="cbx" for="mob-cat-1">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Прямые</span></label
+                >
+                <input id="mob-cat-1" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-cat-2" type="checkbox" />
+                <label class="cbx" for="mob-cat-2">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Угловые</span></label
+                >
+                <input id="mob-cat-2" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-cat-3" type="checkbox" />
+                <label class="cbx" for="mob-cat-3">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Большие</span></label
+                >
+                <input id="mob-cat-3" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-cat-4" type="checkbox" />
+                <label class="cbx" for="mob-cat-4">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Компактные</span></label
+                >
+                <input id="mob-cat-4" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-cat-5" type="checkbox" />
+                <label class="cbx" for="mob-cat-5">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Модульные</span></label
+                >
+                <input id="mob-cat-5" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-cat-6" type="checkbox" />
+                <label class="cbx" for="mob-cat-6">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Кушетки</span></label
+                >
+                <input id="mob-cat-6" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-cat-7" type="checkbox" />
+                <label class="cbx" for="mob-cat-7">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Пуфы</span></label
+                >
+                <input id="mob-cat-7" class="inp-cbx" type="checkbox" />
+              </div>
+            </div>
+          </div>
+          <div class="catalog-filter-mobile-item only-mobile">
+            <div class="item-cat">
+              <span>Форма</span>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            </div>
+            <div class="catalog-filter-sidebar-subcategory only-mobile">
+              <div class="title">
+                <img class="back-to-all" src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
+                <h4>Форма</h4>
+                <img class="close-sidebar-filter" src="./icons/close.svg" alt="img" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-form-1" type="checkbox" />
+                <label class="cbx" for="mob-form-1">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Стандартный</span></label
+                >
+                <input id="mob-form-1" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-form-2" type="checkbox" />
+                <label class="cbx" for="mob-form-2">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Г-образная форма</span></label
+                >
+                <input id="mob-form-2" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-form-3" type="checkbox" />
+                <label class="cbx" for="mob-form-3">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>П-образная форма</span></label
+                >
+                <input id="mob-form-3" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-form-4" type="checkbox" />
+                <label class="cbx" for="mob-form-4">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Свободная форма</span></label
+                >
+                <input id="mob-form-4" class="inp-cbx" type="checkbox" />
+              </div>
+            </div>
+          </div>
+          <div class="catalog-filter-mobile-item only-mobile">
+            <div class="item-cat">
+              <span>Цена</span>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            </div>
+            <div class="catalog-filter-sidebar-subcategory only-mobile">
+              <div class="title">
+                <img class="back-to-all" src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
+                <h4>Цена</h4>
+                <img class="close-sidebar-filter" src="./icons/close.svg" alt="img" />
+              </div>
+            </div>
+          </div>
+          <div class="catalog-filter-mobile-item only-mobile">
+            <div class="item-cat">
+              <span>Размер</span>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            </div>
+            <div class="catalog-filter-sidebar-subcategory only-mobile">
+              <div class="title">
+                <img class="back-to-all" src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
+                <h4>Размер</h4>
+                <img class="close-sidebar-filter" src="./icons/close.svg" alt="img" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-size-1" type="checkbox" />
+                <label class="cbx" for="mob-size-1">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>160 см</span></label
+                >
+                <input id="mob-size-1" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-size-2" type="checkbox" />
+                <label class="cbx" for="mob-size-2">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>180 см</span></label
+                >
+                <input id="mob-size-2" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-size-3" type="checkbox" />
+                <label class="cbx" for="mob-size-3">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>200 см</span></label
+                >
+                <input id="mob-size-3" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-size-4" type="checkbox" />
+                <label class="cbx" for="mob-size-4">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>220 см</span></label
+                >
+                <input id="mob-size-4" class="inp-cbx" type="checkbox" />
+              </div>
+            </div>
+          </div>
+          <div class="catalog-filter-mobile-item only-mobile">
+            <div class="item-cat">
+              <span>Съемный чехол</span>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            </div>
+            <div class="catalog-filter-sidebar-subcategory only-mobile">
+              <div class="title">
+                <img class="back-to-all" src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
+                <h4>Съемный чехол</h4>
+                <img class="close-sidebar-filter" src="./icons/close.svg" alt="img" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-iscase-1" type="checkbox" />
+                <label class="cbx" for="mob-iscase-1">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Да</span></label
+                >
+                <input id="mob-iscase-1" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-iscase-2" type="checkbox" />
+                <label class="cbx" for="mob-iscase-2">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Нет</span></label
+                >
+                <input id="mob-iscase-2" class="inp-cbx" type="checkbox" />
+              </div>
+            </div>
+          </div>
+          <div class="catalog-filter-mobile-item only-mobile">
+            <div class="item-cat">
+              <span>Цвет</span>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            </div>
+            <div class="catalog-filter-sidebar-subcategory only-mobile">
+              <div class="title">
+                <img class="back-to-all" src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
+                <h4>Цвет</h4>
+                <img class="close-sidebar-filter" src="./icons/close.svg" alt="img" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-color-1" type="checkbox" />
+                <label class="cbx" for="mob-color-1">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Бежевый</span></label
+                >
+                <input id="mob-color-1" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-color-2" type="checkbox" />
+                <label class="cbx" for="mob-color-2">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Белый</span></label
+                >
+                <input id="mob-color-2" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-color-3" type="checkbox" />
+                <label class="cbx" for="mob-color-3">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Голубой</span></label
+                >
+                <input id="mob-color-3" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-color-4" type="checkbox" />
+                <label class="cbx" for="mob-color-4">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Желтый</span></label
+                >
+                <input id="mob-color-4" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-color-5" type="checkbox" />
+                <label class="cbx" for="mob-color-5">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Зеленый</span></label
+                >
+                <input id="mob-color-5" class="inp-cbx" type="checkbox" />
+              </div>
+            </div>
+          </div>
+          <div class="catalog-filter-mobile-item only-mobile">
+            <div class="item-cat">
+              <span>Тип обивки</span>
+              <img src="./full-catalog/img/collapse-arrow.svg" alt="img" />
+            </div>
+            <div class="catalog-filter-sidebar-subcategory only-mobile">
+              <div class="title">
+                <img class="back-to-all" src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
+                <h4>Тип обивки</h4>
+                <img class="close-sidebar-filter" src="./icons/close.svg" alt="img" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-typemat-1" type="checkbox" />
+                <label class="cbx" for="mob-typemat-1">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Натуральная кожа</span></label
+                >
+                <input id="mob-typemat-1" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-typemat-2" type="checkbox" />
+                <label class="cbx" for="mob-typemat-2">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Экокожа</span></label
+                >
+                <input id="mob-typemat-2" class="inp-cbx" type="checkbox" />
+              </div>
+              <div class="catalog-filter-sidebar__content-item">
+                <input class="inp-cbx" id="mob-typemat-3" type="checkbox" />
+                <label class="cbx" for="mob-typemat-3">
+                  <span>
+                    <svg width="12px" height="10px">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </span>
+                  <span>Ткань</span></label
+                >
+                <input id="mob-typemat-3" class="inp-cbx" type="checkbox" />
               </div>
             </div>
           </div>
@@ -1397,7 +1811,7 @@
                 <label class="help-section__label">Имя</label>
               </div>
               <div>
-                <input type="text" placeholder="Телефон" />
+                <input type="tel" placeholder="Телефон" />
                 <label class="help-section__label">Телефон</label>
               </div>
               <button>Позвонить мне</button>
@@ -1593,6 +2007,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./sidebar.js"></script>
+    <script src="./inputmask.min.js"></script>
     <script src="./full_catalog.js"></script>
   </body>
 </html>

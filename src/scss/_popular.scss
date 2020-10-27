@@ -53,6 +53,7 @@
   @media #{$media-to-xs} {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 20px;
+    grid-gap: 0;
   }
 }
 .card {
@@ -265,8 +266,10 @@
     text-decoration: line-through;
     text-align: right;
     line-height: 20px;
+    @media #{$media-to-md} {
+      text-align: left;
+    }
     @media #{$media-to-xs} {
-      text-align-last: left;
       font-size: 12px;
       line-height: 18px;
     }

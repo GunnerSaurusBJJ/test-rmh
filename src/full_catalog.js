@@ -2,15 +2,31 @@ const sortBtn = document.querySelector('.full-catalog-filters-sort'),
   sortList = document.querySelector('.sort-list'),
   sortListItem = document.querySelectorAll('.sort-list li'),
   arrowSortBtn = document.querySelector('.full-catalog-filters-sort img'),
+  mobileFilterItems = document.querySelectorAll('.catalog-filter-mobile-item'),
   sidebarFilterBtns = document.querySelectorAll('.catalog-filter-sidebar__btn'),
   allFiltersBtn = document.querySelector('.all-filters'),
-  closeSideBarFilter = document.querySelector('.close-sidebar-filter')
-dropdownMenuAnimated = document.querySelector('.dropdown_menu--animated')
+  closeSideBarFilter = document.querySelector('.close-sidebar-filter'),
+  dropdownMenuAnimated = document.querySelector('.dropdown_menu--animated'),
+  mobileFilterCatItems = document.querySelectorAll('.item-cat')
 sortBtn.addEventListener('click', (e) => {
   if (e.target === sortBtn || e.target === sortBtn.querySelector('span') || e.target === sortBtn.querySelector('img')) {
-    dropdownMenuAnimated.classList.toggle('display-block')
+    document.querySelectorAll('.dropdown_menu--animated').forEach((i) => i.classList.toggle('display-block'))
     sortBtn.querySelector('img').style.transform = dropdownMenuAnimated.classList.contains('display-block') ? 'rotate(180deg)' : 'rotate(0)'
   }
+})
+
+mobileFilterCatItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    item.nextElementSibling.classList.add('sidebar-filter-visible')
+    item.nextElementSibling.querySelector('.back-to-all').addEventListener('click', () => {
+      item.nextElementSibling.classList.remove('sidebar-filter-visible')
+    })
+    item.nextElementSibling.querySelector('.close-sidebar-filter').addEventListener('click', () => {
+      item.nextElementSibling.classList.remove('sidebar-filter-visible')
+      document.querySelector('.catalog-filter-sidebar').classList.remove('sidebar-filter-visible')
+      document.querySelector('.filter-sidebar-background').classList.remove('filter-sidebar-background-visible')
+    })
+  })
 })
 
 dropdownMenuAnimated.querySelectorAll('li').forEach((li) => {
@@ -542,3 +558,7 @@ document.querySelectorAll('.help-section__label').forEach((i) => {
     this.previousElementSibling.focus()
   })
 })
+
+let inputTel = document.querySelector('.help-section__input-wrapper input[type="tel"]')
+let im = new Inputmask('+7 (999) 999-99-99')
+im.mask(inputTel)

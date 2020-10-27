@@ -355,7 +355,7 @@
         font-size: 14px;
         top: 55%;
         z-index: 9;
-        @media #{$media-to-xs} {
+        @media #{$media-to-md} {
           top: 44%;
         }
       }
@@ -366,7 +366,7 @@
         font-size: 10px;
         transform: translateY(0);
         transition: 0.2s;
-        @media #{$media-to-xs} {
+        @media #{$media-to-md} {
           top: 34%;
         }
       }
