@@ -9,15 +9,26 @@
 }
 .categories__item {
   width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
 }
 .categories {
   margin-top: 30px;
 }
 .categories-item__link {
   font-size: 1.25vw;
-  img {
+  div {
+    overflow: hidden;
+    border-radius: 10px;
     margin-bottom: 12px;
+  }
+  img {
     width: 100%;
+    transition: 0.7s;
+    &:hover {
+      transform: scale(1.2);
+      transition: 0.7s;
+    }
   }
 }
 
@@ -39,6 +50,7 @@
     }
     @media #{$media-to-xs} {
       font-size: 14px;
+      line-height: 20px;
     }
     img {
       @media #{$media-xs-up} {

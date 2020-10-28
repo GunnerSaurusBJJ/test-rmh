@@ -326,6 +326,10 @@ html {
   width: 34.236vw;
 }
 
+.navbar-links__link:hover {
+  color: #ed1c24;
+}
+
 .navbar-search {
   position: relative;
 }
@@ -407,12 +411,27 @@ html {
   cursor: pointer;
 }
 
-.personal-links__item:last-child {
-  margin-left: 40px;
+.personal-links__item:hover {
+  color: #ed1c24;
 }
 
-.personal-links__item a {
-  margin-top: 5px;
+.personal-links__item:hover svg {
+  stroke: #ed1c24;
+}
+
+.personal-links__item:hover a {
+  color: #ed1c24;
+}
+
+.personal-links__item svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  stroke: #282724;
+}
+
+.personal-links__item:last-child {
+  margin-left: 40px;
 }
 
 .mobile-navbar {
@@ -1324,6 +1343,8 @@ html {
 
 .categories__item {
   width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .categories {
@@ -1334,9 +1355,23 @@ html {
   font-size: 1.25vw;
 }
 
-.categories-item__link img {
+.categories-item__link div {
+  overflow: hidden;
+  border-radius: 10px;
   margin-bottom: 12px;
+}
+
+.categories-item__link img {
   width: 100%;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.categories-item__link img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1359,6 +1394,7 @@ html {
 @media only screen and (max-width: 375px) {
   .mobile-categories-wrapper .mobile-categories-item__link {
     font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -3212,6 +3248,9 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   right: 32px;
   bottom: 32px;
@@ -3594,6 +3633,12 @@ html {
   margin-bottom: 10px;
 }
 
+.full-catalog-image__wrap:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background: #ededed;
+}
+
 .full-catalog-image__wrap img {
   width: 85%;
 }
@@ -3936,7 +3981,7 @@ html {
   position: relative;
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  z-index: 100;
+  z-index: 15;
 }
 
 .dropdown-sort-btn:hover {
@@ -4888,6 +4933,12 @@ input[type='range']::-webkit-slider-thumb {
   display: flex;
 }
 
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .product-preview-wrapper {
+    margin-top: 30px;
+  }
+}
+
 @media only screen and (max-width: 375px) {
   .product-preview-wrapper {
     display: block;
@@ -4913,6 +4964,7 @@ input[type='range']::-webkit-slider-thumb {
     margin-left: 70px;
     margin-right: 0;
     height: 400px;
+    margin-bottom: 150px;
   }
 }
 
@@ -5027,11 +5079,23 @@ input[type='range']::-webkit-slider-thumb {
           transform: rotate(180deg) translateY(8px);
 }
 
-.product-info {
-  margin-left: auto;
+@media (min-width: 576px) {
+  .product-info {
+    position: fixed;
+    right: 32px;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .product-info {
+    right: 16px;
+    width: 50%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
   .product-info {
     padding-left: 16px;
     padding-right: 16px;
@@ -5708,7 +5772,7 @@ input[type='range']::-webkit-slider-thumb {
 
 @media only screen and (min-width: 376px) and (max-width: 768px) {
   .configuration-info {
-    width: 50%;
+    width: 46%;
   }
 }
 
@@ -5771,7 +5835,7 @@ input[type='range']::-webkit-slider-thumb {
           justify-content: space-between;
 }
 
-@media only screen and (min-width: 376px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .configuration-description-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5783,6 +5847,8 @@ input[type='range']::-webkit-slider-thumb {
 .configuration-description-wrapper p {
   margin-left: 32px;
   font-size: 14px;
+  max-width: 458px;
+  margin-right: auto;
 }
 
 @media only screen and (max-width: 768px) {
@@ -5792,7 +5858,13 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .configuration-description-wrapper img {
-  width: 25vw;
+  width: 10vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .configuration-description-wrapper img {
+    width: 300px;
+  }
 }
 
 .configuration-sizes-wrapper {
@@ -5912,12 +5984,12 @@ input[type='range']::-webkit-slider-thumb {
 
 .product-desc {
   margin-top: 60px;
-  width: 70vw;
+  width: 750px;
 }
 
 @media only screen and (min-width: 376px) and (max-width: 768px) {
   .product-desc {
-    width: 50%;
+    width: 46%;
     margin-left: 16px;
   }
 }
@@ -5925,6 +5997,13 @@ input[type='range']::-webkit-slider-thumb {
 @media only screen and (max-width: 375px) {
   .product-desc {
     width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .product-desc__text {
+    font-size: 14px;
+    width: 90%;
   }
 }
 
@@ -5981,12 +6060,14 @@ input[type='range']::-webkit-slider-thumb {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  width: 750px;
   grid-gap: 20px;
   margin-top: 14px;
 }
 
 @media only screen and (min-width: 376px) and (max-width: 768px) {
   .product-features__wrapper {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5999,6 +6080,7 @@ input[type='range']::-webkit-slider-thumb {
 
 @media only screen and (max-width: 375px) {
   .product-features__wrapper {
+    width: 100%;
     display: block;
   }
 }
@@ -6417,7 +6499,7 @@ input[type='range']::-webkit-slider-thumb {
 .video-product-fixed {
   position: absolute;
   right: 30px;
-  bottom: -60px;
+  bottom: -140px;
   cursor: pointer;
 }
 
@@ -6458,7 +6540,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .create-your-design__wrapper {
-  background: url("../src/product-page/create-design-bg.jpg") no-repeat;
+  background: url("../src/product-page/create-design-bg-2.jpg") no-repeat;
   padding: 58px 0 71px 70px;
   border-radius: 10px;
   background-size: cover;
@@ -7765,7 +7847,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .item-material-changed__price ~ img {
-  margin-left: 93px;
+  margin-left: 89px;
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

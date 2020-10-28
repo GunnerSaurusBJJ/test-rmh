@@ -57,6 +57,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  &:hover {
+    transition: 0.2s;
+    background: #ededed;
+  }
   img {
     width: 85%;
   }
@@ -293,7 +297,7 @@
   background: #34495e;
   position: relative;
   perspective: 1000px;
-  z-index: 100;
+  z-index: 15;
 }
 .dropdown-sort-btn:hover {
   cursor: pointer;

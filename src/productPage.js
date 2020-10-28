@@ -200,3 +200,34 @@ document.querySelectorAll('.product-info__choise-color img').forEach((img) => {
     img.classList.add('selected')
   })
 })
+
+// add timer to info block
+let dateTimer = new Date()
+let countDown = dateTimer.setDate(dateTimer.getDate() + 3)
+const infoTimer = document.querySelector('.promo-block-subtitle')
+setInterval(() => {
+  let now = new Date().getTime()
+  let distance = countDown - now
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24))
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+  infoTimer.innerHTML = days + 'д | ' + hours + 'ч | ' + minutes + 'м '
+}, 1000)
+
+// add/remove fixed pos to info block
+const prodFeatures = document.querySelector('.product-features__wrapper')
+const productInfo = document.querySelector('.product-info')
+const productReviews = document.querySelector('.product-reviews')
+
+window.addEventListener('scroll', () => {
+  if (window.innerWidth > 580) {
+    if (pageYOffset + prodFeatures.getBoundingClientRect().bottom <= pageYOffset + productInfo.getBoundingClientRect().bottom) {
+      productInfo.style.position = 'absolute'
+      productInfo.style.top = productReviews.offsetTop - productInfo.offsetHeight - 54 + 'px'
+    }
+    if (productInfo.getBoundingClientRect().top >= 100) {
+      productInfo.style.position = 'fixed'
+      productInfo.style.top = 100 + 'px'
+    }
+  }
+})

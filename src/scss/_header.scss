@@ -10,6 +10,11 @@
   justify-content: space-between;
   align-items: center;
   width: 34.236vw;
+  &__link {
+    &:hover {
+      color: $red;
+    }
+  }
 }
 .navbar-search {
   position: relative;
@@ -54,11 +59,23 @@
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    &:hover {
+      svg {
+        stroke: $red;
+      }
+      a {
+        color: $red;
+      }
+      color: $red;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+      stroke: #282724;
+    }
     &:last-child {
       margin-left: 40px;
-    }
-    a {
-      margin-top: 5px;
     }
   }
 }
