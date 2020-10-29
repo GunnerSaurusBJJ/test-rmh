@@ -31,3 +31,7 @@ document.querySelectorAll('.cart-data__item .label-focus').forEach((i) => {
     this.previousElementSibling.focus()
   })
 })
+
+let inputTel = document.querySelector('.cart-data__inputs-wrapper input[type="tel"]')
+let im = new Inputmask('+7 (999) 999-99-99')
+im.mask(inputTel)

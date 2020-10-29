@@ -29,6 +29,7 @@
       flex-direction: column;
       align-items: center;
       margin-right: 38.5px;
+      cursor: pointer;
       @media #{$media-to-xs} {
         margin-right: 8px;
       }
@@ -84,6 +85,10 @@
     -ms-flex-align: center;
     align-items: center;
     margin-left: 14px;
+    &:hover {
+      background: #ededed;
+      transition: 0.2s;
+    }
     @media #{$media-to-xs} {
       width: 50%;
       display: flex;
@@ -92,7 +97,7 @@
     }
   }
   &__filters-sort {
-    background: #2e394d;
+    background: #2e394d !important;
     color: #fff;
     position: relative;
     display: flex;
@@ -118,6 +123,9 @@
       padding-left: 16px;
       padding-right: 16px;
     }
+  }
+  .blog-sort {
+    background: #2e394d !important;
   }
   &__item {
     position: relative;

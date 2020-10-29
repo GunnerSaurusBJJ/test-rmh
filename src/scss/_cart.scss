@@ -26,7 +26,6 @@
       grid-template-rows: repeat(auto, minmax(min-content, max-content));
       justify-items: center;
       padding-left: 16px;
-      padding-right: 16px;
     }
     &::after {
       content: '';
@@ -195,6 +194,9 @@
   }
   @media #{$media-to-md} {
     width: 100%;
+  }
+  @media #{$media-to-xs} {
+    padding-right: 16px;
   }
 }
 .cart-delivery {
@@ -559,7 +561,7 @@
   align-items: center;
   padding: 10px 16px;
   @media #{$media-md-only} {
-    margin-right: 10px;
+    margin-right: 25px;
     justify-content: space-between;
   }
   @media #{$media-to-xs} {

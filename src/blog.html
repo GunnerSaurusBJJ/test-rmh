@@ -362,8 +362,31 @@
     <section class="blog-grid">
       <div class="container">
         <div class="blog-grid__filter-wrapper">
-          <div class="blog-grid__filters-btn blog-grid__filters-sort">
+          <div class="full-catalog-filters__btn full-catalog-filters-sort dropdown-sort-btn dropdown-10 blog-sort">
             <span> По популярности </span>
+            <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-10">
+              <li>
+                <label class="radio-container"
+                  >По популярности
+                  <input type="radio" checked="checked" name="radio" />
+                  <span class="radio-checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="radio-container"
+                  >По скидке
+                  <input type="radio" name="radio" />
+                  <span class="radio-checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="radio-container"
+                  >Сначала дорогие
+                  <input type="radio" name="radio" />
+                  <span class="radio-checkmark"></span>
+                </label>
+              </li>
+            </ul>
             <img src="./full-catalog/img/arrow-filter.svg" alt="img" />
           </div>
           <div class="blog-grid__filters-btn" id="blog-category-btn">

@@ -366,7 +366,7 @@ input[type='range']::-webkit-slider-thumb {
   }
 }
 .help-section {
-  @media #{$media-to-xs} {
+  @media #{$media-to-md} {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -518,8 +518,11 @@ input[type='range']::-webkit-slider-thumb {
   margin-top: 22px;
   margin-left: -40px;
   justify-items: center;
-  @media #{$media-to-md} {
+  @media #{$media-md-only} {
     grid-gap: 10px;
+    justify-content: space-between;
+    margin-left: 16px;
+    margin-right: 16px;
   }
   @media #{$media-to-xs} {
     grid-template-columns: repeat(2, 1fr);

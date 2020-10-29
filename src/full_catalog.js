@@ -500,19 +500,6 @@ document.querySelectorAll('.card-hover-img').forEach((card) => {
   })
 })
 
-document.querySelectorAll('.card').forEach((card) => {
-  card.querySelectorAll('.love.action').forEach((item) => {
-    item.addEventListener('click', () => addToFavIconActive(card, '.favorite-icon-product', '.line'))
-  })
-  if (window.innerWidth < 576) {
-    card
-      .querySelectorAll('.favorite-mobile.only-mobile')
-      .forEach((item) =>
-        item.addEventListener('click', () => addToFavIconActive(card, '.favorite-mobile.only-mobile .favorite-icon-product', '.favorite-mobile.only-mobile .line'))
-      )
-  }
-})
-
 function addToFavIconActive(card, iconClass, lineClass) {
   card.querySelector(iconClass).classList.toggle('love')
   card.querySelectorAll(lineClass).forEach((i) => i.classList.add('active'))
@@ -546,16 +533,6 @@ document.querySelectorAll('.card').forEach((card) => {
   }
 })
 
-function addToFavIconActive(card, iconClass, lineClass) {
-  card.querySelector(iconClass).classList.toggle('love')
-  card.querySelectorAll(lineClass).forEach((i) => i.classList.add('active'))
-  card.querySelector(iconClass).classList.add('active')
-  setTimeout(() => {
-    card.querySelectorAll(lineClass).forEach((i) => i.classList.remove('active'))
-    card.querySelector(iconClass).classList.remove('active')
-  }, 300)
-}
-
 document.querySelectorAll('.help-section__label').forEach((i) => {
   i.addEventListener('click', function () {
     this.previousElementSibling.focus()
@@ -565,3 +542,26 @@ document.querySelectorAll('.help-section__label').forEach((i) => {
 let inputTel = document.querySelector('.help-section__input-wrapper input[type="tel"]')
 let im = new Inputmask('+7 (999) 999-99-99')
 im.mask(inputTel)
+
+const cardSizeBtnWrapper = document.querySelectorAll('.card-sizes__btns'),
+  cardColorBtnWrapper = document.querySelectorAll('.card-colors__btns')
+cardSizeBtnWrapper.forEach((item, idx) => toggleUniqueClass(item, idx, 'sizebtn', 'card-size__button-selected'))
+cardColorBtnWrapper.forEach((item, idx) => toggleUniqueClass(item, idx, 'colorbtn', 'card-colors__selected'))
+
+function toggleUniqueClass(item, idx, addedClass, mainClass) {
+  return Array.from(item.children).forEach((btn) => {
+    btn.classList.add(`${addedClass}${idx}`)
+    btn.addEventListener('click', () => {
+      document.querySelector(`.${mainClass}.${addedClass}${idx}`).classList.remove(`${mainClass}`)
+      btn.classList.add(`${mainClass}`)
+    })
+  })
+}
+// add no-mobile class to size btns from 3 element
+cardSizeBtnWrapper.forEach((item) => {
+  Array.from(item.children).forEach((btn, idx) => {
+    if (idx > 1) {
+      btn.classList.add('no-mobile')
+    }
+  })
+})

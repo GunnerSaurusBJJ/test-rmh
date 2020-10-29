@@ -225,6 +225,13 @@
       &:first-of-type {
         margin-left: 12px;
         margin-right: 44px;
+        @media #{$media-md-only} {
+          width: 100px;
+          margin-right: 18px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         @media #{$media-to-xs} {
           white-space: nowrap;
           overflow: hidden;
@@ -639,6 +646,9 @@
 .configuration-sizes-wrapper {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+  @media #{$media-to-md} {
+    grid-template-columns: auto;
+  }
   :nth-child(2) {
     justify-self: center;
   }
@@ -686,10 +696,19 @@
   @media #{$media-xl-up} {
     grid-template-columns: 2.2fr 1fr;
   }
+  @media #{$media-to-xs} {
+    display: flex;
+  }
 }
 .madeof-item {
+  @media #{$media-to-xs} {
+    flex-basis: 50%;
+  }
   &:last-of-type {
     margin-left: 10px;
+    @media #{$media-to-xs} {
+      margin-left: 0;
+    }
   }
   span {
     color: #a7a8b3;
@@ -893,6 +912,9 @@
     &:hover {
       background: #d00a12;
       transition: 0.2s;
+    }
+    @media #{$media-to-xs} {
+      width: 90%;
     }
   }
 }

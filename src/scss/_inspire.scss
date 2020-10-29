@@ -72,7 +72,7 @@
 }
 .collections {
   margin-top: 40px;
-  @media #{$media-to-xs} {
+  @media #{$media-to-md} {
     padding-left: 16px;
     padding-right: 16px;
   }
