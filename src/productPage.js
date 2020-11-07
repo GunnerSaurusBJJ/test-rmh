@@ -37,14 +37,16 @@ $('.slider-bottom').slick({
   ],
 })
 $('.product-reviews__wrapper').slick({
-  slidesToShow: 2,
+  slidesToShow: 2.4,
   infinite: false,
   responsive: [
     {
       breakpoint: 900,
       settings: {
         arrows: false,
-        slidesToShow: 0.8,
+        slidesToShow: 1,
+        centerPadding: '10px',
+        centerMode: true,
       },
     },
   ],
@@ -204,7 +206,7 @@ document.querySelectorAll('.product-info__choise-color img').forEach((img) => {
 // add timer to info block
 let dateTimer = new Date()
 let countDown = dateTimer.setDate(dateTimer.getDate() + 3)
-const infoTimer = document.querySelector('.promo-block-subtitle')
+const infoTimer = document.querySelector('.promo-block-subtitle span')
 setInterval(() => {
   let now = new Date().getTime()
   let distance = countDown - now

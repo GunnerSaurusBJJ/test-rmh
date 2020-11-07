@@ -1,0 +1,89 @@
+.content {
+  iframe {
+    height: 57vh;
+    width: 100%;
+  }
+  &__box {
+    box-shadow: 0px -2px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    top: 55vh;
+    background: #fff;
+    overflow-y: auto;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    padding: 24px 16px 0;
+  }
+  &__subtitle {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    max-width: 280px;
+    padding: 0 16px;
+  }
+  .schedule {
+    padding: 0 16px;
+    &__title {
+      color: #a7a8b3;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__days {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+  }
+  .contacts {
+    padding: 0 16px;
+    &__title {
+      color: #a7a8b3;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__phone {
+      color: #a7a8b3;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      margin-top: 4px;
+      margin-bottom: 24px;
+      color: #0d8bc1;
+      text-decoration-line: underline;
+    }
+  }
+  &__btn {
+    background: #fff;
+    box-shadow: 0px -2px 20px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    bottom: 0px;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      background: #ed1c24;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      margin: 0 auto;
+      width: calc(100% - 32px);
+      display: block;
+    }
+  }
+}

@@ -2,6 +2,13 @@ document.querySelectorAll('.cart-delivery__type').forEach((item) => {
   item.addEventListener('click', () => {
     document.querySelector('.cart-delivery__type-selected').classList.remove('cart-delivery__type-selected')
     item.classList.add('cart-delivery__type-selected')
+    if (item.id === 'delivery-pickup') {
+      document.querySelector('.cart-address-section .address-info').classList.remove('display-none')
+      document.querySelector('.cart-data__inputs-top').classList.add('display-none')
+    } else {
+      document.querySelector('.cart-address-section .address-info').classList.add('display-none')
+      document.querySelector('.cart-data__inputs-top').classList.remove('display-none')
+    }
   })
 })
 

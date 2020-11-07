@@ -11,7 +11,7 @@ const sortBtn = document.querySelector('.full-catalog-filters-sort'),
 
 sortBtn.addEventListener('click', (e) => {
   if (e.target === sortBtn || e.target === sortBtn.querySelector('span') || e.target === sortBtn.querySelector('img')) {
-    document.querySelectorAll('.dropdown_menu--animated').forEach((i) => i.classList.toggle('display-block'))
+    dropdownMenuAnimated.forEach((i) => i.classList.toggle('display-block'))
     sortBtn.querySelector('img').style.transform = sortBtn.querySelector('ul').classList.contains('display-block') ? 'rotate(180deg)' : 'rotate(0)'
   }
 })
@@ -73,8 +73,10 @@ allFiltersBtn.addEventListener('click', () => {
   openFilterSidebar()
   sidebarFilterBtns.forEach((btn) => {
     let content = btn.nextElementSibling
+    // if (!btn.querySelector('.chosen-filter').textContent.length) {
     content.style.maxHeight = content.scrollHeight + 'px'
     btn.querySelector('img').style.transform = 'rotate(180deg)'
+    // }
   })
 })
 
@@ -110,7 +112,7 @@ let inputRight = document.getElementById('input-right')
 let thumbLeft = document.querySelector('.slider > .thumb.left')
 let thumbRight = document.querySelector('.slider > .thumb.right')
 let range = document.querySelector('.slider > .range')
-
+let fromPriceTxt = document.querySelector('.chosen-filter.price')
 function setLeftValue() {
   let _this = inputLeft,
     min = parseInt(_this.min),
@@ -122,6 +124,7 @@ function setLeftValue() {
 
   thumbLeft.style.left = percent + '%'
   range.style.left = percent + '%'
+  fromPriceTxt.querySelector('.from').textContent = `от ${_this.value} - `
 }
 setLeftValue()
 
@@ -136,6 +139,7 @@ function setRightValue() {
 
   thumbRight.style.right = 100 - percent + '%'
   range.style.right = 100 - percent + '%'
+  fromPriceTxt.querySelector('.to').textContent = _this.value
 }
 setRightValue()
 
@@ -182,6 +186,86 @@ inputLeft.addEventListener('input', () => {
 inputRight.addEventListener('input', () => {
   inputToPrice.value = inputRight.value
 })
+// Range slider for mobile
+
+let inputLeftMobile = document.querySelector('.mobile-filter-price #input-left')
+let inputRightMobile = document.querySelector('.mobile-filter-price #input-right')
+
+let thumbLeftMobile = document.querySelector('.mobile-filter-price .slider > .thumb.left')
+let thumbRightMobile = document.querySelector('.mobile-filter-price .slider > .thumb.right')
+let rangeMobile = document.querySelector('.mobile-filter-price .slider > .range')
+
+function setLeftValueMobile() {
+  let _this = inputLeftMobile,
+    min = parseInt(_this.min),
+    max = parseInt(_this.max)
+
+  _this.value = Math.min(parseInt(_this.value), parseInt(inputRightMobile.value) - 1)
+
+  let percent = ((_this.value - min) / (max - min)) * 100
+
+  thumbLeftMobile.style.left = percent + '%'
+  rangeMobile.style.left = percent + '%'
+}
+setLeftValueMobile()
+
+function setRightValueMobile() {
+  let _this = inputRightMobile,
+    min = parseInt(_this.min),
+    max = parseInt(_this.max)
+
+  _this.value = Math.max(parseInt(_this.value), parseInt(inputLeftMobile.value) + 1)
+
+  let percent = ((_this.value - min) / (max - min)) * 100
+
+  thumbRightMobile.style.right = 100 - percent + '%'
+  rangeMobile.style.right = 100 - percent + '%'
+}
+setRightValueMobile()
+
+inputLeftMobile.addEventListener('input', setLeftValueMobile)
+inputRightMobile.addEventListener('input', setRightValueMobile)
+
+inputLeftMobile.addEventListener('mouseover', function () {
+  thumbLeftMobile.classList.add('hover')
+})
+inputLeftMobile.addEventListener('mouseout', function () {
+  thumbLeftMobile.classList.remove('hover')
+})
+inputLeftMobile.addEventListener('mousedown', function () {
+  thumbLeftMobile.classList.add('active')
+})
+inputLeftMobile.addEventListener('mouseup', function () {
+  thumbLeftMobile.classList.remove('active')
+})
+
+inputRightMobile.addEventListener('mouseover', function () {
+  thumbRightMobile.classList.add('hover')
+})
+inputRightMobile.addEventListener('mouseout', function () {
+  thumbRightMobile.classList.remove('hover')
+})
+inputRightMobile.addEventListener('mousedown', function () {
+  thumbRightMobile.classList.add('active')
+})
+inputRightMobile.addEventListener('mouseup', function () {
+  thumbRightMobile.classList.remove('active')
+})
+
+//binding price value with price range slider in filter
+let inputFromPriceMobile = document.querySelector('.mobile-filter-price .sidebar-filter-input-from')
+let inputToPriceMobile = document.querySelector('.mobile-filter-price .sidebar-filter-input-to')
+
+inputFromPriceMobile.value = inputLeftMobile.value
+inputToPriceMobile.value = inputRightMobile.value
+
+inputLeftMobile.addEventListener('input', () => {
+  inputFromPriceMobile.value = inputLeftMobile.value
+})
+
+inputRightMobile.addEventListener('input', () => {
+  inputToPriceMobile.value = inputRightMobile.value
+})
 
 // sidebar filter section
 let watchFilteredBtn = document.querySelector('.watch-filtered-btn')
@@ -189,9 +273,10 @@ let watchFilteredBtn = document.querySelector('.watch-filtered-btn')
 watchFilteredBtn.addEventListener('click', () => {
   addCounterToBtn()
   closeAllAccordeons()
+  document.querySelectorAll('.catalog-filter-sidebar-subcategory.only-mobile').forEach((i) => i.classList.remove('sidebar-filter-visible'))
 })
-
 function addCounterToBtn() {
+  fromPriceTxt.classList.remove('display-none')
   document.querySelector('.filter-sidebar-background').classList.remove('filter-sidebar-background-visible')
   document.querySelector('html').style.overflow = 'scroll'
   // add text to btn
@@ -229,6 +314,22 @@ function addCounterToBtn() {
       document.querySelector('.chosen-filter.category').textContent = categoryArray
     }
   })
+  // add value to price btn
+  const mainPriceBtnText = document.querySelector('.price-count')
+  mainPriceBtnText.innerHTML =
+    fromPriceTxt.querySelector('.from').textContent +
+    fromPriceTxt.querySelector('.to').textContent +
+    '| <img src="./full-catalog/icons/close-filter-btn.svg" class="close-count-btn" id="remove-price-btn">'
+  const mainPriceBtn = document.querySelector('#price-btn')
+  mainPriceBtn.style.background = '#2E394D'
+  mainPriceBtn.style.color = '#fff'
+  if (document.querySelector('#remove-price-btn')) {
+    document.querySelector('#remove-price-btn').addEventListener('click', () => {
+      mainPriceBtn.style.background = '#F5F6FA'
+      mainPriceBtn.style.color = '#282724'
+      mainPriceBtnText.textContent = ''
+    })
+  }
   // to form btn
   let formCountText = document.querySelector('.form-count')
   formCountText.innerHTML = formCount > 0 ? `: ${formCount} | <img src="./full-catalog/icons/close-filter-btn.svg" class="close-count-btn" id="remove-form-btn">` : ''
@@ -409,20 +510,106 @@ let btnFiltersObj = {
   '.size-count': '#size-btn',
   '.form-count': '#form-btn',
   '.category-count': '#category-btn',
+  '.price-count': '#price-btn',
 }
 
 let chosenFiltersText = ['.chosen-filter.category', '.chosen-filter.size', '.chosen-filter.form', '.chosen-filter.type-cover', '.chosen-filter.color']
-// clear all filters
-document.querySelector('.clear-filter-btn').addEventListener('click', () => {
-  document.querySelector('.filter-sidebar-background').classList.remove('filter-sidebar-background-visible')
-  document.querySelector('html').style.overflow = 'scroll'
+// clear all filters and add chosen filters in main categories
+const clearAllFiltersBtn = document.querySelector('.clear-filter-btn')
+const mobChbxFilter = document.querySelectorAll('.catalog-filter-sidebar__content-item input')
+let mobCounter = 0
+let mobMainCategory = []
+let mobMainForm = []
+let mobMainPrice = []
+let mobMainSize = []
+let mobMainCase = []
+let mobMainColor = []
+let mobMainMat = []
 
+function addChosenFilters(category, checkbox, checkboxParent) {
+  category.push(checkbox.nextElementSibling.textContent.trim())
+  if (category.length) {
+    checkboxParent.parentElement.querySelector('.chosen-mob-filter').textContent = category
+    checkboxParent.style.paddingBottom = '30px'
+  }
+}
+
+function removeChosenFilters(category, checkbox, checkboxParent) {
+  category.splice(category.indexOf(checkbox.nextElementSibling.textContent.trim()), 1)
+  if (category.length) {
+    checkboxParent.parentElement.querySelector('.chosen-mob-filter').textContent = category
+    checkboxParent.style.paddingBottom = '30px'
+  } else {
+    checkboxParent.parentElement.querySelector('.chosen-mob-filter').textContent = ''
+    checkboxParent.style.paddingBottom = '20px'
+  }
+}
+
+mobChbxFilter.forEach((chbx, idx) => {
+  chbx.addEventListener('change', () => {
+    if (window.innerWidth < 576) {
+      let mainParent = chbx.closest('.catalog-filter-sidebar-subcategory.only-mobile').previousElementSibling
+      if (chbx.checked) {
+        mobCounter++
+        if (mainParent.parentElement.id === 'mob-item-cat') {
+          addChosenFilters(mobMainCategory, chbx, mainParent)
+        }
+        if (mainParent.parentElement.id === 'mob-item-form') {
+          addChosenFilters(mobMainForm, chbx, mainParent)
+        }
+        if (mainParent.parentElement.id === 'mob-item-size') {
+          addChosenFilters(mobMainSize, chbx, mainParent)
+        }
+        if (mainParent.parentElement.id === 'mob-item-case') {
+          addChosenFilters(mobMainCase, chbx, mainParent)
+        }
+        if (mainParent.parentElement.id === 'mob-item-color') {
+          addChosenFilters(mobMainColor, chbx, mainParent)
+        }
+        if (mainParent.parentElement.id === 'mob-item-mat') {
+          addChosenFilters(mobMainMat, chbx, mainParent)
+        }
+      } else {
+        mobCounter--
+        if (mainParent.parentElement.id === 'mob-item-cat') {
+          removeChosenFilters(mobMainCategory, chbx, mainParent)
+        }
+        if (mainParent.parentElement.id === 'mob-item-form') {
+          removeChosenFilters(mobMainForm, chbx, mainParent)
+        }
+        if (mainParent.parentElement.id === 'mob-item-size') {
+          removeChosenFilters(mobMainSize, chbx, mainParent)
+        }
+        if (mainParent.parentElement.id === 'mob-item-case') {
+          removeChosenFilters(mobMainCase, chbx, mainParent)
+        }
+        if (mainParent.parentElement.id === 'mob-item-color') {
+          removeChosenFilters(mobMainColor, chbx, mainParent)
+        }
+        if (mainParent.parentElement.id === 'mob-item-mat') {
+          removeChosenFilters(mobMainMat, chbx, mainParent)
+        }
+      }
+      if (mobCounter > 0) {
+        clearAllFiltersBtn.classList.remove('disabled-clear-filter')
+      } else clearAllFiltersBtn.classList.add('disabled-clear-filter')
+    }
+  })
+})
+clearAllFiltersBtn.addEventListener('click', () => {
+  document.querySelector('.filter-sidebar-background').classList.remove('filter-sidebar-background-visible')
+  document.querySelectorAll('.catalog-filter-sidebar-subcategory.only-mobile').forEach((i) => i.classList.remove('sidebar-filter-visible'))
+  document.querySelector('html').style.overflow = 'scroll'
   categoryCheckboxes.forEach((item) => (item.checked = false))
   formCheckboxes.forEach((item) => (item.checked = false))
   sizeCheckboxes.forEach((item) => (item.checked = false))
   colorCheckboxes.forEach((item) => (item.checked = false))
   typeCheckboxes.forEach((item) => (item.checked = false))
-
+  mobChbxFilter.forEach((item) => (item.checked = false))
+  mobileFilterItems.forEach((i) => {
+    i.querySelector('.chosen-mob-filter').textContent = ''
+    i.querySelector('.item-cat').style.paddingBottom = '20px'
+  })
   categoryCount = 0
   formCount = 0
   sizeCount = 0
@@ -437,12 +624,17 @@ document.querySelector('.clear-filter-btn').addEventListener('click', () => {
   chosenFiltersText.forEach((item) => {
     document.querySelector(item).textContent = ''
   })
+  fromPriceTxt.classList.add('display-none')
+  clearAllFiltersBtn.classList.add('disabled-clear-filter')
 })
 
 $(document).ready(function () {
   $('.full-catalog-categories__wrapper').slick({
     slidesToShow: 3,
     mobileFirst: true,
+    arrows: false,
+    centerPadding: '10px',
+    centerMode: true,
     responsive: [
       {
         breakpoint: 576,
@@ -455,16 +647,17 @@ $(document).ready(function () {
         settings: 'unslick',
       },
     ],
-    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
-    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
   })
 
   $('.full-catalog-filters__wrapper').slick({
-    slidesToShow: 3.4,
     mobileFirst: true,
     infinite: false,
     responsive: [
       {
+        breakpoint: 320,
+        settings: 'unslick',
+      },
+      {
         breakpoint: 576,
         settings: {
           slidesToShow: 6,
@@ -475,8 +668,7 @@ $(document).ready(function () {
         settings: 'unslick',
       },
     ],
-    nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
-    prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
+    arrows: false,
   })
 })
 
@@ -485,7 +677,8 @@ document.querySelectorAll('.card-hover-img').forEach((card) => {
   let whiteLine = card.querySelector('.white-hover-slide-line')
   let hoverSlideImgs = card.querySelectorAll('.hover-slide-img')
   if (!Array.from(hoverSlideImgs).length) {
-    whiteLine.style.width = '100%'
+    whiteLine.style.display = 'none'
+    card.querySelector('.hover-slide-line').style.display = 'none'
   }
   whiteLine.style.width = 100 / Array.from(hoverSlideImgs).length + '%'
   hoverSlideImgs.forEach((item, idx) => {
@@ -540,7 +733,7 @@ document.querySelectorAll('.help-section__label').forEach((i) => {
 })
 
 let inputTel = document.querySelector('.help-section__input-wrapper input[type="tel"]')
-let im = new Inputmask('+7 (999) 999-99-99')
+let im = new Inputmask('+7 ( 999 ) 999-99-99')
 im.mask(inputTel)
 
 const cardSizeBtnWrapper = document.querySelectorAll('.card-sizes__btns'),

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Document</title>
+    <title>item</title>
   </head>
   <body>
     <div class="sidebar only-desktop">
@@ -109,6 +109,19 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="modal-background">
+      <div class="modal-discount-wrapper">
+        <img class="modal-discount__close modal-close" src="./icons/close.svg" />
+        <h2 class="modal-discount__title">Скидки до 80%</h2>
+        <p class="modal-discount__subtitle">Успей купить товар по выгодной цене</p>
+        <p class="modal-discount__time-title">До конца акции осталось</p>
+        <div class="modal-discount__time">
+          <img src="./icons/sidebar/clock.svg" alt="img" />
+          <span class="modal-discount__clock"></span>
+        </div>
+        <button class="modal-discount__btn">Смотреть товары по скидкe</button>
       </div>
     </div>
     <div class="mobile-sidebar-background no-desktop">
@@ -330,219 +343,188 @@
         </div>
       </div>
     </header>
-    <section class="cart">
-      <div class="container">
-        <div class="cart__title">Корзина товаров</div>
-        <div class="cart-items-wrapper">
-          <div class="cart__items">
-            <div class="cart__item">
-              <img src="img/cart-sof.png" alt="img" />
-              <div class="item-info">
-                <div class="item-name">Диваны Энхель</div>
-                <div class="item-desc">3-местный диван-кровать, Энхель темно-синий</div>
-                <div class="item-size">Размер: <span>160 cм</span></div>
-                <div class="item-color">Цвет: <span>темно-синий</span></div>
-                <div class="item-material-changed-row only-desktop">
-                  <div class="item-material-changed">
-                    <img src="https://via.placeholder.com/30" alt="img" />
-                    <p>Alur Plein - Алюр Плейн</p>
-                    <span>Изменить обивку</span>
-                  </div>
-                  <div class="item-material-changed__price">24 900 ₽</div>
-                  <img src="./img/mobile/mobile-close-material.svg" alt="img" />
-                </div>
-              </div>
-              <div class="item-quantity">
-                <button class="item-quantity__sign">
-                  <img src="icons/minus.svg" alt="img" />
-                </button>
-                <div class="item-quantity__num">1</div>
-                <button class="item-quantity__sign">
-                  <img src="icons/plus.svg" alt="img" />
-                </button>
-              </div>
-              <div class="item-price">
-                <div class="item-price__old">
-                  <span>49 000 ₽</span>
-                  <span>-35%</span>
-                </div>
-                <div class="item-price__new">40 100 ₽</div>
-              </div>
-              <button class="cart__trash">
-                <img src="./icons/trash.svg" alt="img" />
-              </button>
-              <div class="item-material-changed-row no-desktop">
-                <div class="item-material-changed">
-                  <img src="https://via.placeholder.com/30" alt="img" />
-                  <p>Alur Plein - Алюр Плейн</p>
-                  <span>Изменить обивку</span>
-                </div>
-                <img src="./img/mobile/mobile-close-material.svg" alt="img" />
-              </div>
-              <div class="item-material-changed__price no-desktop">24 900 ₽</div>
-            </div>
-            <div class="cart__item">
-              <img src="img/cart-sof.png" alt="img" />
-              <div class="item-info">
-                <div class="item-name">Каир Textile Gray</div>
-                <div class="item-desc">3-местный диван-кровать</div>
-                <div class="item-size">Размер: <span>160 cм</span></div>
-                <div class="item-color">Цвет: <span>темно-синий</span></div>
-              </div>
-              <div class="item-quantity">
-                <button class="item-quantity__sign">
-                  <img src="icons/minus.svg" alt="img" />
-                </button>
-                <div class="item-quantity__num">1</div>
-                <button class="item-quantity__sign">
-                  <img src="icons/plus.svg" alt="img" />
-                </button>
-              </div>
-              <div class="item-price">
-                <div class="item-price__old">
-                  <span>49 000 ₽</span>
-                  <span>-35%</span>
-                </div>
-                <div class="item-price__new">40 100 ₽</div>
-              </div>
-              <button class="cart__trash">
-                <img src="./icons/trash.svg" alt="img" />
-              </button>
-            </div>
-          </div>
-          <div class="cart-summary no-mobile">
-            <div class="cart-summary__title">Ваш заказ</div>
-            <div class="cart-summary__row">
-              <div class="cart-summary__row-left">Товар (<span class="cart-summary__qty">2</span>)</div>
-              <div class="cart-summary__row-right">70 229 ₽</div>
-            </div>
-            <div class="cart-summary__row">
-              <div class="cart-summary__row-left">Доставка</div>
-              <div class="cart-summary__row-right">0 ₽</div>
-            </div>
-            <div class="cart-summary__row">
-              <div class="cart-summary__row-left">Скидка:</div>
-              <div class="cart-summary__row-right discount">- 17 060 ₽</div>
-            </div>
-            <div class="cart-summary__total">
-              <div class="cart-summary__total-left">Итого:</div>
-              <div class="cart-summary__total-right">53 169 ₽</div>
-            </div>
-            <div class="cart-summary__btn">Оформить заказ</div>
+    <section class="blog-page">
+      <div class="blog-item-container">
+        <h1 class="blog-page__title title-large-1 no-mobile">Диван из паллет своими руками, красивый и&nbsp;бюджетный вариант для спальни</h1>
+        <h1 class="blog-page__title title-large-1 only-mobile">
+          Диван из паллет своими <br />
+          руками, красивый и&nbsp;бюджетный вариант для спальни
+        </h1>
+        <div class="blog-page__captions">
+          <span>17 августа 2020 года</span>
+          <div><img src="./icons//gray-clock.svg" alt="img" />2 минуты читать</div>
+          <div><img src="./icons/eye.svg" alt="img" />1,5к</div>
+        </div>
+        <div class="blog-page__img blog-item-large-img">
+          <span>Ремонт</span>
+          <img src="./img/blog-item/blog-item-main.png" alt="img" />
+          <div class="blog-page__text blog-item-text">
+            Главное достоинство мебели из паллет – доступность. Такое дизайнерское решение может осуществить, например, студент в&nbsp;общежитии. Компактный диванчик легко
+            передвинуть куда угодно, чего не скажешь о&nbsp;его&nbsp;«собратьях» из ДСП и поролона. Мебель и предметы интерьера из паллет, подходят к&nbsp;эко-стилю, лофт и
+            «сканди», гармонируют по&nbsp;характеру с загородным домом. Дело в&nbsp;естественной красоте натурального дерева, не&nbsp;скрытого обивками и подушками.
           </div>
         </div>
-      </div>
-    </section>
-    <section class="cart-delivery">
-      <div class="cart-summary only-mobile">
-        <div class="cart-summary__title">Ваш заказ</div>
-        <div class="cart-summary__row">
-          <div class="cart-summary__row-left">Товар (<span class="cart-summary__qty">2</span>)</div>
-          <div class="cart-summary__row-right">70 229 ₽</div>
-        </div>
-        <div class="cart-summary__row">
-          <div class="cart-summary__row-left">Доставка</div>
-          <div class="cart-summary__row-right">0 ₽</div>
-        </div>
-        <div class="cart-summary__row">
-          <div class="cart-summary__row-left">Скидка:</div>
-          <div class="cart-summary__row-right discount">- 17 060 ₽</div>
-        </div>
-        <div class="cart-summary__total">
-          <div class="cart-summary__total-left">Итого:</div>
-          <div class="cart-summary__total-right">53 169 ₽</div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="cart-delivery__title">Способ доставки</div>
-        <div class="cart-delivery__wrapper">
-          <div class="cart-delivery__type cart-delivery__type-selected" id="delivery">
-            <div class="cart-delivery__type-title">Доставка</div>
-            <div class="cart-delivery__type-info">Для уточнения данных по доставке заполните форму с&nbsp;личными данными</div>
-            <div class="cart-delivery__type-price">2 500 ₽</div>
+        <div class="blog-item-part">
+          <h2 class="blog-item-part__title title-large-2">Этапы реставрации дивана</h2>
+          <div class="blog-item-part__text blog-item-text no-mobile">
+            Паллеты – это не просто ящики. Вспомогательное&nbsp;оборудование для перевозок производится по стандартам, поэтому с ним так легко работать. Поддоны различаются
+            по&nbsp;сортам – первый, второй и третий. Первосортные чистые паллеты скрепляются винтами. Изделия низких сортов бывают пыльными, потемневшими, а внутри – сбиты
+            гвоздями (тогда стоит проверить, не торчат ли&nbsp;острые края). Лучший вариант –приобрести первосортные европаллеты с габаритами <br />
+            80 х 120 см. Отличительный знак – выжженное клеймо «EUR». Они смотрятся красиво, <br />
+            намного безопаснее, а клеймо добавляет брутальности.
           </div>
-          <div class="cart-delivery__type" id="delivery-pickup">
-            <div class="cart-delivery__type-title">Самовывоз</div>
-            <div class="cart-delivery__type-info">
-              По готовности товара, <br />
-              с наших складов
+          <div class="blog-item-part__text blog-item-text only-mobile">
+            Паллеты – это не просто ящики. Вспомогательное&nbsp;оборудование для перевозок производится по стандартам, поэтому с ним так легко работать. Поддоны различаются
+            <br />;по&nbsp;сортам – первый, второй и третий. Первосортные чистые паллеты скрепляются винтами. Изделия низких сортов бывают пыльными, потемневшими, а внутри – сбиты
+            гвоздями (тогда стоит проверить, не торчат ли&nbsp;острые края). Лучший вариант –приобрести первосортные европаллеты с габаритами <br />
+            80 х 120 см. Отличительный знак – выжженное клеймо «EUR». Они смотрятся красиво, <br />
+            намного безопаснее, а клеймо добавляет брутальности.
+          </div>
+          <div class="blog-item-part__img">
+            <img src="./img/blog-item/blog-item-main2.png" alt="" />
+          </div>
+        </div>
+        <div class="blog-item-part">
+          <h2 class="blog-item-part__title title-large-2">Обработка</h2>
+          <div class="blog-item-part__text blog-item-text">
+            <p>
+              После выбора самих поддонов (габариты паллеты помогут понять, сколько изделий требуется для дивана определенного размера), нужно их обработать антисептиком. Они
+              делятся на&nbsp;водные, масляные и комбинированные. Какой подойдет, лучше проконсультироваться в&nbsp;магазине стройматериалов. Обработка необходима не&nbsp;только
+              поддонов б/у, но и новых.
+            </p>
+            <br />
+            <p>
+              Перед началом обработки зачистите поверхность наждачной бумагой и обезжирьте. Затем кистью или валиком нанесите состав на&nbsp;паллеты, согласно инструкции.
+              Антисептиком пропитать дерево, нанося по 4-5 слоев. После этого 2-3 суток дерево просыхает <br />(идеально – если на улице или на балконе). Теперь паллеты готовы к
+              сборке!
+            </p>
+          </div>
+          <div class="blog-item-part__img blog-item-part-grid">
+            <img src="./img/blog-item/blog-item-main3.png" alt="img" />
+            <img src="./img/blog-item/blog-item-main4.png" alt="img" />
+          </div>
+        </div>
+        <div class="blog-item-part">
+          <h2 class="blog-item-part__title title-large-2">Мастерим диван</h2>
+          <div class="blog-item-part__text blog-item-text">
+            Диванчик-скамейка подойдет для дачи или садового участка. Для изготовления хватит <br />
+            одного-двух европоддонов и нескольких деревянных брусков толщиной 5-6 см. Для работы пригодится перфоратор, шуруповерт, болты, шурупы, шайбы и металлические уголки.
+            Сначала необходимо изготовить основу скамьи.Распилите поддон на 2 неравные части. Стандартная паллета собирается из 7 досок, разделите так, чтобы на одной части было 4
+            доски, а на другой – 3. Широкая часть будет сиденьем, а узкая – спинкой. Можно добавить еще половину паллеты на&nbsp;низ если не планируете прикручивать ножки.
+          </div>
+          <div class="blog-item-part__img">
+            <img src="./img/blog-item/blog-item-main5.png" alt="" />
+          </div>
+          <div class="blog-item-part__text blog-item-text mt40 only-mobile">
+            Сложите спинку и сиденье друг с другом под&nbsp;углом 90 и крепко стяните шурупами. Усильте крепление с помощью деревянных брусков, прикрепленных по диагонали
+            от&nbsp;верхнего угла спинки в нижний угол сиденья. Получатся своеобразные подлокотники. При&nbsp;желании из оставшихся досок сделайте ножки, укрепите металлическими
+            уголками
+          </div>
+          <div class="blog-item-part__text blog-item-text mt40 no-mobile">
+            Сложите спинку и сиденье друг с другом под углом 90 и крепко стяните шурупами. <br />
+            Усильте крепление с помощью деревянных брусков, прикрепленных по диагонали <br />
+            от верхнего угла спинки в нижний угол сиденья. Получатся своеобразные подлокотники. При&nbsp;желании из оставшихся досок сделайте ножки, укрепите металлическими
+            уголками
+          </div>
+          <div class="blog-item-part__img">
+            <img src="./img/blog-item/blog-item-main6.png" alt="" />
+          </div>
+          <div class="blog-item-part__text blog-item-text mt40">
+            Отделка таких диванов – простор для&nbsp;творчества. Дайте волю фантазии! Благодаря декоративному покрытию изделие становится прочным и блестящим. Покройте дерево
+            морилкой, маслом или лаком – это подчеркнет текстуру дерева. Ровно ложится и&nbsp;водоэмульсионная краска. Дополните мебель резьбой, выжиганием или декупажем.
+            Техника&nbsp;«состаривания» дерева добавляет изделиям благородный вид. Желаем успехов!
+          </div>
+        </div>
+        <div class="blog-item-slider">
+          <h2 class="title-large-2">Похожие темы</h2>
+          <div class="blog-item-slider__wrapper">
+            <div class="blog-grid__item">
+              <span>Ремонт</span>
+              <img src="https://via.placeholder.com/305x196" alt="img" />
+              <p class="blog-grid__item-date">17 августа 2020 года</p>
+              <div class="blog-grid__item-caption">Диван из паллет своими руками, красивый и бюджетный вариант</div>
             </div>
-            <div class="cart-delivery__type-price">Бесплатно</div>
+            <div class="blog-grid__item">
+              <span>Коллекции</span>
+              <img src="https://via.placeholder.com/305x196" alt="img" />
+              <p class="blog-grid__item-date">17 августа 2020 года</p>
+              <div class="blog-grid__item-caption">Нашей мебели дали оценку дизайнеры лучших компаний</div>
+            </div>
+            <div class="blog-grid__item">
+              <span>Коллекции</span>
+              <img src="https://via.placeholder.com/305x196" alt="img" />
+              <p class="blog-grid__item-date">17 августа 2020 года</p>
+              <div class="blog-grid__item-caption">Как обустроить гардеробную комнату?</div>
+            </div>
+            <div class="blog-grid__item">
+              <span>Ремонт</span>
+              <img src="https://via.placeholder.com/305x196" alt="img" />
+              <p class="blog-grid__item-date">17 августа 2020 года</p>
+              <div class="blog-grid__item-caption">Диван из паллет своими руками, красивый и бюджетный вариант</div>
+            </div>
+            <div class="blog-grid__item">
+              <span>Коллекции</span>
+              <img src="https://via.placeholder.com/305x196" alt="img" />
+              <p class="blog-grid__item-date">17 августа 2020 года</p>
+              <div class="blog-grid__item-caption">Диван из паллет своими руками, красивый и бюджетный вариант</div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="address cart-address-section">
-      <div class="container">
-        <div class="address-info display-none">
-          <div class="address-card cart-address-card only-desktop">
-            <div class="address-card__title">Склад RM Home</div>
-            <div class="address-card__street">г.Москва, ул. Большая Переяславская, 10, (ст. метро Проспект Мира)</div>
-            <div class="address-card__schedule">
-              <div class="address-card__schedule-title">Режим работы:</div>
-              <div class="address-card__schedule-days">
-                <p>Пн-пт: 0-18</p>
-                <p>Сб-вск: 10-15</p>
+        <div class="blog-item-similar">
+          <h2 class="title-large-2">Товар из статьи</h2>
+          <div class="similar-wrapper">
+            <div class="similar-products__card">
+              <span class="similar-products__card-discount">-35 <span>%</span></span>
+              <img src="https://via.placeholder.com/198" alt="img" />
+              <div class="similar-products__card-title">Каир Textile Grey</div>
+              <div class="similar-products__card-subtitle">Диван прямой</div>
+              <div class="similar-products__card-price">
+                <span class="similar-products__card-new-price">32 100 ₽</span>
+                <span class="similar-products__card-old-price">34 000 ₽</span>
               </div>
             </div>
-            <div class="address-card__contacts">
-              <span> Наши контакты: </span>
-              <p>+7 800 100-0-100</p>
+            <div class="similar-products__card">
+              <span class="similar-products__card-discount">-35 <span>%</span></span>
+              <img src="https://via.placeholder.com/198" alt="img" />
+              <div class="similar-products__card-title">Энхель</div>
+              <div class="similar-products__card-subtitle">Диван прямой</div>
+              <div class="similar-products__card-price">
+                <span class="similar-products__card-new-price">32 100 ₽</span>
+                <span class="similar-products__card-old-price">34 000 ₽</span>
+              </div>
             </div>
-            <button class="address-card__btn cart-address-btn">Выбрать пункт самовывоза</button>
-          </div>
-          <div class="address-map cart-address-map">
-            <iframe
-              class="cart-map"
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A3585012a40db44aa9d3a38bff65c76627e932508a9bc038297e613cf7f597d97&amp;source=constructor"
-              width="961"
-              height="543"
-              frameborder="0"
-            ></iframe>
+            <div class="similar-products__card">
+              <span class="similar-products__card-discount">-35 <span>%</span></span>
+              <img src="https://via.placeholder.com/198" alt="img" />
+              <div class="similar-products__card-title">Порту</div>
+              <div class="similar-products__card-subtitle">Диван прямой</div>
+              <div class="similar-products__card-price">
+                <span class="similar-products__card-new-price">32 100 ₽</span>
+                <span class="similar-products__card-old-price">34 000 ₽</span>
+              </div>
+            </div>
+            <div class="similar-products__card">
+              <span class="similar-products__card-discount">-35 <span>%</span></span>
+              <img src="https://via.placeholder.com/198" alt="img" />
+              <div class="similar-products__card-title">Порту</div>
+              <div class="similar-products__card-subtitle">Диван прямой</div>
+              <div class="similar-products__card-price">
+                <span class="similar-products__card-new-price">32 100 ₽</span>
+                <span class="similar-products__card-old-price">34 000 ₽</span>
+              </div>
+            </div>
+            <div class="similar-products__card no-mobile">
+              <span class="similar-products__card-discount">-35 <span>%</span></span>
+              <img src="https://via.placeholder.com/198" alt="img" />
+              <div class="similar-products__card-title">Каир Textile Grey</div>
+              <div class="similar-products__card-subtitle">Диван прямой</div>
+              <div class="similar-products__card-price">
+                <span class="similar-products__card-new-price">32 100 ₽</span>
+                <span class="similar-products__card-old-price">34 000 ₽</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="cart-payment">
-          <div class="cart-payment__title">Способ оплаты</div>
-          <div class="cart-payment__wrapper">
-            <div class="cart-payment__type cart-payment__type-selected">Наличными</div>
-            <div class="cart-payment__type">В кредит</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="cart-data">
-      <div class="container">
-        <div class="cart-data__title">Ваши данные</div>
-        <form class="cart-data__inputs-top">
-          <div class="cart-data__item">
-            <label for="name">Город <img src="./icons/star.svg" alt="img" /></label>
-            <input type="tel" placeholder="Телефон" />
-            <div class="label-focus">Город</div>
-          </div>
-          <div class="cart-data__item">
-            <label for="name">Адрес</label>
-            <input type="text" placeholder="Адрес доставки" />
-            <div class="label-focus">Адрес доставки</div>
-          </div>
-          <div class="cart-data__warn">Стоимость доставки расчитывается в зависимости от&nbsp;выбранного города</div>
-        </form>
-        <form class="cart-data__inputs-wrapper">
-          <div class="cart-data__item first-input">
-            <label for="name">Имя <img src="./icons/star.svg" alt="img" /></label>
-            <input type="text" placeholder="Имя" />
-            <div class="label-focus">Имя</div>
-          </div>
-          <div class="cart-data__item">
-            <label for="name">Контактный телефон <img src="./icons/star.svg" alt="img" /></label>
-            <input type="tel" placeholder="Телефон" />
-            <div class="label-focus">Телефон</div>
-          </div>
-          <div class="cart-data__item">
-            <label for="name">Электронная почта</label>
-            <input type="text" placeholder="Эл. почта" />
-            <div class="label-focus">Эл. почта</div>
-          </div>
-        </form>
       </div>
     </section>
     <footer class="footer">
@@ -712,8 +694,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./sidebar.js"></script>
-    <script src="./inputmask.min.js"></script>
-    <script src="cart.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="blog-item.js"></script>
   </body>
 </html>

@@ -14,6 +14,9 @@
 }
 .categories {
   margin-top: 30px;
+  @media #{$media-to-xs} {
+    margin-top: 20px;
+  }
 }
 .categories-item__link {
   font-size: 1.25vw;
@@ -35,12 +38,19 @@
 .mobile-categories-wrapper {
   @media #{$media-to-md} {
     padding-left: 16px;
-    padding-right: 16px;
   }
   .mobile-categories {
     &__item {
       & + .mobile-categories__item {
         margin-left: 8px;
+      }
+      a {
+        outline: none !important;
+        line-height: 20px;
+        span {
+          margin-top: 8px;
+          display: inline-block;
+        }
       }
     }
   }

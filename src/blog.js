@@ -1,6 +1,8 @@
 $('.blog-head__wrapper').slick({
   slidesToShow: 3,
   mobileFirst: true,
+  centerPadding: '10px',
+  centerMode: true,
   responsive: [
     {
       breakpoint: 576,

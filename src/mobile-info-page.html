@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="content">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A3585012a40db44aa9d3a38bff65c76627e932508a9bc038297e613cf7f597d97&amp;source=constructor"
+        class="mobile-info-page-map"
+        frameborder="0"
+        id="map"
+      >
+      </iframe>
+      <button class="back-to-catalog only-mobile">
+        <img src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
+      </button>
+      <div class="content__box">
+        <h3 class="content__title">Шоу-рум RM Home</h3>
+        <div class="content__subtitle">г.Москва, ул. Большая Переяславская, 10, (ст. метро Проспект Мира)</div>
+        <div class="content__schedule schedule">
+          <div class="schedule__title">Режим работы:</div>
+          <div class="schedule__days">
+            Пн-пт: 0-18 <br />
+            Сб-вск: 10-15
+          </div>
+        </div>
+        <div class="content__contacts contacts">
+          <div class="contacts__title">Наши контакты:</div>
+          <div class="contacts__phone">+7 800 100-0-100</div>
+        </div>
+        <div class="content__btn">
+          <button>Написать нам</button>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.querySelector('.back-to-catalog').addEventListener('click', () => {
+        window.history.back()
+      })
+    </script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 .goods {
   margin-top: 50px;
   @media #{$media-to-xs} {
-    margin-top: 00px;
+    margin-top: 20px;
   }
   &__title {
     display: flex;
@@ -61,7 +61,27 @@
   display: flex;
   flex-direction: column;
   @media #{$media-to-xs} {
-    border: 1px solid #d2d7e3;
+    &:nth-child(odd) {
+      @media #{$media-to-xs} {
+        border-bottom: 1px solid #d2d7e3;
+        border-right: 1px solid #d2d7e3;
+      }
+    }
+    &:first-of-type:nth-child(odd) {
+      @media #{$media-to-xs} {
+        border-top: 1px solid #d2d7e3;
+      }
+    }
+    &:nth-child(even) {
+      @media #{$media-to-xs} {
+        border-bottom: 1px solid #d2d7e3;
+      }
+    }
+    &:nth-of-type(2) {
+      @media #{$media-to-xs} {
+        border-top: 1px solid #d2d7e3;
+      }
+    }
   }
   .card-hover-img {
     position: absolute;
@@ -104,16 +124,31 @@
     top: -6px;
     left: 4px;
     z-index: 14;
-    span {
+    div {
       background-color: $red;
       font-weight: 700;
       color: #fff;
       border-radius: 1px 14px;
       font-size: 14px;
       line-height: 31px;
-      padding: 4px;
+      width: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 29px;
+      font-weight: bold;
       @media #{$media-to-xs} {
         font-size: 12px;
+        width: 37px;
+        height: 22px;
+        border-radius: 1px 10px;
+      }
+      span {
+        font-size: 12px;
+        margin-left: 3px;
+        @media #{$media-to-xs} {
+          font-size: 10px;
+        }
       }
     }
   }
@@ -132,14 +167,23 @@
   .card-title {
     font-size: 18px;
     font-weight: normal;
-    margin-top: 85px;
+    margin-top: 95px;
     margin-left: 10px;
+    @media #{$media-to-xs} {
+      margin-top: 40px;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
   .card-subtitle {
     font-weight: normal;
     font-size: 14px;
     color: #a7a8b3;
     margin-left: 10px;
+    @media #{$media-to-xs} {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
   .card-tooltip {
     position: absolute;
@@ -194,20 +238,50 @@
       font-size: 14px;
       margin-top: 16px;
       margin-bottom: 4px;
+      @media #{$media-to-xs} {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+      }
     }
     &__btns {
       button {
         border: 1px solid transparent;
         background-color: $light-gray;
         font-size: 14px;
-        padding: 3px 7px;
+        padding: 4px 9px;
         border-radius: 5px;
-        &:hover {
+        position: relative;
+        & + button {
+          margin-left: 10px;
+        }
+        @media #{$media-to-xs} {
+          font-size: 12px;
+        }
+        &:hover::after {
+          content: '';
+          height: 37px;
+          width: 65px;
           border: 1px solid #a7a8b3;
+          background: transparent;
+          position: absolute;
+          border-radius: 5px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -49%);
+          @media #{$media-to-xs} {
+            width: 60px;
+            height: 35px;
+            border-radius: 7px;
+          }
         }
         span {
           font-size: 12px;
           margin-left: 3px;
+          @media #{$media-to-xs} {
+            font-size: 10px;
+          }
         }
       }
     }
@@ -225,6 +299,9 @@
   }
   .card-colors {
     font-size: 14px;
+    @media #{$media-md-up} {
+      margin-bottom: 9px;
+    }
     &__btns {
       display: flex;
       align-items: center;
@@ -260,6 +337,11 @@
       }
     }
   }
+  .card-price {
+    @media #{$media-md-up} {
+      margin-top: 5px;
+    }
+  }
   .old-price {
     color: #a7a8b3;
     font-size: 14px;
@@ -290,8 +372,10 @@
       opacity: 1;
       transition: all 0.4s;
     }
-    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.07);
-    border-radius: 10px;
+    @media #{$media-md-up} {
+      box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.07);
+      border-radius: 10px;
+    }
   }
 }
 .discount-banner {
@@ -311,6 +395,10 @@
     margin-left: 16px;
     margin-right: 16px;
     height: 160px;
+    background: url('../src/img/popular/img-discount-mob.png'), #ffe677;
+    background-size: cover;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   @media #{$media-xl-up} {
     height: 240px;
@@ -357,12 +445,30 @@
     @media #{$media-to-xs} {
       font-size: 12px;
       width: 50%;
+      line-height: 20px;
+      margin-top: 4px;
     }
   }
 }
 .card-size__button-selected {
-  border: 1px solid #a7a8b3 !important;
   font-weight: bold;
+  &:after {
+    content: '';
+    height: 37px;
+    width: 65px;
+    border: 1px solid #a7a8b3;
+    background: transparent;
+    position: absolute;
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -49%);
+    @media #{$media-to-xs} {
+      width: 60px;
+      height: 35px;
+      border-radius: 7px;
+    }
+  }
 }
 .card-colors__selected {
   &:after {
@@ -442,6 +548,7 @@
   background-color: #fff;
   height: 5px;
   position: absolute;
+  border-radius: 5px;
 }
 
 .action {
@@ -505,8 +612,8 @@
 
 .favorite-icon-product {
   cursor: pointer;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 24px;
   fill: #fff;
   stroke: #000;
   position: absolute;
@@ -518,8 +625,8 @@
   @media #{$media-to-xs} {
     right: 0;
     top: 0;
-    width: 22px;
-    height: 22px;
+    width: 17px;
+    height: 15px;
   }
 }
 .favorite-icon-product.active {

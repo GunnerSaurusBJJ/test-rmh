@@ -8,43 +8,6 @@ const sidebarItems = document.querySelectorAll('.sidebar-products'),
   chairImage = document.querySelector('.sidebar-item__chair-image'),
   sidebarClock = document.querySelector('.sidebar-opened__clock')
 
-var date = new Date()
-let countDownDateForProductOfTheDay = date.setDate(date.getDate() + 1)
-
-sidebarItems.forEach((item) => {
-  item.addEventListener('click', toggleClassSidebar)
-})
-
-closeSideBarBtn.addEventListener('click', toggleClassSidebar)
-
-sidebarItems[0].addEventListener('mouseover', () => changeImagePath(sofaImage, './img/sidebar/sofa-hover.svg'))
-sidebarItems[0].addEventListener('mouseleave', (e) => {
-  if (!openedSideBar.classList.contains('open-sidebar')) {
-    changeImagePath(sofaImage, './img/sidebar/sofa.svg')
-  }
-})
-
-sidebarItems[1].addEventListener('mouseover', () => changeImagePath(bedImage, './img/sidebar/bed-hover.svg'))
-sidebarItems[1].addEventListener('mouseleave', () => {
-  if (!openedSideBar.classList.contains('open-sidebar')) {
-    changeImagePath(bedImage, './img/sidebar/bed.svg')
-  }
-})
-
-sidebarItems[2].addEventListener('mouseover', () => changeImagePath(armchairImage, './img/sidebar/armchair-hover.png'))
-sidebarItems[2].addEventListener('mouseleave', () => {
-  if (!openedSideBar.classList.contains('open-sidebar')) {
-    changeImagePath(armchairImage, './img/sidebar/armchair.svg')
-  }
-})
-
-sidebarItems[3].addEventListener('mouseover', () => changeImagePath(chairImage, './img/sidebar/chair-hover.png'))
-sidebarItems[3].addEventListener('mouseleave', () => {
-  if (!openedSideBar.classList.contains('open-sidebar')) {
-    changeImagePath(chairImage, './img/sidebar/chair.png')
-  }
-})
-
 function toggleClassSidebar(e) {
   let title = document.querySelector('.sidebar-opened-title h2')
   openedSideBar.classList.toggle('open-sidebar')
@@ -69,6 +32,24 @@ function toggleClassSidebar(e) {
   }
 }
 
+function changeImagePath(element, path) {
+  element.src = path
+  return
+}
+const sidebarImages = [sofaImage, bedImage, armchairImage, chairImage]
+const sidebarImgPaths = ['./img/sidebar/sofa.svg', './img/sidebar/bed.svg', './img/sidebar/armchair.svg', './img/sidebar/chair.png']
+const sidebarImhHoversPaths = ['./img/sidebar/sofa-hover.svg', './img/sidebar/bed-hover.svg', './img/sidebar/armchair-hover.png', './img/sidebar/chair-hover.png']
+sidebarItems.forEach((item, idx) => {
+  item.addEventListener('click', toggleClassSidebar)
+  item.addEventListener('mouseover', () => changeImagePath(sidebarImages[idx], sidebarImhHoversPaths[idx]))
+  item.addEventListener('mouseleave', (e) => {
+    if (!openedSideBar.classList.contains('open-sidebar')) {
+      changeImagePath(sidebarImages[idx], sidebarImgPaths[idx])
+    }
+  })
+})
+closeSideBarBtn.addEventListener('click', toggleClassSidebar)
+
 document.addEventListener('click', (e) => {
   if (openedSideBarBackGround.classList.contains('sidebar-background-visible') && e.target === openedSideBarBackGround) {
     document.documentElement.style.overflow = 'auto'
@@ -80,11 +61,9 @@ document.addEventListener('click', (e) => {
     changeImagePath(armchairImage, './img/sidebar/armchair.svg')
   }
 })
-function changeImagePath(element, path) {
-  element.src = path
-  return
-}
 
+var date = new Date()
+let countDownDateForProductOfTheDay = date.setDate(date.getDate() + 1)
 setInterval(() => {
   let now = new Date().getTime()
   let distance = countDownDateForProductOfTheDay - now
@@ -108,32 +87,36 @@ document.querySelectorAll('.mobile-footer-links__title').forEach((btn) => {
   })
 })
 
-let mobileNavbarBurger = document.querySelector('.mobile-navbar__burger')
-let mobileSidebar = document.querySelector('.mobile-sidebar')
-
+const mobileNavbarBurger = document.querySelector('.mobile-navbar__burger')
+const mobileSidebar = document.querySelector('.mobile-sidebar')
+const mobileSubcategory = document.querySelector('.mobile-subcategory')
 mobileNavbarBurger.addEventListener('click', () => {
   mobileNavbarBurger.classList.toggle('burger-active')
   document.querySelector('.mobile-sidebar-background').classList.toggle('mobile-sidebar-background--opened')
   mobileSidebar.classList.toggle('mobile-sidebar-opened')
-  if (document.querySelector('.mobile-subcategory').classList.contains('mobile-subcategory-opened')) {
-    document.querySelector('.mobile-subcategory').classList.remove('mobile-subcategory-opened')
+  if (mobileSubcategory.classList.contains('mobile-subcategory-opened')) {
+    mobileSubcategory.classList.remove('mobile-subcategory-opened')
+    document.documentElement.style.overflow = 'auto'
+  }
+  if (mobileSidebar.classList.contains('mobile-sidebar-opened')) {
+    document.documentElement.style.overflow = 'hidden'
+  } else {
+    document.documentElement.style.overflow = 'auto'
   }
 })
-if (mobileSidebar.classList.contains('mobile-sidebar-opened')) {
-  document.documentElement.style.overflow = 'hidden'
-}
 
 let mobileSubcategoryTitle = document.querySelector('.mobile-subcategory-title')
 
 document.querySelectorAll('.mobile-sidebar-categories__item').forEach((item) => {
   item.addEventListener('click', () => {
     mobileSubcategoryTitle.children[1].textContent = item.firstElementChild.children[1].textContent
-    document.querySelector('.mobile-subcategory').classList.add('mobile-subcategory-opened')
+    mobileSubcategory.classList.add('mobile-subcategory-opened')
+    document.documentElement.style.overflow = 'hidden'
   })
 })
 
 mobileSubcategoryTitle.querySelector('img').addEventListener('click', () => {
-  document.querySelector('.mobile-subcategory').classList.remove('mobile-subcategory-opened')
+  mobileSubcategory.classList.remove('mobile-subcategory-opened')
 })
 
 let scrollToTopBtn = document.querySelector('.footer-subscribe__top-btn')
@@ -174,3 +157,23 @@ window.addEventListener('scroll', () => {
 document.querySelector('.footer-subscribe__label').addEventListener('click', function () {
   this.previousElementSibling.focus()
 })
+
+let mobileSidebarClock = document.querySelector('.mobile-subcategory-product__title span')
+function timeMobileSubcategory() {
+  const today = new Date()
+  const tomorrow = new Date()
+  tomorrow.setDate(tomorrow.getDate() + 1)
+  tomorrow.setHours(0, 0, 0, 0)
+  const diffMs = tomorrow - today
+  const seconds = addZero(Math.floor(diffMs / 1000) % 60)
+  const hours = addZero(Math.floor(diffMs / 1000 / 3600) % 24)
+  const mins = addZero(Math.floor(diffMs / 1000 / 60) % 60)
+  mobileSidebarClock.textContent = `${hours}ч | ${mins}м | ${seconds}с`
+}
+function addZero(num) {
+  return num < 10 ? `0${num}` : num
+}
+
+setInterval(() => {
+  timeMobileSubcategory()
+}, 1000)
