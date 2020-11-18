@@ -3,23 +3,28 @@ $(document).ready(function () {
     nextArrow: '<img class="top-slider__right-arrow top-slider-arrow" src="./icons/topslider/right-arrow.svg">',
     prevArrow: '<img class="top-slider__left-arrow top-slider-arrow" src="./icons/topslider/left-arrow.svg">',
   })
-  $('.mobile-categories-wrapper').slick({
-    slidesToShow: 3,
-    arrows: false,
-    centerPadding: '10px',
-    centerMode: true,
-  })
-  $('.mobile-example-types').slick({
+  $('.blog-wrapper').slick({
     slidesToShow: 2,
     arrows: false,
     centerPadding: '10px',
     centerMode: true,
-  })
-  $('.mobile-images-wrapper').slick({
-    slidesToShow: 3,
-    arrows: false,
-    centerPadding: '10px',
-    centerMode: true,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 320,
+        settings: 'unslick',
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: 'unslick',
+      },
+    ],
   })
 })
 var date = new Date()
@@ -138,13 +143,13 @@ collectionsPoints.forEach((point, index) => {
         item.classList.remove('collection-anim')
       }
     })
-    if (window.innerWidth > 580) {
-      point.nextElementSibling.style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - 230 + 'px'
-    }
-    if (window.innerWidth < 580) {
-      point.nextElementSibling.style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - point.nextElementSibling.offsetWidth + point.offsetWidth * 2 + 'px'
-      point.nextElementSibling.style.top = parseFloat(getComputedStyle(point).getPropertyValue('top')) - point.nextElementSibling.offsetHeight / 2 - 10 + 'px'
-    }
+    // if (window.innerWidth > 580) {
+    //   point.nextElementSibling.style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - 230 + 'px'
+    // }
+    // if (window.innerWidth < 580) {
+    // point.nextElementSibling.style.right = parseFloat(getComputedStyle(point).getPropertyValue('right')) - point.nextElementSibling.offsetWidth + point.offsetWidth * 2 + 'px'
+    // point.nextElementSibling.style.top = parseFloat(getComputedStyle(point).getPropertyValue('top')) - point.nextElementSibling.offsetHeight / 2 - 10 + 'px'
+    // }
     collectionsPoints.forEach((item) => {
       if (item.id !== point.id) {
         item.classList.remove('collection-point-active')

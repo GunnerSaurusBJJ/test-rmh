@@ -1,16 +1,16 @@
-$('.blog-head__wrapper').slick({
-  slidesToShow: 3,
-  mobileFirst: true,
-  centerPadding: '10px',
-  centerMode: true,
-  responsive: [
-    {
-      breakpoint: 576,
-      settings: 'unslick',
-    },
-  ],
-  arrows: false,
-})
+// $('.blog-head__wrapper').slick({
+//   slidesToShow: 3,
+//   mobileFirst: true,
+//   centerPadding: '10px',
+//   centerMode: true,
+//   responsive: [
+//     {
+//       breakpoint: 576,
+//       settings: 'unslick',
+//     },
+//   ],
+//   arrows: false,
+// })
 
 let sortBtn = document.querySelector('.full-catalog-filters-sort')
 let dropdownMenuAnimated = document.querySelectorAll('.dropdown_menu--animated')

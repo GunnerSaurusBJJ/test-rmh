@@ -3,31 +3,39 @@
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 20px;
   justify-content: space-between;
+
   @media (min-width: 1440px) {
     justify-items: center;
   }
 }
+
 .categories__item {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
 }
+
 .categories {
   margin-top: 30px;
+
   @media #{$media-to-xs} {
     margin-top: 20px;
   }
 }
+
 .categories-item__link {
-  font-size: 1.25vw;
+  font-size: 18px;
+
   div {
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 12px;
   }
+
   img {
     width: 100%;
     transition: 0.7s;
+
     &:hover {
       transform: scale(1.2);
       transition: 0.7s;
@@ -38,30 +46,96 @@
 .mobile-categories-wrapper {
   @media #{$media-to-md} {
     padding-left: 16px;
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
+
+  @media #{$media-md-only} {
+    padding-left: 32px;
+  }
+
+  @media #{$media-to-xs} {
+    padding-left: 16px;
+  }
+
   .mobile-categories {
     &__item {
-      & + .mobile-categories__item {
-        margin-left: 8px;
+      &+.mobile-categories__item {
+        margin-left: 20px;
+
+        @media #{$media-to-xs} {
+          margin-left: 8px;
+        }
       }
+
+      &:last-child {
+        @media #{$media-md-only} {
+          padding-right: 32px;
+        }
+
+        @media #{$media-to-xs} {
+          padding-right: 16px;
+        }
+      }
+
       a {
         outline: none !important;
         line-height: 20px;
+        display: block;
+
+        @media #{$media-md-only} {
+          width: 221px;
+        }
+
+        @media #{$media-to-xs} {
+          width: 109px;
+        }
+
         span {
           margin-top: 8px;
           display: inline-block;
+
+          @media #{$media-to-md} {
+            white-space: normal;
+          }
+        }
+
+        img {
+          @media #{$media-md-only} {
+            width: 221px;
+            height: 221px;
+          }
+
+          @media #{$media-to-xs} {
+            width: 109px;
+            height: 109px;
+          }
         }
       }
     }
   }
+
   .mobile-categories-item__link {
     @media #{$media-to-md} {
       font-size: 18px;
     }
+
     @media #{$media-to-xs} {
       font-size: 14px;
       line-height: 20px;
     }
+
     img {
       @media #{$media-xs-up} {
         width: 94%;

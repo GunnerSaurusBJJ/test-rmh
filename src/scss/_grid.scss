@@ -2,14 +2,14 @@ $xs: 415px;
 $md: 768px;
 $xl: 1600px;
 
-$screen: 'only screen';
-$media-to-xs: '#{$screen} and (max-width: #{$xs})'; // up to 415px
-$media-xs-up: '#{$screen} and (min-width: #{$xs + 1})'; // from 376px
-$media-to-xl: '#{$screen} and (max-width: #{$xl + 1})'; // up to 1660px
-$media-xl-up: '#{$screen} and (min-width: #{$xl + 1})'; // from 1660px
-$media-to-md: '#{$screen} and (max-width: #{$md})'; // up to 768px
-$media-md-up: '#{$screen} and (min-width: #{$md + 1})'; // from 768px
-$media-md-only: '#{$screen} and (min-width: #{$xs + 1}) and (max-width: #{$md})'; // min 415 max 768px
+$screen: "only screen";
+$media-to-xs: "#{$screen} and (max-width: #{$xs})"; // up to 415px
+$media-xs-up: "#{$screen} and (min-width: #{$xs + 1})"; // from 416px
+$media-to-xl: "#{$screen} and (max-width: #{$xl + 1})"; // up to 1660px
+$media-xl-up: "#{$screen} and (min-width: #{$xl + 1})"; // from 1660px
+$media-to-md: "#{$screen} and (max-width: #{$md})"; // up to 768px
+$media-md-up: "#{$screen} and (min-width: #{$md + 1})"; // from 768px
+$media-md-only: "#{$screen} and (min-width: #{$xs + 1}) and (max-width: #{$md})"; // min 415 max 768px
 
 .no-mobile {
   @media #{$media-to-xs} {
@@ -22,6 +22,12 @@ $media-md-only: '#{$screen} and (min-width: #{$xs + 1}) and (max-width: #{$md})'
     display: none !important;
   }
   @media #{$media-md-up} {
+    display: none !important;
+  }
+}
+
+.no-tablet {
+  @media #{$media-md-only} {
     display: none !important;
   }
 }
@@ -46,6 +52,12 @@ $media-md-only: '#{$screen} and (min-width: #{$xs + 1}) and (max-width: #{$md})'
 
 .only-xl-up {
   @media #{$media-to-xl} {
+    display: none !important;
+  }
+}
+
+.no-xl {
+  @media #{$media-xl-up} {
     display: none !important;
   }
 }

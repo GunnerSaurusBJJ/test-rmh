@@ -90,10 +90,11 @@ document.querySelectorAll('.mobile-footer-links__title').forEach((btn) => {
 const mobileNavbarBurger = document.querySelector('.mobile-navbar__burger')
 const mobileSidebar = document.querySelector('.mobile-sidebar')
 const mobileSubcategory = document.querySelector('.mobile-subcategory')
+const mobileCloseIcon = document.querySelector('.mobile-close-icon')
+const mobileSubcategoryCloseIcon = document.querySelector('.mobile-subcategory-close-icon')
 mobileNavbarBurger.addEventListener('click', () => {
-  mobileNavbarBurger.classList.toggle('burger-active')
-  document.querySelector('.mobile-sidebar-background').classList.toggle('mobile-sidebar-background--opened')
-  mobileSidebar.classList.toggle('mobile-sidebar-opened')
+  document.querySelector('.mobile-sidebar-background').classList.add('mobile-sidebar-background--opened')
+  mobileSidebar.classList.add('mobile-sidebar-opened')
   if (mobileSubcategory.classList.contains('mobile-subcategory-opened')) {
     mobileSubcategory.classList.remove('mobile-subcategory-opened')
     document.documentElement.style.overflow = 'auto'
@@ -104,7 +105,17 @@ mobileNavbarBurger.addEventListener('click', () => {
     document.documentElement.style.overflow = 'auto'
   }
 })
-
+mobileCloseIcon.addEventListener('click', () => {
+  document.querySelector('.mobile-sidebar-background').classList.remove('mobile-sidebar-background--opened')
+  mobileSidebar.classList.remove('mobile-sidebar-opened')
+  document.documentElement.style.overflow = 'auto'
+})
+mobileSubcategoryCloseIcon.addEventListener('click', () => {
+  document.querySelector('.mobile-sidebar-background').classList.remove('mobile-sidebar-background--opened')
+  mobileSidebar.classList.remove('mobile-sidebar-opened')
+  mobileSubcategory.classList.remove('mobile-subcategory-opened')
+  document.documentElement.style.overflow = 'auto'
+})
 let mobileSubcategoryTitle = document.querySelector('.mobile-subcategory-title')
 
 document.querySelectorAll('.mobile-sidebar-categories__item').forEach((item) => {

@@ -1,14 +1,23 @@
 .address {
-  margin-top: 40px;
-  @media #{$media-to-md} {
+  margin-top: 60px;
+  @media #{$media-md-only} {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 60px;
+  }
+  @media #{$media-to-xs} {
     padding-left: 16px;
     padding-right: 16px;
+    margin-top: 40px;
   }
 }
 .address-title {
   font-weight: bold;
   font-size: 3.333vw;
   margin-bottom: 20px;
+  @media #{$media-md-only} {
+    font-size: 40px;
+  }
   @media #{$media-to-xs} {
     font-size: 24px;
   }

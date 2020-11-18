@@ -628,50 +628,6 @@ clearAllFiltersBtn.addEventListener('click', () => {
   clearAllFiltersBtn.classList.add('disabled-clear-filter')
 })
 
-$(document).ready(function () {
-  $('.full-catalog-categories__wrapper').slick({
-    slidesToShow: 3,
-    mobileFirst: true,
-    arrows: false,
-    centerPadding: '10px',
-    centerMode: true,
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 6,
-        },
-      },
-      {
-        breakpoint: 900,
-        settings: 'unslick',
-      },
-    ],
-  })
-
-  $('.full-catalog-filters__wrapper').slick({
-    mobileFirst: true,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 320,
-        settings: 'unslick',
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 6,
-        },
-      },
-      {
-        breakpoint: 900,
-        settings: 'unslick',
-      },
-    ],
-    arrows: false,
-  })
-})
-
 document.querySelectorAll('.card-hover-img').forEach((card) => {
   let srcDefault = card.querySelector('a img').src
   let whiteLine = card.querySelector('.white-hover-slide-line')

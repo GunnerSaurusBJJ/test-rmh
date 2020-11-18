@@ -16,23 +16,28 @@ $blue: #0d8bc1;
 }
 
 @import '_grid';
+
 body {
   font-family: 'Conv_circe';
   color: $base-text-color;
 }
+
 input {
   outline: none;
 }
+
 .container {
   margin-left: 96px;
   padding-left: 24px;
   padding-right: 34px;
+
   @media #{$media-to-md} {
     margin-left: 0;
     padding-left: 0px;
     padding-right: 0px;
   }
 }
+
 .modal-discount-wrapper {
   background: #fff;
   border-radius: 10px;
@@ -41,30 +46,37 @@ input {
   text-align: center;
   position: relative;
   animation: show 0.4s;
+
   @media #{$media-to-xs} {
     width: calc(100% - 42px);
   }
 }
+
 .display-none {
   display: none !important;
 }
+
 .display-block {
   display: block !important;
 }
+
 .collection-anim {
   transform: translateY(-50%) scale(1) !important;
   opacity: 1 !important;
   visibility: visible !important;
   transition: 0.4s;
 }
+
 .img-magnifier-container {
   position: relative;
   z-index: 3;
   margin-right: 3.81944vw;
+
   @media #{$media-md-only} {
     margin-right: -230px;
   }
 }
+
 .img-magnifier-glass {
   position: absolute;
   border: 1.5px solid #ffffff;
@@ -76,17 +88,22 @@ input {
   -moz-box-shadow: 0px 0px 16px -1px rgba(255, 255, 255, 1);
   box-shadow: 0px 0px 16px -1px rgba(255, 255, 255, 1);
 }
+
 .btn-disabled {
   background: #d2d7e3;
   border-radius: 10px;
   color: #a7a8b3;
 }
+
 input {
   caret-color: $red;
 }
-html {
+
+html,
+body {
   overflow-x: hidden;
 }
+
 .modal-background {
   position: fixed;
   height: 100%;
@@ -99,6 +116,7 @@ html {
   opacity: 0;
   transition: 0.4s;
 }
+
 .show-modal {
   visibility: visible;
   opacity: 1;
@@ -120,3 +138,5 @@ html {
 @import '_cart';
 @import '_mobile-info-page';
 @import '_blog-item';
+@import '_about';
+@import '_404';

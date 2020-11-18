@@ -130,6 +130,9 @@
           <a href="index.html">
             <img src="img/mobile/mobile-logo.png" alt="img" />
           </a>
+          <div>
+            <span class="mobile-close-icon close-icon-burger"></span>
+          </div>
         </div>
         <div class="mobile-sidebar-search">
           <input type="text" class="search" placeholder="Поиск" />
@@ -208,6 +211,9 @@
       <div class="mobile-subcategory-title">
         <img src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
         <p></p>
+        <div>
+          <span class="mobile-subcategory-close-icon close-icon-burger"></span>
+        </div>
       </div>
       <div class="mobile-subcategory-items">
         <div class="mobile-subcategory-item">
@@ -299,7 +305,7 @@
         <div class="header-navbar">
           <div class="navbar-links">
             <a class="navbar-links__link" href="#">Доставка и оплата</a>
-            <a class="navbar-links__link" href="#">О магазине</a>
+            <a class="navbar-links__link" href="about.html">О магазине</a>
             <a class="navbar-links__link" href="#">Вызов консультанта</a>
             <a class="navbar-links__link" href="blog.html">Блог</a>
           </div>
@@ -348,7 +354,9 @@
       <div class="container">
         <div class="slider-wrapper">
           <div class="slide">
-            <img src="./img/topslider/top-slider-img.jpg" class="no-mobile" alt="slide-img" />
+            <img src="./img/topslider/slider1920.png" class="only-xl-up" alt="slide-img" />
+            <img src="./img/topslider/top-slider-img.jpg" class="only-desktop no-xl" alt="slide-img" />
+            <img src="./img/topslider/slider-tablet-img.png" class="only-tablet" alt="slide-img" />
             <img src="./img/mobile/slider-img-mobile.png" class="only-mobile" alt="slide-img" />
             <div class="slide__text">
               <h1>
@@ -360,7 +368,9 @@
             </div>
           </div>
           <div class="slide">
-            <img src="./img/topslider/top-slider-img.jpg" class="no-mobile" alt="slide-img" />
+            <img src="./img/topslider/slider1920.png" class="only-xl-up" alt="slide-img" />
+            <img src="./img/topslider/top-slider-img.jpg" class="only-desktop no-xl" alt="slide-img" />
+            <img src="./img/topslider/slider-tablet-img.png" class="only-tablet" alt="slide-img" />
             <img src="./img/mobile/slider-img-mobile.png" class="only-mobile" alt="slide-img" />
             <div class="slide__text">
               <h1>
@@ -931,11 +941,12 @@
             </button>
           </div>
           <div style="position: relative">
-            <div class="img-magnifier-container no-mobile">
+            <div class="img-magnifier-container only-desktop">
               <img id="myimage" class="banner-img" src="./img/material_ex/ex_022.jpg" alt="img" />
             </div>
             <img class="border-ex-img" src="./img/material_ex/border-ex.png" alt="img" />
           </div>
+          <img class="mobile-example-img only-tablet" src="./img/material_ex/tab-ex-img.png" alt="img" />
           <img id="myimage" class="mobile-example-img only-mobile" src="./img/material_ex/mob-ex-img.png" alt="img" />
         </div>
         <div class="example-types only-desktop">
@@ -983,7 +994,7 @@
       </div>
     </section>
     <!-- !SPECIAL OFFERS -->
-    <section class="goods">
+    <section class="goods special-offers">
       <div class="container">
         <div class="goods__title">
           <h1>Спецпредложения</h1>
@@ -1395,7 +1406,7 @@
             <h1 class="discount-banner__title">Невероятные скидки</h1>
             <p class="discount-banner__subtitle">Осенняя распродажа в самом разагре успей купить мебель по&nbsp;выгодной цене</p>
           </div>
-          <img class="no-mobile" src="./img/popular/bg-discount.png" alt="img" />
+          <img class="only-desktop" src="./img/popular/bg-discount.png" alt="img" />
         </div>
       </div>
     </section>
@@ -1672,7 +1683,7 @@
                 <button class="collection-card-opened__more">Подробнее</button>
               </div>
             </div>
-            <img class="no-mobile" src="./img/collections/collection01.png" alt="img" />
+            <img class="no-mobile colect-tab-img" src="./img/collections/collection01.png" alt="img" />
             <img class="only-mobile" src="./img/collections/collection01-mob.png" alt="img" />
           </div>
           <div class="collections-image">
@@ -1690,7 +1701,7 @@
               </div>
               <button class="collection-card-opened__more">Подробнее</button>
             </div>
-            <img class="no-mobile" src="./img/collections/collection02.png" alt="img" />
+            <img class="no-mobile colect-tab-img" src="./img/collections/collection02.png" alt="img" />
             <img class="only-mobile" src="./img/collections/collection02-mob.png" alt="img" />
           </div>
         </div>
@@ -1810,9 +1821,9 @@
               height="543"
               frameborder="0"
               id="map"
-              class="no-mobile"
+              class="only-desktop"
             ></iframe>
-            <a href="mobile-info-page.html" class="mobile-map only-mobile">
+            <a href="mobile-info-page.html" class="mobile-map no-desktop">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A3585012a40db44aa9d3a38bff65c76627e932508a9bc038297e613cf7f597d97&amp;source=constructor"
                 width="961"

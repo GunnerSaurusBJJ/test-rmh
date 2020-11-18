@@ -197,7 +197,7 @@
   transform: translate(15px, -8px);
 }
 
-input[type='range'] {
+input[type="range"] {
   position: absolute;
   pointer-events: none;
   -webkit-appearance: none;
@@ -206,7 +206,7 @@ input[type='range'] {
   width: 100%;
   opacity: 0;
 }
-input[type='range']::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   pointer-events: all;
   width: 30px;
   height: 30px;
@@ -348,7 +348,7 @@ input[type='range']::-webkit-slider-thumb {
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
 }
@@ -373,27 +373,39 @@ input[type='range']::-webkit-slider-thumb {
 .load-more-info {
   text-align: center;
   margin-top: 67px;
+  @media #{$media-md-only} {
+    margin-top: 40px;
+    line-height: 20px;
+  }
   @media #{$media-to-xs} {
     margin-top: 24px;
   }
 }
-.load-more-btn {
-  border-radius: 10px;
-  border: 1px solid #ed1c24;
-  background: #fff;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 15px 160px;
-  margin: 24px auto 0;
-  display: block;
-  &:hover {
-    border: 1px solid #d00a12;
-    transition: 0.2s;
-    background: #f7f7f7;
-  }
-  @media #{$media-to-xs} {
-    margin-top: 12px;
-    padding: 11px 120px;
+.full-catalog-section-categories {
+  .load-more-btn {
+    border-radius: 10px;
+    border: 1px solid #ed1c24;
+    background: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 15px 160px;
+    margin: 24px auto 0;
+    display: block;
+    &:hover {
+      border: 1px solid #d00a12;
+      transition: 0.2s;
+      background: #f7f7f7;
+    }
+    @media #{$media-md-only} {
+      margin-top: 20px;
+      width: 462px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+    @media #{$media-to-xs} {
+      margin-top: 12px;
+      padding: 11px 120px;
+    }
   }
 }
 .catalog-filter-mobile-item {
@@ -420,7 +432,11 @@ input[type='range']::-webkit-slider-thumb {
   }
 }
 .help-section {
-  @media #{$media-to-md} {
+  @media #{$media-md-only} {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media #{$media-to-xs} {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -428,9 +444,13 @@ input[type='range']::-webkit-slider-thumb {
 .help-section__wrapper {
   margin-top: 60px;
   background: #f5f6fa;
-  background: url('../src/full-catalog/img/help-bg.png') no-repeat center / cover;
+  background: url("../src/full-catalog/img/help-bg.png") no-repeat center / cover;
   height: 280px;
   border-radius: 10px;
+  @media #{$media-md-only} {
+    height: 314px;
+    background: url("../src/full-catalog/img/help-bg-tab.png") no-repeat center / cover;
+  }
   @media #{$media-to-xs} {
     margin-top: 50px;
     height: auto;
@@ -444,6 +464,7 @@ input[type='range']::-webkit-slider-thumb {
   }
   @media #{$media-to-xs} {
     padding: 20px;
+    overflow: hidden;
   }
   img {
     position: absolute;
@@ -452,6 +473,9 @@ input[type='range']::-webkit-slider-thumb {
     width: 34.027vw;
     @media #{$media-md-only} {
       width: 355px;
+      right: 19px;
+      top: 9px;
+      height: 190px;
     }
     @media #{$media-xl-up} {
       width: 500px;
@@ -483,9 +507,10 @@ input[type='range']::-webkit-slider-thumb {
   max-width: 550px;
   margin-bottom: 25px;
   @media #{$media-md-only} {
-    width: 43%;
+    width: 41%;
     line-height: 20px;
     margin-top: 16px;
+    margin-bottom: 40px;
   }
   @media #{$media-to-xs} {
     width: 70%;
@@ -518,7 +543,7 @@ input[type='range']::-webkit-slider-thumb {
       margin-bottom: 12px;
     }
   }
-  input[type='text'] {
+  input[type="text"] {
     &:placeholder-shown ~ label {
       font-size: 14px;
       top: 50%;
@@ -661,7 +686,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .radio-checkmark:after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
 }

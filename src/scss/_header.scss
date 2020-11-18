@@ -91,16 +91,20 @@
   margin-bottom: 10px;
   padding-left: 16px;
   padding-right: 16px;
+  @media #{$media-md-only} {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   &__burger {
     transition: transform 0.4s;
     .burger-line {
-      transition: all 0.4s;
+      // transition: all 0.4s;
       background: #282724;
       width: 16px;
       height: 2px;
       display: block;
       position: relative;
-      z-index: 101;
+      // z-index: 101;
       &::after,
       &::before {
         content: '';
@@ -132,6 +136,34 @@
     }
   }
 }
+.close-icon-burger {
+  background: #282724;
+  width: 16px;
+  height: 2px;
+  display: block;
+  position: relative;
+  margin-bottom: 8px;
+  transform: rotate(45deg);
+  margin-right: 5px;
+  &::after {
+    content: '';
+    background: #282724;
+    width: 16px;
+    height: 2px;
+    display: block;
+    position: absolute;
+  }
+  &::after {
+    top: -5px;
+    transform: rotate(90deg) translateX(5px);
+  }
+}
+.mobile-subcategory-close-icon {
+  @media #{$media-md-only} {
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+}
 .mobile-sidebar-background {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -141,7 +173,7 @@
   bottom: 0;
   visibility: hidden;
   opacity: 0;
-  z-index: 100;
+  z-index: 105;
   transition: all 0.4s;
 }
 .mobile-sidebar-background--opened {
@@ -177,8 +209,11 @@
   background: #fff;
   transform: translateX(-100%);
   transition: transform 0.4s;
-  @media #{$media-xs-up} {
+  @media #{$media-md-up} {
     right: 50%;
+  }
+  @media #{$media-md-only} {
+    right: 43%;
   }
 }
 .mobile-sidebar-opened {
@@ -191,8 +226,14 @@
     padding-top: 16px;
     padding-left: 24px;
     padding-right: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     img {
       display: inline-block;
+    }
+    @media #{$media-md-only} {
+      padding: 24px 32px 0;
     }
   }
 }
@@ -201,6 +242,10 @@
   position: relative;
   padding-left: 16px;
   padding-right: 16px;
+  @media #{$media-md-only} {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   input {
     min-width: 200px;
     width: 100%;
@@ -225,12 +270,19 @@
     border-radius: 10px;
     padding: 6px 15px;
     cursor: pointer;
+    @media #{$media-md-only} {
+      right: 37px;
+    }
   }
 }
 .mobile-sidebar-categories {
   margin-top: 13px;
   padding-left: 16px;
   padding-right: 16px;
+  @media #{$media-md-only} {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   &__item {
     border-bottom: 1px solid #d2d7e3;
     min-height: 50px;
@@ -298,6 +350,10 @@
       margin-left: 15px;
     }
   }
+  @media #{$media-md-only} {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 .mobile-subcategory {
@@ -306,13 +362,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 101;
+  z-index: 106;
   background: #fff;
   transform: translateX(-100%);
   transition: transform 0.4s;
   overflow: auto;
   @media #{$media-md-only} {
-    right: 50%;
+    right: 43%;
   }
 }
 
@@ -331,6 +387,16 @@
   margin-bottom: 10px;
   img {
     margin-right: 15px;
+  }
+  @media #{$media-md-only} {
+    margin-top: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  p {
+    @media #{$media-to-md} {
+      margin-right: auto;
+    }
   }
 }
 
@@ -355,6 +421,10 @@
   margin-left: 16px;
   margin-right: 24px;
   position: relative;
+  @media #{$media-md-only} {
+    margin-left: 18px;
+    margin-right: 34px;
+  }
   &:not(:last-of-type) {
     &:after {
       content: '';
@@ -389,6 +459,16 @@
   padding-right: 24px;
   display: block;
   margin: 15px auto 40px;
+  @media #{$media-md-only} {
+    margin-top: 25px;
+    padding-left: 30px;
+    padding-right: 32px;
+  }
+  button {
+    @media #{$media-md-only} {
+      height: 48px;
+    }
+  }
 }
 .mobile-subcategory__showmore {
   width: 100%;
@@ -405,10 +485,17 @@
 .mobile-subcategory-product {
   padding-left: 24px;
   padding-right: 24px;
+  @media #{$media-md-only} {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   &__title {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    @media #{$media-to-md} {
+      margin-bottom: 15px;
+    }
     :first-child {
       font-weight: bold;
       font-size: 20px;
@@ -439,6 +526,10 @@
     p {
       color: #a7a8b3;
       font-size: 12px;
+      @media #{$media-to-md} {
+        margin-top: 2px;
+        margin-bottom: 16px;
+      }
     }
   }
   &__oldprice {

@@ -1,10 +1,11 @@
 .material-examples {
   margin-top: 70px;
+
   @media #{$media-to-xs} {
-    padding-left: 16px;
     margin-top: 40px;
   }
 }
+
 .example-banner {
   background-color: #0081a7;
   border-radius: 10px;
@@ -12,63 +13,78 @@
   align-self: center;
   padding-left: 80px;
   justify-content: space-between;
+
   @media #{$media-md-only} {
     padding-left: 40px;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 32px;
+    margin-right: 32px;
+    overflow: hidden;
+    position: relative;
     overflow: hidden;
   }
+
   @media #{$media-to-xs} {
     height: 190px;
     margin-right: 16px;
+    margin-left: 16px;
     padding: 0;
     position: relative;
     overflow: hidden;
   }
 }
+
 .banner-img {
   width: 520px;
   height: 214px;
   margin-top: 40px;
   margin-right: 4.86111vw;
+
   @media #{$media-to-xs} {
     height: 190px;
   }
 }
+
 .banner-text {
   padding-top: 40px;
   padding-bottom: 50px;
+
   @media #{$media-to-xs} {
     padding: 20px;
     padding-right: 0;
     width: 58%;
   }
+
   &__title {
     font-weight: bold;
     font-size: 32px;
     line-height: 47px;
     color: #fff;
+
     @media #{$media-to-xs} {
       font-size: 18px;
       line-height: 29px;
     }
   }
+
   &__desc {
     color: #ffffff;
     opacity: 0.65;
     max-width: 300px;
     margin-top: 10px;
     line-height: 20px;
+
     @media #{$media-to-xs} {
       font-size: 14px;
       line-height: 20px;
       margin-top: 2px;
     }
   }
+
   &__more {
     img {
       margin-right: 10px;
     }
+
     background: transparent;
     border: 1.5px solid #fff;
     border-radius: 10px;
@@ -80,22 +96,39 @@
     font-size: 14px;
     padding: 14px 0;
     margin-top: 48px;
+
+    @media #{$media-md-only} {
+      padding: 12px 0;
+      max-width: 240px;
+    }
+
     @media #{$media-to-xs} {
       margin-top: 18px;
       max-width: 140px;
       height: 40px;
       padding: 0;
+      display: flex;
+      align-items: center;
     }
+
     &:hover {
       border: 1.5px solid #cbcbcb;
       transition: 0.2s;
     }
   }
 }
+
 .mobile-example-img {
   position: absolute;
   height: 90%;
   top: 10px;
+
+  @media #{$media-md-only} {
+    right: 0;
+    top: -2px;
+    height: 100%;
+  }
+
   @media #{$media-to-xs} {
     left: 170px;
     height: 86%;
@@ -110,25 +143,32 @@
 }
 
 .type-image {
-  font-size: 1.25vw;
+  font-size: 18px;
   cursor: pointer;
+
   div {
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 12px;
   }
+
   img {
     width: 100%;
     transition: 0.7s;
+
     &:hover {
-      transform: scale(1.2);
-      transition: 0.7s;
+      @media #{$media-md-up} {
+        transform: scale(1.2);
+        transition: 0.7s;
+      }
     }
+
     @media #{$media-to-xs} {
       margin-bottom: 8px;
     }
+
     @media #{$media-md-only} {
-      width: 94%;
+      margin-bottom: 12px;
     }
   }
 }
@@ -136,14 +176,68 @@
 .mobile-example-types {
   margin-top: 20px;
   margin-bottom: 40px;
-  @media #{$media-md-only} {
+  display: flex;
+  display: -webkit-box;
+
+  @media #{$media-to-md} {
+    overflow: auto;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  @media #{$media-to-xs} {
     padding-left: 16px;
   }
-  .type-image + .type-image {
+
+  .type-image {
+    @media #{$media-md-only} {
+      width: 342px;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      &:last-child {
+        padding-right: 32px;
+        width: 374px;
+      }
+    }
+
+    @media #{$media-to-xs} {
+      width: 168px;
+      font-size: 14px;
+
+      &:last-child {
+        padding-right: 16px;
+        width: 184px;
+      }
+    }
+  }
+
+  .type-image.slick-slide {
+    outline: none !important;
+  }
+
+  @media #{$media-md-only} {
+    padding-left: 32px;
+    margin-top: 40px;
+  }
+
+  .type-image+.type-image {
     @media #{$media-to-xs} {
       margin-left: 8px;
       font-size: 14px;
     }
+
     @media #{$media-md-only} {
       font-size: 18px;
     }
@@ -154,6 +248,6 @@
   position: absolute;
   top: 0;
   right: 4.6vw;
-  height: 98%;
+  height: 96%;
   width: 650px;
 }

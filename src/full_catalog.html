@@ -111,12 +111,28 @@
         </div>
       </div>
     </div>
+    <div class="modal-background">
+      <div class="modal-discount-wrapper">
+        <img class="modal-discount__close modal-close" src="./icons/close.svg" />
+        <h2 class="modal-discount__title">Скидки до 80%</h2>
+        <p class="modal-discount__subtitle">Успей купить товар по выгодной цене</p>
+        <p class="modal-discount__time-title">До конца акции осталось</p>
+        <div class="modal-discount__time">
+          <img src="./icons/sidebar/clock.svg" alt="img" />
+          <span class="modal-discount__clock"></span>
+        </div>
+        <button class="modal-discount__btn">Смотреть товары по скидкe</button>
+      </div>
+    </div>
     <div class="mobile-sidebar-background no-desktop">
       <div class="mobile-sidebar no-desktop">
         <div class="mobile-sidebar__top">
           <a href="index.html">
             <img src="img/mobile/mobile-logo.png" alt="img" />
           </a>
+          <div>
+            <span class="mobile-close-icon close-icon-burger"></span>
+          </div>
         </div>
         <div class="mobile-sidebar-search">
           <input type="text" class="search" placeholder="Поиск" />
@@ -195,6 +211,9 @@
       <div class="mobile-subcategory-title">
         <img src="./icons/mobile/back-arrow-mobile.svg" alt="img" />
         <p></p>
+        <div>
+          <span class="mobile-subcategory-close-icon close-icon-burger"></span>
+        </div>
       </div>
       <div class="mobile-subcategory-items">
         <div class="mobile-subcategory-item">
@@ -286,7 +305,7 @@
         <div class="header-navbar">
           <div class="navbar-links">
             <a class="navbar-links__link" href="#">Доставка и оплата</a>
-            <a class="navbar-links__link" href="#">О магазине</a>
+            <a class="navbar-links__link" href="about.html">О магазине</a>
             <a class="navbar-links__link" href="#">Вызов консультанта</a>
             <a class="navbar-links__link" href="blog.html">Блог</a>
           </div>
@@ -468,8 +487,10 @@
               <span> Тип обивки <span class="type-cover-count"></span> </span>
             </div>
             <div class="all-filters">
-              <img src="./full-catalog/img/all-filters.svg" alt="img" />
-              <span> Все фильтры </span>
+              <button>
+                <img src="./full-catalog/img/all-filters.svg" alt="img" />
+                <span> Все фильтры </span>
+              </button>
             </div>
           </div>
         </div>
@@ -1299,7 +1320,7 @@
       </div>
     </section>
     <!-- !FULL CATALOG GOODS -->
-    <section>
+    <section class="full-catalog-section-categories">
       <div class="container">
         <div class="wrapper">
           <div class="card">

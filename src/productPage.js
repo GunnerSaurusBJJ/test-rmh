@@ -42,12 +42,7 @@ $('.product-reviews__wrapper').slick({
   responsive: [
     {
       breakpoint: 900,
-      settings: {
-        arrows: false,
-        slidesToShow: 1,
-        centerPadding: '10px',
-        centerMode: true,
-      },
+      settings: 'unslick',
     },
   ],
   nextArrow: '<img class="product-reviews-slider-arrow right-arrow" src="./icons/topslider/right-arrow.svg">',
@@ -59,18 +54,6 @@ $('.product-info__choise-color').slick({
   responsive: [
     {
       breakpoint: 900,
-      settings: 'unslick',
-    },
-  ],
-  arrows: false,
-})
-$('.product-features__wrapper').slick({
-  mobileFirst: true,
-  infinite: false,
-  slidesToShow: 1.2,
-  responsive: [
-    {
-      breakpoint: 576,
       settings: 'unslick',
     },
   ],
@@ -220,16 +203,20 @@ setInterval(() => {
 const prodFeatures = document.querySelector('.product-features__wrapper')
 const productInfo = document.querySelector('.product-info')
 const productReviews = document.querySelector('.product-reviews')
+const productPreviewWrapper = document.querySelector('.product-preview-wrapper')
 
 window.addEventListener('scroll', () => {
   if (window.innerWidth > 580) {
+    if (window.scrollY > productPreviewWrapper.offsetTop - 20) {
+      productInfo.style.position = 'fixed'
+      productInfo.style.top = '20px'
+    } else {
+      productInfo.style.position = 'absolute'
+      productInfo.style.top = '100px'
+    }
     if (pageYOffset + prodFeatures.getBoundingClientRect().bottom <= pageYOffset + productInfo.getBoundingClientRect().bottom) {
       productInfo.style.position = 'absolute'
       productInfo.style.top = productReviews.offsetTop - productInfo.offsetHeight - 54 + 'px'
-    }
-    if (productInfo.getBoundingClientRect().top >= 100) {
-      productInfo.style.position = 'fixed'
-      productInfo.style.top = 100 + 'px'
     }
   }
 })
